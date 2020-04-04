@@ -18,5 +18,5 @@ support regarding PDS4 Data Dictionaries? Please file a report in our
 
 # Contribute
 
-* Issue Tracker: https://github.com/pds-data-dictionaries/pds4-ldd-issue-repo/issues
-* Local Data Dictionary Repos: https://github.com/pds-data-dictionaries/
+* **Issue Tracker:** [https://github.com/pds-data-dictionaries/pds4-ldd-issue-repo/issues](https://github.com/pds-data-dictionaries/pds4-ldd-issue-repo/issues)
+* **Local Data Dictionary Repos:** [https://github.com/pds-data-dictionaries/](https://github.com/pds-data-dictionaries/)
