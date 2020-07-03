@@ -1,1 +1,313 @@
-html/index.html
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PDS4 Local Data Dictionaries (LDDs) &mdash; PDS Data Dictionaries  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="background.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> PDS Data Dictionaries
+          
+
+          
+            
+            <img src="_static/PDS_Planets.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Local Data Dictionary Overview</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-create.html">LDD Creation Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-update.html">LDD Update Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-ccb.html">LDD Change Control Board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-users.html">LDD Users Groups</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html">Request a New LDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html#request-a-new-class-or-attribute">Request a New Class or Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html#report-a-bug">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contact.html">Contact Us</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">PDS Data Dictionaries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>PDS4 Local Data Dictionaries (LDDs)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pds4-local-data-dictionaries-ldds">
+<h1>PDS4 Local Data Dictionaries (LDDs)<a class="headerlink" href="#pds4-local-data-dictionaries-ldds" title="Permalink to this headline">¶</a></h1>
+<p>The NASA Planetary Data System PDS4 Data Dictionaries Repo is used for managing PDS4 Local Data Dictionaries (LDDs) for the <a class="reference external" href="https://nasa-pds-incubator.github.io/pds4-information-model/">PDS4 Information Model</a>. LDDs are a critical component of the <a class="reference external" href="https://pds.nasa.gov/datastandards/about/">PDS4 Data Standard</a>.</p>
+<p>This website is intended to provide a how-to for to developing, managing, and using PDS Local Data Dictionaries.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="background.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="background.html#additional-information">Additional Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Local Data Dictionary Overview</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-create.html">LDD Creation Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#proposing-a-new-discipline-ldd">Proposing a New Discipline LDD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#is-this-ldd-needed">1. Is this LDD needed?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#who-will-be-the-ldd-steward-s">2. Who will be the LDD Steward(s)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#who-will-be-on-the-ldd-change-control-board">3. Who will be on the LDD Change Control Board?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#proposing-a-new-mission-ldd">Proposing a New Mission LDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#requesting-a-new-namespace-id">Requesting A New Namespace ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#kick-off-team-and-repo-creation">Kick-off Team and Repo Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#create-ldd-google-groups-and-github-teams">Create LDD Google Groups and Github Teams</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#create-google-group">1. Create Google Group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#create-github-team">2. Create Github Team</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#creating-new-ldd-repository">Creating New LDD Repository</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#create-new-repo-from-ldd-template">1. Create new repo from ldd-template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#update-repo-settings">2. Update Repo Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#update-codeowners">3. Update CODEOWNERS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#notify-ldd-steward">4. Notify LDD Steward</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#notify-ldd-ccb-and-user-groups">Notify LDD CCB and User Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#initial-repo-updates">Initial Repo Updates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#start-development">Start Development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-update.html">LDD Update Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#change-request-proposed">1. Change Request Proposed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#ldd-steward-initial-approval">2. LDD Steward Initial Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#update-ingestldd">3. Update IngestLDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#push-updates-to-github">4. Push Updates To Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#ldd-change-control-board-approval">5. LDD Change Control Board Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#approve-and-merge-changes">6. Approve and Merge Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-ccb.html">LDD Change Control Board</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-ccb.html#membership">Membership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-ccb.html#communication">Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-ccb.html#voting-and-approvals-of-change-requests">Voting and Approvals of Change Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-users.html">LDD Users Groups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-users.html#membership">Membership</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html">Request a New LDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html#request-a-new-class-or-attribute">Request a New Class or Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html#report-a-bug">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html">Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="support/contribute.html#code">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support/contribute.html#user-groups">User Groups</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support/contact.html">Contact Us</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="support/contact.html#need-help-with-an-ldd">Need Help with an LDD?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support/contact.html#need-additonal-help">Need Additonal Help?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="background.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020 California Institute of Technology
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
