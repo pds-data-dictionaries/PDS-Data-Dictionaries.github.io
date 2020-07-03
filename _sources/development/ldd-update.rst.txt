@@ -25,7 +25,7 @@ The update request is received by the LDD Steward, who makes an initial determin
 
 Once the LDD Steward approves the change, they will get the latest version of the LDD from Github, and complete the necessary updates to the IngestLDD file (TBD link).
 
-The LDD Steward can download and use `LDDTool  <https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html>`_ for testing purposes, but only changes to the IngestLDD should be added to the Github repo in future steps.
+The LDD Steward can download and use `LDDTool  <https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html>`_ for testing purposes, but only the IngestLDD will be needed for submission to Github.
 
 
 4. Push Updates To Github
@@ -34,8 +34,19 @@ The LDD Steward can download and use `LDDTool  <https://nasa-pds.github.io/pds4-
 Once the LDD Steward has completed the necessary changes to the IngestLDD, a Pull Request (TBD link) is then created in the applicable LDD repository. When creating the Pull Request, sufficient documentation and details need to be provided in order to sufficiently describe the change and the rationale for LDD Change Control Board (link TBD) review.
 
 
+5. LDD Change Control Board Approval
++++++++++++++++++++++++++++++++++++++
 
-5. LDD Change Control Board
+The LDD Change Control Board will be notified their review is needed by two mechanisms:
+a. They will be assigned as reviewers on the Github Pull Request
+b. The LDD Steward will notify the group of the review start by emailing the CCB Google Group
+
+Discussions about the changes should as much as possible be done within the Github Pull Request. See `Github Documentation <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request>`_ for more details.
+
+See the `LDD Change Control Board web page <ldd-ccb>`_ for details on the voting and approval process.
+
+
+6. Approve and Merge Changes
 ++++++++++++++++++++++++++++
 
-
+Once the LDD CCB has approved changes 
