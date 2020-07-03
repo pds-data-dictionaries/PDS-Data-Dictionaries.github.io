@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LDD Update Process &mdash; PDS Data Dictionaries  documentation</title>
+  <title>LDD Build Process &mdash; PDS Data Dictionaries  documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="LDD Build Process" href="ldd-build.html" />
-    <link rel="prev" title="Local Data Dictionary Overview" href="../overview.html" /> 
+    <link rel="next" title="LDD Change Control Board" href="ldd-ccb.html" />
+    <link rel="prev" title="LDD Update Process" href="ldd-update.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,15 +92,9 @@
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Update Process</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#change-request-proposed">1. Change Request Proposed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ldd-steward-initial-approval">2. LDD Steward Initial Approval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#update-ingestldd">3. Update IngestLDD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#push-updates-to-github">4. Push Updates To Github</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ldd-change-control-board">5. LDD Change Control Board</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-create.html">LDD Creation Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Build Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-ccb.html">LDD Change Control Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-users.html">LDD Users Groups</a></li>
 </ul>
@@ -110,7 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../support/update-requests.html#request-a-new-class-or-attribute">Request a New Class or Attribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/update-requests.html#report-a-bug">Report a Bug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/contribute.html">Contribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../support/contact.html">Contact Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contact.html">Contact Us</a></li>
 </ul>
 
             
@@ -157,13 +151,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>LDD Update Process</li>
+      <li>LDD Build Process</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/development/ldd-update.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/development/ldd-build.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,35 +170,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ldd-update-process">
-<h1>LDD Update Process<a class="headerlink" href="#ldd-update-process" title="Permalink to this headline">¶</a></h1>
-<p>The following are the necessary steps to propose and execute an update to a PDS4 Local Data Dictionary.</p>
-<a class="reference external image-reference" href="../_static/images/LDD-mgmt-process.png"><img alt="../_images/LDD-mgmt-process.png" src="../_images/LDD-mgmt-process.png" /></a>
-<div class="section" id="change-request-proposed">
-<h2>1. Change Request Proposed<a class="headerlink" href="#change-request-proposed" title="Permalink to this headline">¶</a></h2>
-<p>The process is initiated when a user requests an update to an LDD via the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose">PDS4 Github Issues Repo</a>.</p>
-</div>
-<div class="section" id="ldd-steward-initial-approval">
-<h2>2. LDD Steward Initial Approval<a class="headerlink" href="#ldd-steward-initial-approval" title="Permalink to this headline">¶</a></h2>
-<p>The update request is received by the LDD Steward, who makes an initial determination of whether or not the change is warranted.</p>
-<blockquote>
-<div><ol class="loweralpha simple">
-<li><p>If no, the issue is brought to the LDD Change Control Board (link TBD) for discussion. The outcome of that User Group discussion will determine whether or not to proceed.</p></li>
-</ol>
-</div></blockquote>
-</div>
-<div class="section" id="update-ingestldd">
-<h2>3. Update IngestLDD<a class="headerlink" href="#update-ingestldd" title="Permalink to this headline">¶</a></h2>
-<p>Once the LDD Steward approves the change, they will get the latest version of the LDD from Github, and complete the necessary updates to the IngestLDD file (TBD link).</p>
-<p>The LDD Steward can download and use <a class="reference external" href="https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html">LDDTool</a> for testing purposes, but only changes to the IngestLDD should be added to the Github repo in future steps.</p>
-</div>
-<div class="section" id="push-updates-to-github">
-<h2>4. Push Updates To Github<a class="headerlink" href="#push-updates-to-github" title="Permalink to this headline">¶</a></h2>
-<p>Once the LDD Steward has completed the necessary changes to the IngestLDD, a Pull Request (TBD link) is then created in the applicable LDD repository. When creating the Pull Request, sufficient documentation and details need to be provided in order to sufficiently describe the change and the rationale for LDD Change Control Board (link TBD) review.</p>
-</div>
-<div class="section" id="ldd-change-control-board">
-<h2>5. LDD Change Control Board<a class="headerlink" href="#ldd-change-control-board" title="Permalink to this headline">¶</a></h2>
-</div>
+  <div class="section" id="ldd-build-process">
+<h1>LDD Build Process<a class="headerlink" href="#ldd-build-process" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
@@ -215,10 +182,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ldd-build.html" class="btn btn-neutral float-right" title="LDD Build Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ldd-ccb.html" class="btn btn-neutral float-right" title="LDD Change Control Board" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../overview.html" class="btn btn-neutral float-left" title="Local Data Dictionary Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ldd-update.html" class="btn btn-neutral float-left" title="LDD Update Process" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
