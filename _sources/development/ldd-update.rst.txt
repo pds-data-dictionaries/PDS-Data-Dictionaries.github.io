@@ -43,7 +43,7 @@ b. The LDD Steward will notify the group of the review start by emailing the CCB
 
 Discussions about the changes should as much as possible be done within the Github Pull Request. See `Github Documentation <https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request>`_ for more details.
 
-See the `LDD Change Control Board web page <ldd-ccb>`_ for details on the voting and approval process.
+See the `LDD Change Control Board web page </teams/ldd-ccb>`_ for details on the voting and approval process.
 
 
 6. Approve and Merge Changes

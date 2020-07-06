@@ -13,5 +13,5 @@ We are always looking for community input into our software and dictionaries. Fe
 User Groups
 +++++++++++
 
-We have user groups for all Discipline Local Data Dictionaries. For more information, see `LDD User Groups <../development/ldd-user-groups>`_
+We have user groups for all Discipline Local Data Dictionaries. For more information, see `LDD User Groups </teams/ldd-users>`_
 

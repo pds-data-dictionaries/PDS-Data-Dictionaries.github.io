@@ -25,13 +25,19 @@ This website is intended to provide a how-to for to developing, managing, and us
     /development/ldd-create
     /development/ldd-update
     /development/ldd-build
-    /development/ldd-ccb
-    /development/ldd-users
+
+..  toctree::
+    :maxdepth: 3
+    :caption: Teams
+
+    /team/ldd-ccb
+    /team/ldd-users
 
 ..  toctree::
     :maxdepth: 3
     :caption: Support
 
     /support/update-requests
+    /support/github-help
     /support/contribute
-    support/contact
+    /support/contact
