@@ -49,4 +49,11 @@ See the `LDD Change Control Board web page </teams/ldd-ccb>`_ for details on the
 6. Approve and Merge Changes
 ++++++++++++++++++++++++++++
 
-Once the LDD CCB has approved changes 
+Once the LDD CCB has approved changes, the PDS DD Steward can then Merge the Pull Request (link TBD).
+
+
+7. (optional) Contact EN for Point Build
+++++++++++++++++++++++++++++++++++++++++
+
+For critical bug fixes that require the LDD to be built and released against the current or a past IM, create a new ticket for a Point Build Request (link TBD)
+

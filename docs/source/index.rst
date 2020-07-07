@@ -30,14 +30,16 @@ This website is intended to provide a how-to for to developing, managing, and us
     :maxdepth: 3
     :caption: Teams
 
-    /team/ldd-ccb
-    /team/ldd-users
+    /teams/pds-dd-stewards
+    /teams/ldd-ccb
+    /teams/ldd-users
 
 ..  toctree::
     :maxdepth: 3
     :caption: Support
 
-    /support/update-requests
+    /support/tutorials
     /support/github-help
+    /support/update-requests
     /support/contribute
     /support/contact
