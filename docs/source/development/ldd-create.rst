@@ -1,10 +1,15 @@
 LDD Creation Process
 ====================
 
+..  toctree::
+    :maxdepth: 3
+
+    /development/ldd-create
+
 Proposing a New Discipline LDD
 ++++++++++++++++++++++++++++++
 
-Creation of a new Discipline LDDs should be discussed and approved by the `PDS Dictionary Stewards Group <mailto:pdsddstewards@jpl.nasa.gov>`_. During this process the following must be determined:
+Creation of a new Discipline LDDs should be discussed and approved by the PDS LDD Change Control Board (TBD Email list or google group). During this process the following must be determined:
 
 1. Is this LDD needed?
 ----------------------
@@ -47,63 +52,24 @@ Contact the `PDS Dictionary Stewards Admin Team <https://github.com/orgs/pds-dat
 * namespace_id
 * Brief description of the LDD. spell out namespace_id if it is an acronym.
 * LDD Steward Github username
-* CCB member Github Usernames
 
 ----
 
-Create LDD Google Groups and Github Teams
-+++++++++++++++++++++++++++++++++++++++++
-
-1. Create Google Group
-----------------------
-
-.. note::
-    Responsible Party: LDD Steward
-
-a. Go to the `Google Groups site <https://groups.google.com/forum/#!creategroup>`_ to create the LDD User Group mailing list
-
-b. Enter information according to the following guidelines:
-    * **Group name:** ``pds-ldd-<namespace_id>-users``
-    * **Group description:** Enter an appropriate description
-    * The remaining can be left the same:
-        * **Group type:** Email list
-        * **Group visibility:** Anyone on the web
-        * **View Topics:** All members of the group
-        * **Post:** All members of the group
-        * **Join the Group:** Anyone can ask
-
-c. Click ``Create group``
-
-d. Select ``Invite people to join the group`` or ``Invite members`` (depending on the screen that appears)
-
-e. Invite appropriate members.
-
-f. Repeat steps a-e to create LDD CCB group. Set **Group name:** ``pds-ldd-<namespace_id>-ccb``
-
-
-2. Create Github Team
-----------------------
-
-.. note::
-    Responsible Party: Member of `PDS Dictionary Stewards Admin Team <https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members>`_
-
-a. `Create the LDD CCB Team <https://github.com/orgs/pds-data-dictionaries/new-team>`_ - **Team name:** ``pds-ldd-<namespace_id>-ccb``
-
-b. Add LDD CCB members based upon input from LDD Steward.
-
-----
-
-Creating New LDD Repository
-++++++++++++++++++++++++++++
+Creating New LDD Repository (Admin Only)
+++++++++++++++++++++++++++++++++++++++++
 
 Once you have your `Namespace ID <#Requesting-A-New-Namespace-ID>`_, you are ready to create the new Github repo for maintaining the LDD.
 
 .. note::
     Responsible Party: Member of `PDS Dictionary Stewards Admin Team <https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members>`_
 
+.. note::
+    This can probably be scripted someday using GithubAPI or within a Github Action.
+
 
 1. Create new repo from ldd-template
 ------------------------------------
+
 a. `Create new repo <https://github.com/pds-data-dictionaries/ldd-template/generate>`_
 
 b. Set the following parameters:
@@ -124,7 +90,6 @@ a. Go to ``Settings``
 b. Add appropriate teams with access to repo
     * Go to ``Manage Access``
     * Click on ``Invite teams or people``
-    * Add ``@pds-data-dictionaries/pds-dictionary-steward-admins`` with Admin access
     * Add the LDD Steward with Admin access
     * Add the LDD CCB Team with Write access
 
@@ -137,20 +102,33 @@ b. Set branches protections
     * Select ``Restrict who can push to matching branches``
 
 
-3. Update CODEOWNERS
---------------------
+3. Create new issue template in PDS4 LDD Issue Repo
+----------------------------------------------------
 
-Updating this file will ensure the LDD-CCB is required for review on each pull request.
+a. `Create a new label <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/labels>`_ in the PDS4 LDD Issue Repo for the new repo (ldd-<namespace_id>)
 
-a. Go to `PDS Data Dictionaries org <https://github.com/pds-data-dictionaries>`_ and the appropriate new repo
+b. Clone the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/>`_
 
-b. Open up the `.github/CODEOWNERS` file
+c. Execute the `generate-issue-template.sh bash script <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/master/bin/generate-issue-template.sh>`_. This will automatically generate an issue template from the `LDD Issue Template <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/master/templates/ldd-issue-template.md>`_ and push to the repo::
 
-c. Uncomment this line and add the appropriate CCB Github Team name::
+        $ bin/generate-issue-template.sh cart Cartography thareUSGS
+        New issue template created: /Users/jpadams/Documents/proj/pds/pdsen/workspace/pds4-ldd-issue-repo/bin/../.github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
+        [master 950bedb] Add cart issue template
+         1 file changed, 33 insertions(+)
+         create mode 100644 .github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
+        Enumerating objects: 8, done.
+        Counting objects: 100% (8/8), done.
+        Delta compression using up to 16 threads
+        Compressing objects: 100% (4/4), done.
+        Writing objects: 100% (5/5), 1.07 KiB | 1.07 MiB/s, done.
+        Total 5 (delta 2), reused 0 (delta 0)
+        remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+        remote: This repository moved. Please use the new location:
+        remote:   git@github.com:pds-data-dictionaries/PDS4-LDD-Issue-Repo.git
+        To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
+           b0abee5..950bedb  master -> master
 
-    *       @pds-data-dictionaries/pds-ldd-<namespace_id>-ccb
-
-d. Commit your changes.
+d. You should now see a `new issue template created <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose>`_
 
 
 4. Notify LDD Steward
@@ -159,30 +137,4 @@ d. Commit your changes.
 Notify the LDD Steward the new repo is ready.
 
 
-----
-
-Notify LDD CCB and User Groups
-++++++++++++++++++++++++++++++
-
-.. note::
-    Responsible Party: LDD Steward
-
-Send an email notification to the LDD CCB and User Groups notifying them of the new LDD repo and development effort.
-
-----
-
-Initial Repo Updates
-+++++++++++++++++++++
-
-.. note::
-    Responsible Party: LDD Steward
-
-Update the ``Contribute`` section of your new repos ``README.md`` to reference the newly created mailing lists and Github teams.
-
-----
-
-Start Development
-++++++++++++++++++
-
-Ready to start development. See the `LDD Update Process <ldd-update>`_ for more information on submitting LDD updates.
 

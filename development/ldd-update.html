@@ -87,8 +87,8 @@
             
               <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../background.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview.html">Local Data Dictionary Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul class="current">
@@ -104,21 +104,22 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-test.html">LDD Regression Testing</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../teams/ldd-users.html">LDD Users Groups</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../support/tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/github-help.html">Github Help</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../support/update-requests.html">Request a New LDD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../support/update-requests.html#request-a-new-class-or-attribute">Request a New Class or Attribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../support/update-requests.html#report-a-bug">Report a Bug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#request-a-new-ldd">Request a New LDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#request-a-new-ldd-class-or-attribute">Request a New LDD Class or Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#report-a-bug">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#user-forum">User Forum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/contact.html">Contact Us</a></li>
 </ul>
 
@@ -187,8 +188,22 @@
             
   <div class="section" id="ldd-update-process">
 <h1>LDD Update Process<a class="headerlink" href="#ldd-update-process" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Update Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#change-request-proposed">1. Change Request Proposed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ldd-steward-initial-approval">2. LDD Steward Initial Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-ingestldd">3. Update IngestLDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#push-updates-to-github">4. Push Updates To Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ldd-change-control-board-approval">5. LDD Change Control Board Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#approve-and-merge-changes">6. Approve and Merge Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-contact-en-for-point-build">7. (optional) Contact EN for Point Build</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>The following are the necessary steps to propose and execute an update to a PDS4 Local Data Dictionary.</p>
-<a class="reference external image-reference" href="../_static/images/LDD-mgmt-process.png"><img alt="../_images/LDD-mgmt-process.png" src="../_images/LDD-mgmt-process.png" /></a>
+<a class="reference external image-reference" href="../images/LDD-mgmt-process.png"><img alt="images/LDD-mgmt-process.png" src="images/LDD-mgmt-process.png" /></a>
 <div class="section" id="change-request-proposed">
 <h2>1. Change Request Proposed<a class="headerlink" href="#change-request-proposed" title="Permalink to this headline">¶</a></h2>
 <p>The process is initiated when a user requests an update to an LDD via the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose">PDS4 Github Issues Repo</a>.</p>
@@ -198,7 +213,7 @@
 <p>The update request is received by the LDD Steward, who makes an initial determination of whether or not the change is warranted.</p>
 <blockquote>
 <div><ol class="loweralpha simple">
-<li><p>If no, the issue is brought to the LDD Change Control Board (link TBD) for discussion. The outcome of that User Group discussion will determine whether or not to proceed.</p></li>
+<li><p>If no, the issue is brought to the <a class="reference internal" href="../teams/ldd-ccb.html"><span class="doc">LDD Change Control Board</span></a> for discussion. The outcome of that User Group discussion will determine whether or not to proceed.</p></li>
 </ol>
 </div></blockquote>
 </div>
@@ -209,7 +224,8 @@
 </div>
 <div class="section" id="push-updates-to-github">
 <h2>4. Push Updates To Github<a class="headerlink" href="#push-updates-to-github" title="Permalink to this headline">¶</a></h2>
-<p>Once the LDD Steward has completed the necessary changes to the IngestLDD, a Pull Request (TBD link) is then created in the applicable LDD repository. When creating the Pull Request, sufficient documentation and details need to be provided in order to sufficiently describe the change and the rationale for LDD Change Control Board (link TBD) review.</p>
+<p>Once the LDD Steward has completed the necessary changes to the IngestLDD, a Pull Request (PR) (TBD link) is then created in the applicable LDD repository. When creating the Pull Request, sufficient documentation and details need to be provided in order to sufficiently describe the change and the rationale for LDD Change Control Board (link TBD) review.</p>
+<p>Additionally, by generating a PR on the IngestLDD updates, the system will automatically run LDDTool to generate the schemas, schematrons, and other default LDDTool outputs. See the <a class="reference internal" href="../support/tutorials.html"><span class="doc">LDD Update and Build Tutorial</span></a></p>
 </div>
 <div class="section" id="ldd-change-control-board-approval">
 <h2>5. LDD Change Control Board Approval<a class="headerlink" href="#ldd-change-control-board-approval" title="Permalink to this headline">¶</a></h2>
@@ -217,7 +233,7 @@
 a. They will be assigned as reviewers on the Github Pull Request
 b. The LDD Steward will notify the group of the review start by emailing the CCB Google Group</p>
 <p>Discussions about the changes should as much as possible be done within the Github Pull Request. See <a class="reference external" href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request">Github Documentation</a> for more details.</p>
-<p>See the <a class="reference external" href="/teams/ldd-ccb">LDD Change Control Board web page</a> for details on the voting and approval process.</p>
+<p>See the <a class="reference internal" href="../teams/ldd-ccb.html"><span class="doc">LDD Change Control Board web page</span></a> for details on the voting and approval process.</p>
 </div>
 <div class="section" id="approve-and-merge-changes">
 <h2>6. Approve and Merge Changes<a class="headerlink" href="#approve-and-merge-changes" title="Permalink to this headline">¶</a></h2>

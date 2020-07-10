@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Request a New LDD" href="update-requests.html" />
+    <link rel="next" title="Contribute" href="contribute.html" />
     <link rel="prev" title="Tutorials" href="tutorials.html" /> 
 </head>
 
@@ -87,20 +87,20 @@
             
               <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../background.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview.html">Local Data Dictionary Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../development/ldd-create.html">LDD Creation Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development/ldd-update.html">LDD Update Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development/ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/ldd-test.html">LDD Regression Testing</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../teams/ldd-users.html">LDD Users Groups</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Support</span></p>
 <ul class="current">
@@ -112,12 +112,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#github-best-practices">Github Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github-tutorials">Github Tutorials</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="update-requests.html">Request a New LDD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="update-requests.html#request-a-new-class-or-attribute">Request a New Class or Attribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="update-requests.html#report-a-bug">Report a Bug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html#request-a-new-ldd">Request a New LDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html#request-a-new-ldd-class-or-attribute">Request a New LDD Class or Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html#report-a-bug">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html#user-forum">User Forum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
 </ul>
 
@@ -186,6 +188,20 @@
             
   <div class="section" id="github-help">
 <h1>Github Help<a class="headerlink" href="#github-help" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Github Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git-and-github-training">Git and Github Training</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started-3-hrs">Getting Started (~3 hrs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-github-desktop-tbd-hrs">Using Github Desktop (TBD hrs)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#github-best-practices">Github Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github-tutorials">Github Tutorials</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>PDS Local Data Dictionary development and management is centered out of Github.com. This page will help provide some information to get folks trained up on using Git, Github, and Github Issues.</p>
 <hr class="docutils" />
 <div class="section" id="git-and-github-training">
@@ -198,7 +214,7 @@
 </div>
 <div class="section" id="using-github-desktop-tbd-hrs">
 <h3>Using Github Desktop (TBD hrs)<a class="headerlink" href="#using-github-desktop-tbd-hrs" title="Permalink to this headline">¶</a></h3>
-<p>For most people using Github.com, you will want to use <a class="reference external" href="http://desktop.github.com/">Github Desktop</a>, which is a desktop application to locally update your Github repositories. Once you download, install, and open the application, the initial prompt will present with an option to “Create a Tutorial Repository”, which will walk you through a tutorial to get started with Github Desktop. See this <a class="reference external" href="CreateaTutorialRepository">Github Blog</a> post for more information on Github Desktop and this intro tutorial.</p>
+<p>For most people using Github.com, you will want to use <a class="reference external" href="http://desktop.github.com/">Github Desktop</a>, which is a desktop application to locally update your Github repositories. Once you download, install, and open the application, the initial prompt will present with an option to “Create a Tutorial Repository”, which will walk you through a tutorial to get started with Github Desktop. See this <a class="reference external" href="https://github.blog/2019-10-02-get-started-easier-with-github-desktop-2-2/">Github Blog</a> post for more information on Github Desktop and this intro tutorial.</p>
 <p>If you wish to access Github via command-line, there are numerous tutorial online for doing so.</p>
 </div>
 </div>
@@ -207,9 +223,15 @@
 <h2>Github Best Practices<a class="headerlink" href="#github-best-practices" title="Permalink to this headline">¶</a></h2>
 <p>Here is some additional information for some best practices the PDS tries to follow when using Github:</p>
 <ul class="simple">
-<li><p><cite>Commit Message Best Practices &lt;https://nasa-pds.github.io/developer/pds_git_and_github_guide.html#commit-message-best-practices&gt;</cite> - providing helpful, consistent commit messages is very important to ensuring traceability and usability of the revision history for software and data products. A little extra consideration and time can go a long way.</p></li>
+<li><p><a class="reference external" href="https://nasa-pds.github.io/developer/pds_git_and_github_guide.html#commit-message-best-practices">Commit Message Best Practices</a> - providing helpful, consistent commit messages is very important to ensuring traceability and usability of the revision history for software and data products. A little extra consideration and time can go a long way.</p></li>
 <li><p><a class="reference external" href="https://nasa-pds.github.io/developer/pds_issue_tracking_guide.html#issue-creation-best-practices">Issue and Pull Request Creation Best Practices</a> - Creating good Github issue and pull request names and descriptions, and providing sufficient associated test data is very help in providing a streamlined, robust issue tracking system. A little extra consideration and time can go a long way.</p></li>
 </ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="github-tutorials">
+<h2>Github Tutorials<a class="headerlink" href="#github-tutorials" title="Permalink to this headline">¶</a></h2>
+<p>Github has many tutorials and exampels through <a class="reference external" href="https://lab.github.com/">Github Learning Lab</a>.</p>
+<p>We also have a <span class="xref std std-doc">&lt;support/tutorials&gt;</span> to test using the LDD Repositories.</p>
 </div>
 </div>
 
@@ -221,7 +243,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="update-requests.html" class="btn btn-neutral float-right" title="Request a New LDD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="contribute.html" class="btn btn-neutral float-right" title="Contribute" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tutorials.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -15,8 +15,9 @@ This website is intended to provide a how-to for to developing, managing, and us
     :glob:
     :caption: Getting Started:
 
-    /background
-    /overview
+    /getting-started
+
+.. /overview
 
 ..  toctree::
     :maxdepth: 3
@@ -25,6 +26,7 @@ This website is intended to provide a how-to for to developing, managing, and us
     /development/ldd-create
     /development/ldd-update
     /development/ldd-build
+    /development/ldd-test
 
 ..  toctree::
     :maxdepth: 3
@@ -32,7 +34,6 @@ This website is intended to provide a how-to for to developing, managing, and us
 
     /teams/pds-dd-stewards
     /teams/ldd-ccb
-    /teams/ldd-users
 
 ..  toctree::
     :maxdepth: 3
@@ -40,6 +41,5 @@ This website is intended to provide a how-to for to developing, managing, and us
 
     /support/tutorials
     /support/github-help
-    /support/update-requests
     /support/contribute
     /support/contact

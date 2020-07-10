@@ -1,6 +1,11 @@
 Github Help
 ===========
 
+..  toctree::
+    :maxdepth: 3
+
+    /support/github-help
+
 PDS Local Data Dictionary development and management is centered out of Github.com. This page will help provide some information to get folks trained up on using Git, Github, and Github Issues.
 
 ----
@@ -21,7 +26,7 @@ For those of you who do not wish to created a LinkedIn Learning account, Github 
 Using Github Desktop (TBD hrs)
 ------------------------------
 
-For most people using Github.com, you will want to use `Github Desktop <http://desktop.github.com/>`_, which is a desktop application to locally update your Github repositories. Once you download, install, and open the application, the initial prompt will present with an option to "Create a Tutorial Repository", which will walk you through a tutorial to get started with Github Desktop. See this `Github Blog <Create a Tutorial Repository>`_ post for more information on Github Desktop and this intro tutorial.
+For most people using Github.com, you will want to use `Github Desktop <http://desktop.github.com/>`_, which is a desktop application to locally update your Github repositories. Once you download, install, and open the application, the initial prompt will present with an option to "Create a Tutorial Repository", which will walk you through a tutorial to get started with Github Desktop. See this `Github Blog <https://github.blog/2019-10-02-get-started-easier-with-github-desktop-2-2/>`_ post for more information on Github Desktop and this intro tutorial.
 
 If you wish to access Github via command-line, there are numerous tutorial online for doing so.
 
@@ -32,6 +37,15 @@ Github Best Practices
 
 Here is some additional information for some best practices the PDS tries to follow when using Github:
 
-* `Commit Message Best Practices <https://nasa-pds.github.io/developer/pds_git_and_github_guide.html#commit-message-best-practices>` - providing helpful, consistent commit messages is very important to ensuring traceability and usability of the revision history for software and data products. A little extra consideration and time can go a long way.
+* `Commit Message Best Practices <https://nasa-pds.github.io/developer/pds_git_and_github_guide.html#commit-message-best-practices>`_ - providing helpful, consistent commit messages is very important to ensuring traceability and usability of the revision history for software and data products. A little extra consideration and time can go a long way.
 
 * `Issue and Pull Request Creation Best Practices <https://nasa-pds.github.io/developer/pds_issue_tracking_guide.html#issue-creation-best-practices>`_ - Creating good Github issue and pull request names and descriptions, and providing sufficient associated test data is very help in providing a streamlined, robust issue tracking system. A little extra consideration and time can go a long way.
+
+----
+
+Github Tutorials
+++++++++++++++++
+
+Github has many tutorials and exampels through `Github Learning Lab <https://lab.github.com/>`_.
+
+We also have a :doc:`<support/tutorials>` to test using the LDD Repositories.

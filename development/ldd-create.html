@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="LDD Update Process" href="ldd-update.html" />
-    <link rel="prev" title="Local Data Dictionary Overview" href="../overview.html" /> 
+    <link rel="prev" title="Getting Started" href="../getting-started.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,8 +87,8 @@
             
               <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../background.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview.html">Local Data Dictionary Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul class="current">
@@ -102,40 +102,33 @@
 <li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-mission-ldd">Proposing a New Mission LDD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#requesting-a-new-namespace-id">Requesting A New Namespace ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kick-off-team-and-repo-creation">Kick-off Team and Repo Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-ldd-google-groups-and-github-teams">Create LDD Google Groups and Github Teams</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#create-google-group">1. Create Google Group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-github-team">2. Create Github Team</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-new-ldd-repository">Creating New LDD Repository</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-new-ldd-repository-admin-only">Creating New LDD Repository (Admin Only)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#create-new-repo-from-ldd-template">1. Create new repo from ldd-template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#update-repo-settings">2. Update Repo Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#update-codeowners">3. Update CODEOWNERS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-new-issue-template-in-pds4-ldd-issue-repo">3. Create new issue template in PDS4 LDD Issue Repo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#notify-ldd-steward">4. Notify LDD Steward</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#notify-ldd-ccb-and-user-groups">Notify LDD CCB and User Groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#initial-repo-updates">Initial Repo Updates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#start-development">Start Development</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-test.html">LDD Regression Testing</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../teams/ldd-users.html">LDD Users Groups</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../support/tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/github-help.html">Github Help</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../support/update-requests.html">Request a New LDD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../support/update-requests.html#request-a-new-class-or-attribute">Request a New Class or Attribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../support/update-requests.html#report-a-bug">Report a Bug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#request-a-new-ldd">Request a New LDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#request-a-new-ldd-class-or-attribute">Request a New LDD Class or Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#report-a-bug">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#user-forum">User Forum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/contact.html">Contact Us</a></li>
 </ul>
 
@@ -204,9 +197,32 @@
             
   <div class="section" id="ldd-creation-process">
 <h1>LDD Creation Process<a class="headerlink" href="#ldd-creation-process" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Creation Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-discipline-ldd">Proposing a New Discipline LDD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#is-this-ldd-needed">1. Is this LDD needed?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-will-be-the-ldd-steward-s">2. Who will be the LDD Steward(s)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-will-be-on-the-ldd-change-control-board">3. Who will be on the LDD Change Control Board?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-mission-ldd">Proposing a New Mission LDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requesting-a-new-namespace-id">Requesting A New Namespace ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kick-off-team-and-repo-creation">Kick-off Team and Repo Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-new-ldd-repository-admin-only">Creating New LDD Repository (Admin Only)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-new-repo-from-ldd-template">1. Create new repo from ldd-template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-repo-settings">2. Update Repo Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-new-issue-template-in-pds4-ldd-issue-repo">3. Create new issue template in PDS4 LDD Issue Repo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notify-ldd-steward">4. Notify LDD Steward</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="proposing-a-new-discipline-ldd">
 <h2>Proposing a New Discipline LDD<a class="headerlink" href="#proposing-a-new-discipline-ldd" title="Permalink to this headline">¶</a></h2>
-<p>Creation of a new Discipline LDDs should be discussed and approved by the <a class="reference external" href="mailto:pdsddstewards&#37;&#52;&#48;jpl&#46;nasa&#46;gov">PDS Dictionary Stewards Group</a>. During this process the following must be determined:</p>
+<p>Creation of a new Discipline LDDs should be discussed and approved by the PDS LDD Change Control Board (TBD Email list or google group). During this process the following must be determined:</p>
 <div class="section" id="is-this-ldd-needed">
 <h3>1. Is this LDD needed?<a class="headerlink" href="#is-this-ldd-needed" title="Permalink to this headline">¶</a></h3>
 <p>Does a similar dictionary exist? If so, what is the rationale for creating a new one instead of adding to an existing one?</p>
@@ -239,64 +255,19 @@
 <li><p>namespace_id</p></li>
 <li><p>Brief description of the LDD. spell out namespace_id if it is an acronym.</p></li>
 <li><p>LDD Steward Github username</p></li>
-<li><p>CCB member Github Usernames</p></li>
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="create-ldd-google-groups-and-github-teams">
-<h2>Create LDD Google Groups and Github Teams<a class="headerlink" href="#create-ldd-google-groups-and-github-teams" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="create-google-group">
-<h3>1. Create Google Group<a class="headerlink" href="#create-google-group" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Responsible Party: LDD Steward</p>
-</div>
-<ol class="loweralpha simple">
-<li><p>Go to the <a class="reference external" href="https://groups.google.com/forum/#!creategroup">Google Groups site</a> to create the LDD User Group mailing list</p></li>
-<li><dl class="simple">
-<dt>Enter information according to the following guidelines:</dt><dd><ul class="simple">
-<li><p><strong>Group name:</strong> <code class="docutils literal notranslate"><span class="pre">pds-ldd-&lt;namespace_id&gt;-users</span></code></p></li>
-<li><p><strong>Group description:</strong> Enter an appropriate description</p></li>
-<li><dl class="simple">
-<dt>The remaining can be left the same:</dt><dd><ul>
-<li><p><strong>Group type:</strong> Email list</p></li>
-<li><p><strong>Group visibility:</strong> Anyone on the web</p></li>
-<li><p><strong>View Topics:</strong> All members of the group</p></li>
-<li><p><strong>Post:</strong> All members of the group</p></li>
-<li><p><strong>Join the Group:</strong> Anyone can ask</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">group</span></code></p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">people</span> <span class="pre">to</span> <span class="pre">join</span> <span class="pre">the</span> <span class="pre">group</span></code> or <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">members</span></code> (depending on the screen that appears)</p></li>
-<li><p>Invite appropriate members.</p></li>
-<li><p>Repeat steps a-e to create LDD CCB group. Set <strong>Group name:</strong> <code class="docutils literal notranslate"><span class="pre">pds-ldd-&lt;namespace_id&gt;-ccb</span></code></p></li>
-</ol>
-</div>
-<div class="section" id="create-github-team">
-<h3>2. Create Github Team<a class="headerlink" href="#create-github-team" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Responsible Party: Member of <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members">PDS Dictionary Stewards Admin Team</a></p>
-</div>
-<ol class="loweralpha simple">
-<li><p><a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/new-team">Create the LDD CCB Team</a> - <strong>Team name:</strong> <code class="docutils literal notranslate"><span class="pre">pds-ldd-&lt;namespace_id&gt;-ccb</span></code></p></li>
-<li><p>Add LDD CCB members based upon input from LDD Steward.</p></li>
-</ol>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="creating-new-ldd-repository">
-<h2>Creating New LDD Repository<a class="headerlink" href="#creating-new-ldd-repository" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-new-ldd-repository-admin-only">
+<h2>Creating New LDD Repository (Admin Only)<a class="headerlink" href="#creating-new-ldd-repository-admin-only" title="Permalink to this headline">¶</a></h2>
 <p>Once you have your <a class="reference external" href="#Requesting-A-New-Namespace-ID">Namespace ID</a>, you are ready to create the new Github repo for maintaining the LDD.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Responsible Party: Member of <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members">PDS Dictionary Stewards Admin Team</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can probably be scripted someday using GithubAPI or within a Github Action.</p>
 </div>
 <div class="section" id="create-new-repo-from-ldd-template">
 <h3>1. Create new repo from ldd-template<a class="headerlink" href="#create-new-repo-from-ldd-template" title="Permalink to this headline">¶</a></h3>
@@ -324,7 +295,6 @@
 <dt>Add appropriate teams with access to repo</dt><dd><ul class="simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Access</span></code></p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">teams</span> <span class="pre">or</span> <span class="pre">people</span></code></p></li>
-<li><p>Add <code class="docutils literal notranslate"><span class="pre">&#64;pds-data-dictionaries/pds-dictionary-steward-admins</span></code> with Admin access</p></li>
 <li><p>Add the LDD Steward with Admin access</p></li>
 <li><p>Add the LDD CCB Team with Write access</p></li>
 </ul>
@@ -347,47 +317,38 @@
 </li>
 </ol>
 </div>
-<div class="section" id="update-codeowners">
-<h3>3. Update CODEOWNERS<a class="headerlink" href="#update-codeowners" title="Permalink to this headline">¶</a></h3>
-<p>Updating this file will ensure the LDD-CCB is required for review on each pull request.</p>
+<div class="section" id="create-new-issue-template-in-pds4-ldd-issue-repo">
+<h3>3. Create new issue template in PDS4 LDD Issue Repo<a class="headerlink" href="#create-new-issue-template-in-pds4-ldd-issue-repo" title="Permalink to this headline">¶</a></h3>
 <ol class="loweralpha">
-<li><p>Go to <a class="reference external" href="https://github.com/pds-data-dictionaries">PDS Data Dictionaries org</a> and the appropriate new repo</p></li>
-<li><p>Open up the <cite>.github/CODEOWNERS</cite> file</p></li>
-<li><p>Uncomment this line and add the appropriate CCB Github Team name:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span>       <span class="nd">@pds</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">dictionaries</span><span class="o">/</span><span class="n">pds</span><span class="o">-</span><span class="n">ldd</span><span class="o">-&lt;</span><span class="n">namespace_id</span><span class="o">&gt;-</span><span class="n">ccb</span>
+<li><p><a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/labels">Create a new label</a> in the PDS4 LDD Issue Repo for the new repo (ldd-&lt;namespace_id&gt;)</p></li>
+<li><p>Clone the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/">PDS4 LDD Issue Repo</a></p></li>
+<li><p>Execute the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/master/bin/generate-issue-template.sh">generate-issue-template.sh bash script</a>. This will automatically generate an issue template from the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/master/templates/ldd-issue-template.md">LDD Issue Template</a> and push to the repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bin/generate-issue-template.sh cart Cartography thareUSGS
+New issue template created: /Users/jpadams/Documents/proj/pds/pdsen/workspace/pds4-ldd-issue-repo/bin/../.github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
+[master 950bedb] Add cart issue template
+ 1 file changed, 33 insertions(+)
+ create mode 100644 .github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.07 KiB | 1.07 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:pds-data-dictionaries/PDS4-LDD-Issue-Repo.git
+To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
+   b0abee5..950bedb  master -&gt; master
 </pre></div>
 </div>
 </li>
-<li><p>Commit your changes.</p></li>
+<li><p>You should now see a <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose">new issue template created</a></p></li>
 </ol>
 </div>
 <div class="section" id="notify-ldd-steward">
 <h3>4. Notify LDD Steward<a class="headerlink" href="#notify-ldd-steward" title="Permalink to this headline">¶</a></h3>
 <p>Notify the LDD Steward the new repo is ready.</p>
 </div>
-</div>
-<hr class="docutils" />
-<div class="section" id="notify-ldd-ccb-and-user-groups">
-<h2>Notify LDD CCB and User Groups<a class="headerlink" href="#notify-ldd-ccb-and-user-groups" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Responsible Party: LDD Steward</p>
-</div>
-<p>Send an email notification to the LDD CCB and User Groups notifying them of the new LDD repo and development effort.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="initial-repo-updates">
-<h2>Initial Repo Updates<a class="headerlink" href="#initial-repo-updates" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Responsible Party: LDD Steward</p>
-</div>
-<p>Update the <code class="docutils literal notranslate"><span class="pre">Contribute</span></code> section of your new repos <code class="docutils literal notranslate"><span class="pre">README.md</span></code> to reference the newly created mailing lists and Github teams.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="start-development">
-<h2>Start Development<a class="headerlink" href="#start-development" title="Permalink to this headline">¶</a></h2>
-<p>Ready to start development. See the <a class="reference external" href="ldd-update">LDD Update Process</a> for more information on submitting LDD updates.</p>
 </div>
 </div>
 
@@ -402,7 +363,7 @@
         <a href="ldd-update.html" class="btn btn-neutral float-right" title="LDD Update Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../overview.html" class="btn btn-neutral float-left" title="Local Data Dictionary Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../getting-started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

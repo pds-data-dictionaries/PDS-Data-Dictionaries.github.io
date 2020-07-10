@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Getting Started" href="background.html" /> 
+    <link rel="next" title="Getting Started" href="getting-started.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,29 +86,30 @@
             
               <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="background.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Local Data Dictionary Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-create.html">LDD Creation Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-update.html">LDD Update Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-test.html">LDD Regression Testing</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="teams/ldd-ccb.html">LDD Change Control Board</a></li>
-<li class="toctree-l1"><a class="reference internal" href="teams/ldd-users.html">LDD Users Groups</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="support/tutorials.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support/github-help.html">Github Help</a></li>
-<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html">Request a New LDD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html#request-a-new-class-or-attribute">Request a New Class or Attribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html#report-a-bug">Report a Bug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support/contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html#request-a-new-ldd">Request a New LDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html#request-a-new-ldd-class-or-attribute">Request a New LDD Class or Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html#report-a-bug">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html#user-forum">User Forum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support/contact.html">Contact Us</a></li>
 </ul>
 
@@ -182,12 +183,28 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="background.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="background.html#background">Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="background.html#additional-information">Additional Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#additional-pds4-documentation">Additional PDS4 Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Local Data Dictionary Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#ldd-generation-and-validation">LDD Generation and Validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#generating-schemas-and-schematrons">Generating schemas and schematrons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#ldd-validation">LDD Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#repo-directory-structure">Repo Directory Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#readme-md">README.md</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#build">build/</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#src">src/</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html#test">test/</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html#trying-it-out">Trying It Out</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -203,21 +220,13 @@
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#proposing-a-new-mission-ldd">Proposing a New Mission LDD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#requesting-a-new-namespace-id">Requesting A New Namespace ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#kick-off-team-and-repo-creation">Kick-off Team and Repo Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#create-ldd-google-groups-and-github-teams">Create LDD Google Groups and Github Teams</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#create-google-group">1. Create Google Group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#create-github-team">2. Create Github Team</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#creating-new-ldd-repository">Creating New LDD Repository</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#creating-new-ldd-repository-admin-only">Creating New LDD Repository (Admin Only)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#create-new-repo-from-ldd-template">1. Create new repo from ldd-template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#update-repo-settings">2. Update Repo Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#update-codeowners">3. Update CODEOWNERS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#create-new-issue-template-in-pds4-ldd-issue-repo">3. Create new issue template in PDS4 LDD Issue Repo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#notify-ldd-steward">4. Notify LDD Steward</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#notify-ldd-ccb-and-user-groups">Notify LDD CCB and User Groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#initial-repo-updates">Initial Repo Updates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#start-development">Start Development</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-update.html">LDD Update Process</a><ul>
@@ -239,6 +248,13 @@
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-build.html#ldd-github-actions">LDD Github Actions</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-test.html">LDD Regression Testing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-test.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-test.html#regression-test-data">Regression Test Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-test.html#regression-test-data-rules">Regression Test Data Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-test.html#test-data-directory-layout">Test Data Directory Layout</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -254,17 +270,17 @@
 <li class="toctree-l2"><a class="reference internal" href="teams/ldd-ccb.html#voting-and-approvals-of-change-requests">Voting and Approvals of Change Requests</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="teams/ldd-users.html">LDD Users Groups</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="teams/ldd-users.html#membership">Membership</a></li>
-</ul>
-</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="support/tutorials.html">Tutorials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="support/tutorials.html#ldd-update-and-build-tutorial">LDD Update and Build Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support/tutorials.html#ldd-update-and-build-tutorial">LDD Update and Build Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="support/tutorials.html#clone-the-ldd-template-repository">1. Clone the ldd-template repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="support/tutorials.html#create-a-branch-for-your-changes">2. Create a Branch for your Changes</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="support/github-help.html">Github Help</a><ul>
@@ -274,16 +290,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="support/github-help.html#github-best-practices">Github Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support/github-help.html#github-tutorials">Github Tutorials</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html">Request a New LDD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html#request-a-new-class-or-attribute">Request a New Class or Attribute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="support/update-requests.html#report-a-bug">Report a Bug</a></li>
-<li class="toctree-l1"><a class="reference internal" href="support/contribute.html">Contribute</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="support/contribute.html#code">Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="support/contribute.html#user-groups">User Groups</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html#request-a-new-ldd">Request a New LDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html#request-a-new-ldd-class-or-attribute">Request a New LDD Class or Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html#report-a-bug">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/contribute.html#user-forum">User Forum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support/contact.html">Contact Us</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="support/contact.html#need-help-with-an-ldd">Need Help with an LDD?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="support/contact.html#need-additonal-help">Need Additonal Help?</a></li>
@@ -301,7 +315,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="background.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="getting-started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
