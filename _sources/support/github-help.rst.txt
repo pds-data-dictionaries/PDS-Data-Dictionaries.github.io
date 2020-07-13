@@ -28,6 +28,9 @@ Using Github Desktop (TBD hrs)
 
 For most people using Github.com, you will want to use `Github Desktop <http://desktop.github.com/>`_, which is a desktop application to locally update your Github repositories. Once you download, install, and open the application, the initial prompt will present with an option to "Create a Tutorial Repository", which will walk you through a tutorial to get started with Github Desktop. See this `Github Blog <https://github.blog/2019-10-02-get-started-easier-with-github-desktop-2-2/>`_ post for more information on Github Desktop and this intro tutorial.
 
+.. note::
+    By default, when you download the Github Desktop application, it does not install into your ``Applications`` or ``Program Files`` directories. It is recommended that your move the application appropriately so you do not lose track of where it is installed.
+
 If you wish to access Github via command-line, there are numerous tutorial online for doing so.
 
 ----
@@ -49,3 +52,14 @@ Github Tutorials
 Github has many tutorials and exampels through `Github Learning Lab <https://lab.github.com/>`_.
 
 We also have a :doc:`<support/tutorials>` to test using the LDD Repositories.
+
+----
+
+Github Tips and Tricks
+++++++++++++++++++++++
+
+* **Push and Pull often** - Pushing and pulling often with your repositories ensures you are regularly up-to-date with the Github repo. Leaving files sitting around partially modified, and/or pulling once a month on your Github repo is how issues happen. You get out of sync with updates as they happen, which can have lots of negative consequences. If in doubt, pull then push.
+
+* **Commit messages are worth a few minutes** - Good commit messages really help debug decision making and solutions in the future. They can also help self-document the updates. As much as possible, take some time to make good commit messages. See `PDS Commit Message Best Practices <https://nasa-pds.github.io/developer/pds_git_and_github_guide.html#commit-message-best-practices>`_ for more details.
+
+* TBD

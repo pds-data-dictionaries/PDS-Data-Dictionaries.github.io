@@ -9,8 +9,8 @@ LDD Update Process
 
 The following are the necessary steps to propose and execute an update to a PDS4 Local Data Dictionary.
 
-..  image:: /images/LDD-mgmt-process.png
-    :target: ../images/LDD-mgmt-process.png
+..  image:: /_static/images/LDD-mgmt-process.png
+    :target: ../_static/images/LDD-mgmt-process.png
 
 1. Change Request Proposed
 +++++++++++++++++++++++++++
