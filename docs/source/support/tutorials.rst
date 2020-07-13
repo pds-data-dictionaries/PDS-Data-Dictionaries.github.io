@@ -11,12 +11,14 @@ LDD Update and Build Tutorial
 ++++++++++++++++++++++++++++++
 
 **Objective:**
+
     * create a test LDD Repository from the LDD Template
     * create a branch and pull request with the link to an issue
     * merge a pull request
     * see :doc:`Github Actions and LDD Continuous Integration <getting-started#ldd-generation-and-validation>` in action
 
 **Pre-requisites:**
+
 * :doc:`Github Recommended Training </support/github-help>`
 * `Github Desktop <https://desktop.github.com/>`_ has been installed
 * Github Desktop has been opened on your computer, and you have logged into your Github.com account

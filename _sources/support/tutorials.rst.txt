@@ -11,12 +11,14 @@ LDD Update and Build Tutorial
 ++++++++++++++++++++++++++++++
 
 **Objective:**
+
     * create a test LDD Repository from the LDD Template
     * create a branch and pull request with the link to an issue
     * merge a pull request
     * see :doc:`Github Actions and LDD Continuous Integration <getting-started#ldd-generation-and-validation>` in action
 
 **Pre-requisites:**
+
 * :doc:`Github Recommended Training </support/github-help>`
 * `Github Desktop <https://desktop.github.com/>`_ has been installed
 * Github Desktop has been opened on your computer, and you have logged into your Github.com account
@@ -48,7 +50,7 @@ d. Open Github Desktop. In the right column, either browse to or search for your
 ..  image:: /_static/images/screenshot_clone_to_desktop.png
     :target: ../_static/images/screenshot_clone_to_desktop.png
 
-e. Choose the path your would like to save the repository to on your file system, and click ``Clone``.
+e. Choose the path you would like to save the repository to on your file system, and click ``Clone``.
 
 ..  image:: /_static/images/screenshot_repo_path.png
     :target: ../_static/images/screenshot_repo_path.png
@@ -122,7 +124,7 @@ f. The changes have been committed to your local branch, but have NOT been pushe
 .. image:: /_static/images/screenshot_publish_branch.png
     :target: ../_static/images/screenshot_publish_branch.png
 
-g. You should now be able to go to Github.com and see your branch there (e.g. https://github.com/jordanpadams/my-ldd-test/tree/my_first_branch).
+g. You should now be able to go to Github.com and see you're branch there (e.g. https://github.com/jordanpadams/my-ldd-test/tree/my_first_branch).
 
 .. image:: /_static/images/screenshot_published_branch.png
     :target: ../_static/images/screenshot_published_branch.png
@@ -201,7 +203,7 @@ b. Similar to writing good commit messages, pull requests are important to ensur
 
 c. If this PR were created under a repo within the PDS Data Dictionaries organization, the LDD CCB would be automatically assigned as a reviewer on the PR. See :doc:`/development/ldd-update` for more details on the review process.
 
-----
+
 ----
 
 
