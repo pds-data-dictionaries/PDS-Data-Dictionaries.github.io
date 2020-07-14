@@ -246,7 +246,7 @@
 <h3>1. Clone the ldd-template repository<a class="headerlink" href="#clone-the-ldd-template-repository" title="Permalink to this headline">¶</a></h3>
 <p>Let’s first, clone the repo from Github.com to our local computer.</p>
 <ol class="loweralpha simple">
-<li><p>Go to the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template">ldd-template repo</a></p></li>
+<li><p>Go to the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template">ldd-template</a> repo</p></li>
 <li><p>Click the <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">this</span> <span class="pre">template</span></code> button to create a new repo from this template</p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_use_this_template.png"><img alt="../_images/screenshot_use_this_template.png" src="../_images/screenshot_use_this_template.png" /></a>
@@ -339,7 +339,7 @@
 <h3>4. Continuous Integration with Github Actions<a class="headerlink" href="#continuous-integration-with-github-actions" title="Permalink to this headline">¶</a></h3>
 <p>What you may not have noticed was once you pushed to that branch, a Github Action was executed to auto-generate your LDD.</p>
 <ol class="loweralpha simple">
-<li><p>First, if you go to your branch, e.g. <a class="reference external" href="https://github.com/jordanpadams/my-ldd-test/tree/my_first_branch">https://github.com/jordanpadams/my-ldd-test/tree/my_first_branch</a>, and then click on the <code class="docutils literal notranslate"><span class="pre">build/development</span></code> directory. You should see something like the following where the schema, schematron, and other files normally output by LDDTool are now mysteriously in this directory:</p></li>
+<li><p>First, if you go to your branch, e.g. <a class="reference external" href="https://github.com/jordanpadams/my-ldd-test/tree/my_first_branch">https://github.com/jordanpadams/my-ldd-test/tree/my_first_branch</a>, and then click on the <code class="docutils literal notranslate"><span class="pre">build/development/GITHUB_SHA</span></code> directory. You should see something like the following where the schema, schematron, and other files normally output by LDDTool are now mysteriously in this directory:</p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_autogen_ldd.png"><img alt="../_images/screenshot_autogen_ldd.png" src="../_images/screenshot_autogen_ldd.png" /></a>
 <ol class="loweralpha simple" start="2">

@@ -33,7 +33,7 @@ LDD Update and Build Tutorial
 
 Let's first, clone the repo from Github.com to our local computer.
 
-a. Go to the `ldd-template repo <https://github.com/pds-data-dictionaries/ldd-template>`_
+a. Go to the `ldd-template <https://github.com/pds-data-dictionaries/ldd-template>`_ repo
 
 b. Click the ``Use this template`` button to create a new repo from this template
 
@@ -141,7 +141,7 @@ h. You can also go to the `dummy issue <https://github.com/pds-data-dictionaries
 
 What you may not have noticed was once you pushed to that branch, a Github Action was executed to auto-generate your LDD.
 
-a. First, if you go to your branch, e.g. https://github.com/jordanpadams/my-ldd-test/tree/my_first_branch, and then click on the ``build/development`` directory. You should see something like the following where the schema, schematron, and other files normally output by LDDTool are now mysteriously in this directory:
+a. First, if you go to your branch, e.g. https://github.com/jordanpadams/my-ldd-test/tree/my_first_branch, and then click on the ``build/development/GITHUB_SHA`` directory. You should see something like the following where the schema, schematron, and other files normally output by LDDTool are now mysteriously in this directory:
 
 .. image:: /_static/images/screenshot_autogen_ldd.png
     :target: ../_static/images/screenshot_autogen_ldd.png
