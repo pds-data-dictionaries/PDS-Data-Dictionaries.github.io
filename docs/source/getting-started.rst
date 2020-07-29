@@ -139,4 +139,27 @@ Trying It Out
 
 Before trying it out on your own repository, I recommend reviewing the `LDD Update Process </development/ldd-update>`_ and completing the `LDD Update and Build Tutorial </support/tutorials>`_ 
 
+----
+
+Handling LDD dependencies
++++++++++++++++++++++++++
+
+If your Discipline LDD has a dependency on another Discipline LDD, you will need to complete the following changes to your repository after it has been created:
+
+1. Create a new ``src/dependencies`` directory::
+
+        mkdir -p src/dependencies
+
+2. Create a submodule to the LDD is in the dependent repo::
+
+        cd src/dependencies
+        git submodule add https://github.com/pds-data-dictionaries/ldd-geom
+
+3. You should now see a ``src/dependencies/ldd_geom`` directory::
+
+        $ ls
+        README.md
+        ldd-geom/
+
+4. Commit and push your changes to a branch and merge.
 
