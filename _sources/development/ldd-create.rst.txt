@@ -87,13 +87,15 @@ We need to setup the teams and ``master`` branch protections.
 
 a. Go to ``Settings``
 
-b. Add appropriate teams with access to repo
+b. Disable issues being created on this repo (they will be created in the PDS4 LDD Issue Repo).
+
+c. Add appropriate teams with access to repo
     * Go to ``Manage Access``
     * Click on ``Invite teams or people``
     * Add the LDD Steward with Admin access
     * Add the LDD CCB Team with Write access
 
-b. Set branches protections
+d. Set branches protections
     * Go to ``Branches``
     * Under **Branch protection rules**, click ``Add rule``
     * Enter **Branch name pattern:** ``master``
@@ -137,4 +139,31 @@ d. You should now see a `new issue template created <https://github.com/pds-data
 Notify the LDD Steward the new repo is ready.
 
 
+----
 
+Retrofit Existing LDD Repository (Admin / Stewards Only)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. Clone the ldd-template repo and the LDD repo to be retrofitted. For this example, we will be retrofitting the ``ldd-img`` repo::
+
+    git clone git@github.com:pds-data-dictionaries/ldd-template.git
+    git clone git@github.com:pds-data-dictionaries/ldd-img.git
+
+2. From the ``ldd-img`` repo, rsync the various files from the ``ldd-template`` repo::
+
+    cd ldd-img
+    rsync -av ../ldd-template/.gitignore ../ldd-template/.github ../ldd-template/build ../ldd-template/src ../ldd-template/test ./
+
+3. Rename or remove test files and example IngestLDD so they don't get picked up in the regression tests (files can't end in .xml)::
+
+    mv test/test1_FAIL.xml test/test1_FAIL.xml_example
+    mv test/test1_VALID.xml test/test1_VALID.xml_example
+    rm src/PDS4_EXAMPLE_IngestLDD.xml
+
+4. Re-arrange directories to match that of the ``ldd-template`` repo. Specifically note the ``build/development`` and ``build/release`` directories.
+
+5. Create a branch and pull request, and verify the Github Action executes successfully. e.g. https://github.com/pds-data-dictionaries/ldd-img/actions/
+
+6. Remove local repo github issues, update permissions on the repository, and add branch protections per :doc:`Update Repo Settings above <ldd-create#update-repo-settings>`
+
+7. Update README as appropriate to direct people to Contribute and Get Support. See the `ldd-template README <https://github.com/pds-data-dictionaries/ldd-template/blob/master/README.md>`_ for more details.

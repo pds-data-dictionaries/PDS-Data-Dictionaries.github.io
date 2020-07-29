@@ -107,6 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#trying-it-out">Trying It Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#handling-ldd-dependencies">Handling LDD dependencies</a></li>
 </ul>
 </li>
 </ul>
@@ -221,6 +222,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#trying-it-out">Trying It Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#handling-ldd-dependencies">Handling LDD dependencies</a></li>
 </ul>
 </li>
 </ul>
@@ -272,6 +274,7 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#trying-it-out">Trying It Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#handling-ldd-dependencies">Handling LDD dependencies</a></li>
 </ul>
 </li>
 </ul>
@@ -352,6 +355,32 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 <div class="section" id="trying-it-out">
 <h2>Trying It Out<a class="headerlink" href="#trying-it-out" title="Permalink to this headline">¶</a></h2>
 <p>Before trying it out on your own repository, I recommend reviewing the <a class="reference external" href="/development/ldd-update">LDD Update Process</a> and completing the <a class="reference external" href="/support/tutorials">LDD Update and Build Tutorial</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="handling-ldd-dependencies">
+<h2>Handling LDD dependencies<a class="headerlink" href="#handling-ldd-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>If your Discipline LDD has a dependency on another Discipline LDD, you will need to complete the following changes to your repository after it has been created:</p>
+<ol class="arabic">
+<li><p>Create a new <code class="docutils literal notranslate"><span class="pre">src/dependencies</span></code> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">src</span><span class="o">/</span><span class="n">dependencies</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a submodule to the LDD is in the dependent repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">src</span><span class="o">/</span><span class="n">dependencies</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">add</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pds</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">dictionaries</span><span class="o">/</span><span class="n">ldd</span><span class="o">-</span><span class="n">geom</span>
+</pre></div>
+</div>
+</li>
+<li><p>You should now see a <code class="docutils literal notranslate"><span class="pre">src/dependencies/ldd_geom</span></code> directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+README.md
+ldd-geom/
+</pre></div>
+</div>
+</li>
+<li><p>Commit and push your changes to a branch and merge.</p></li>
+</ol>
 </div>
 </div>
 

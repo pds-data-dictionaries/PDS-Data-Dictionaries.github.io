@@ -109,6 +109,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#notify-ldd-steward">4. Notify LDD Steward</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#retrofit-existing-ldd-repository-admin-stewards-only">Retrofit Existing LDD Repository (Admin / Stewards Only)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
@@ -216,6 +217,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#notify-ldd-steward">4. Notify LDD Steward</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#retrofit-existing-ldd-repository-admin-stewards-only">Retrofit Existing LDD Repository (Admin / Stewards Only)</a></li>
 </ul>
 </li>
 </ul>
@@ -291,6 +293,7 @@
 <p>We need to setup the teams and <code class="docutils literal notranslate"><span class="pre">master</span></code> branch protections.</p>
 <ol class="loweralpha simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Settings</span></code></p></li>
+<li><p>Disable issues being created on this repo (they will be created in the PDS4 LDD Issue Repo).</p></li>
 <li><dl class="simple">
 <dt>Add appropriate teams with access to repo</dt><dd><ul class="simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Access</span></code></p></li>
@@ -301,8 +304,6 @@
 </dd>
 </dl>
 </li>
-</ol>
-<ol class="loweralpha simple" start="2">
 <li><dl class="simple">
 <dt>Set branches protections</dt><dd><ul class="simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Branches</span></code></p></li>
@@ -349,6 +350,35 @@ To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
 <h3>4. Notify LDD Steward<a class="headerlink" href="#notify-ldd-steward" title="Permalink to this headline">¶</a></h3>
 <p>Notify the LDD Steward the new repo is ready.</p>
 </div>
+</div>
+<hr class="docutils" />
+<div class="section" id="retrofit-existing-ldd-repository-admin-stewards-only">
+<h2>Retrofit Existing LDD Repository (Admin / Stewards Only)<a class="headerlink" href="#retrofit-existing-ldd-repository-admin-stewards-only" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Clone the ldd-template repo and the LDD repo to be retrofitted. For this example, we will be retrofitting the <code class="docutils literal notranslate"><span class="pre">ldd-img</span></code> repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">pds</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">dictionaries</span><span class="o">/</span><span class="n">ldd</span><span class="o">-</span><span class="n">template</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">pds</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">dictionaries</span><span class="o">/</span><span class="n">ldd</span><span class="o">-</span><span class="n">img</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</li>
+<li><p>From the <code class="docutils literal notranslate"><span class="pre">ldd-img</span></code> repo, rsync the various files from the <code class="docutils literal notranslate"><span class="pre">ldd-template</span></code> repo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">ldd</span><span class="o">-</span><span class="n">img</span>
+<span class="n">rsync</span> <span class="o">-</span><span class="n">av</span> <span class="o">../</span><span class="n">ldd</span><span class="o">-</span><span class="n">template</span><span class="o">/.</span><span class="n">gitignore</span> <span class="o">../</span><span class="n">ldd</span><span class="o">-</span><span class="n">template</span><span class="o">/.</span><span class="n">github</span> <span class="o">../</span><span class="n">ldd</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">build</span> <span class="o">../</span><span class="n">ldd</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">src</span> <span class="o">../</span><span class="n">ldd</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">test</span> <span class="o">./</span>
+</pre></div>
+</div>
+</li>
+<li><p>Rename or remove test files and example IngestLDD so they don’t get picked up in the regression tests (files can’t end in .xml):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">test</span><span class="o">/</span><span class="n">test1_FAIL</span><span class="o">.</span><span class="n">xml</span> <span class="n">test</span><span class="o">/</span><span class="n">test1_FAIL</span><span class="o">.</span><span class="n">xml_example</span>
+<span class="n">mv</span> <span class="n">test</span><span class="o">/</span><span class="n">test1_VALID</span><span class="o">.</span><span class="n">xml</span> <span class="n">test</span><span class="o">/</span><span class="n">test1_VALID</span><span class="o">.</span><span class="n">xml_example</span>
+<span class="n">rm</span> <span class="n">src</span><span class="o">/</span><span class="n">PDS4_EXAMPLE_IngestLDD</span><span class="o">.</span><span class="n">xml</span>
+</pre></div>
+</div>
+</li>
+<li><p>Re-arrange directories to match that of the <code class="docutils literal notranslate"><span class="pre">ldd-template</span></code> repo. Specifically note the <code class="docutils literal notranslate"><span class="pre">build/development</span></code> and <code class="docutils literal notranslate"><span class="pre">build/release</span></code> directories.</p></li>
+<li><p>Create a branch and pull request, and verify the Github Action executes successfully. e.g. <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-img/actions/">https://github.com/pds-data-dictionaries/ldd-img/actions/</a></p></li>
+<li><p>Remove local repo github issues, update permissions on the repository, and add branch protections per <span class="xref std std-doc">Update Repo Settings above</span></p></li>
+<li><p>Update README as appropriate to direct people to Contribute and Get Support. See the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template/blob/master/README.md">ldd-template README</a> for more details.</p></li>
+</ol>
 </div>
 </div>
 
