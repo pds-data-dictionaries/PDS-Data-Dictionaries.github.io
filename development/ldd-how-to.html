@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PDS DD Stewards &mdash; PDS Data Dictionaries  documentation</title>
+  <title>LDD How-To Guides &mdash; PDS Data Dictionaries  documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="LDD Change Control Board" href="ldd-ccb.html" />
-    <link rel="prev" title="LDD How-To Guides" href="../development/ldd-how-to.html" /> 
+    <link rel="next" title="PDS DD Stewards" href="../teams/pds-dd-stewards.html" />
+    <link rel="prev" title="LDD Regression Testing" href="ldd-test.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,20 +91,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../development/ldd-create.html">LDD Creation Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/ldd-update.html">LDD Update Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/ldd-build.html">LDD Build Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/ldd-test.html">LDD Regression Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/ldd-how-to.html">LDD How-To Guides</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Teams</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">PDS DD Stewards</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#pds-dd-steward-admins">PDS DD Steward Admins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-create.html">LDD Creation Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-test.html">LDD Regression Testing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD How-To Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-trigger-an-ldd-build">How to trigger an LDD Build?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ldd-ccb.html">LDD Change Control Board</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teams</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Support</span></p>
 <ul>
@@ -162,13 +163,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>PDS DD Stewards</li>
+      <li>LDD How-To Guides</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/teams/pds-dd-stewards.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/development/ldd-how-to.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -181,15 +182,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pds-dd-stewards">
-<h1>PDS DD Stewards<a class="headerlink" href="#pds-dd-stewards" title="Permalink to this headline">¶</a></h1>
-<p>PDS Data Dictionary Stewards are a group of PDS Discipline Node and IPDA personnel responsible for the maintenance of PDS4 Discipline Local Data Dictionaries.</p>
-<p>Github Team: <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-stewards">https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-stewards</a>
-Email List: <a class="reference external" href="mailto:pdsddstewards&#37;&#52;&#48;jpl&#46;nasa&#46;gov">pdsddstewards<span>&#64;</span>jpl<span>&#46;</span>nasa<span>&#46;</span>gov</a></p>
-<div class="section" id="pds-dd-steward-admins">
-<h2>PDS DD Steward Admins<a class="headerlink" href="#pds-dd-steward-admins" title="Permalink to this headline">¶</a></h2>
-<p>Sub-team of the PDS Data Dictionary Stewards responsible for managing the PDS Data Dictionaries Github Org.</p>
-<p>Github Team: <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins">https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins</a></p>
+  <div class="section" id="ldd-how-to-guides">
+<h1>LDD How-To Guides<a class="headerlink" href="#ldd-how-to-guides" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD How-To Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-trigger-an-ldd-build">How to trigger an LDD Build?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="how-to-trigger-an-ldd-build">
+<h2>How to trigger an LDD Build?<a class="headerlink" href="#how-to-trigger-an-ldd-build" title="Permalink to this headline">¶</a></h2>
+<p>For this example we will be using the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-img">IMG Discipline LDD</a> repo. For your repo, just replace the <cite>ldd-img</cite> or references to <cite>IMG</cite> with your appropriate discipline dictionary.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches">Create a new branch for your updates</a> (if you have not already created one).</p></li>
+<li><p>Update your IngestLDD file (e.g. PDS4_IMG_IngestLDD.xml).</p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/committing-and-reviewing-changes-to-your-project">Commit your changes</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/pushing-changes-to-github">Push your branch to Github</a></p></li>
+<li><p>Watch the magic happen on your Github Actions page: <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-img/actions">https://github.com/pds-data-dictionaries/ldd-img/actions</a></p></li>
+<li><p>After the action has completed successfully (hopefully), update your local branch (<a class="reference external" href="https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/syncing-your-branch#:~:text=onto%20another%20branch.%22-,Pulling%20to%20your%20local%20branch%20from%20the%20remote,branch%20you%20want%20to%20update.&amp;text=To%20pull%20any%20commits%20from,or%20Pull%20origin%20with%20rebase.">Git Pull</a>) to get the generated dictionaries from Github.com</p></li>
+</ol>
+</div>
+<div class="section" id="tbd">
+<h2>TBD<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h2>
+<p>Feel free to add some of your own or create a ticket in the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues">PDS4 LDD Issue Repo</a> so we can start to build up this documentation.</p>
 </div>
 </div>
 
@@ -201,10 +219,10 @@ Email List: <a class="reference external" href="mailto:pdsddstewards&#37;&#52;&#
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ldd-ccb.html" class="btn btn-neutral float-right" title="LDD Change Control Board" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../teams/pds-dd-stewards.html" class="btn btn-neutral float-right" title="PDS DD Stewards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../development/ldd-how-to.html" class="btn btn-neutral float-left" title="LDD How-To Guides" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ldd-test.html" class="btn btn-neutral float-left" title="LDD Regression Testing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

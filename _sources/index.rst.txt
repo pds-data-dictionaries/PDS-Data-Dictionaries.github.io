@@ -27,6 +27,7 @@ This website is intended to provide a how-to for to developing, managing, and us
     /development/ldd-update
     /development/ldd-build
     /development/ldd-test
+    /development/ldd-how-to
 
 ..  toctree::
     :maxdepth: 3
