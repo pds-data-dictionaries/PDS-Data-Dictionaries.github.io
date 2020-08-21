@@ -17,7 +17,7 @@ For this example we will be using the `IMG Discipline LDD <https://github.com/pd
 3. `Commit your changes <https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/committing-and-reviewing-changes-to-your-project>`_.
 4. `Push your branch to Github <https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/pushing-changes-to-github>`_
 5. Watch the magic happen on your Github Actions page: https://github.com/pds-data-dictionaries/ldd-img/actions
-6. After the action has completed successfully (hopefully), update your local branch (`Git Pull <https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/syncing-your-branch#:~:text=onto%20another%20branch.%22-,Pulling%20to%20your%20local%20branch%20from%20the%20remote,branch%20you%20want%20to%20update.&text=To%20pull%20any%20commits%20from,or%20Pull%20origin%20with%20rebase.>`_) to get the generated dictionaries from Github.com
+6. After the action has completed successfully (hopefully), `update your local branch <https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/syncing-your-branch>`_ to get the generated dictionaries from Github.com
 
 
 TBD
