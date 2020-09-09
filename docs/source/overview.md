@@ -1,7 +1,6 @@
-Local Data Dictionary Overview
-==============================
+# Local Data Dictionary Overview
 
-.. warning:: This page was originally in Markdown, needs to be updated, and eventually generating dynamically. Proceed with caution. Contact `PDS Operator <mailto:pds-operator@jpl.nasa.gov>` with any questions**
+Contact [PDS Operator](mailto:pds-operator@jpl.nasa.gov) or file a ticket for help at https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues 
 
 
 | Dictionary                  | GitHub URL                                                 | Status          | Documentation URL                                                                    | Documentation Status | Documentation Format   | LDD Steward Node | LDD Steward POC     |
