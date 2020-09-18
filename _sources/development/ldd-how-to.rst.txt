@@ -134,6 +134,26 @@ To use the ``sch:value-of`` in your ``DD_Rule`` descriptions, you simply need to
 
 Note the ``&lt;``` and ``&gt;`` used to replace the ``<`` and ``>``
 
+
+Mission LDD Namespace Formation Guidelines
+++++++++++++++++++++++++++++++++++++++++++++
+
+.. note::
+    The determination of LDD namespaces is ultimately up to the discussion amongst the Mission Data Archive Working Group (DAWG). This is simply a guide to enable consistency wherever possible.
+
+For **mission namespaces**, use the *mission acronym or shortened name*. For example:
+
+* bc for BepiColombo
+* m2020 for Mars2020
+* insight for InSight
+* orex for OSIRIS-REx
+
+for **instrument-specific namespaces**, use the formation rule *mission_host_instrument*. For example:
+
+* bc_mtm_mcam for the MCAM instrument on the Mercury Transfer Module (MTM) instrument host of the BepiColombo mission
+
+
+
 TBD
 +++
 Feel free to add some of your own or create a ticket in the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues>`_ so we can start to build up this documentation.
