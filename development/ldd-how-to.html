@@ -102,10 +102,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#generate-a-mission-ldd">Generate a Mission LDD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generate-a-ldd-with-a-specific-pds4-version">Generate a LDD with a specific PDS4 Version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#specify-enumerated-values-for-attributes-within-inherited-classes">Specify Enumerated Values for Attributes within Inherited Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#common-schematron-dd-rule-rules">Common Schematron (DD_Rule) Rules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#schematron-dd-rule-help">Schematron (DD_Rule) Help</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#specify-enumerated-values-for-inherited-attributes">Specify Enumerated Values for Inherited Attributes</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#using-schematron-value-of-functionality">Using Schematron <code class="docutils literal notranslate"><span class="pre">value-of</span></code> functionality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -200,10 +201,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#generate-a-mission-ldd">Generate a Mission LDD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generate-a-ldd-with-a-specific-pds4-version">Generate a LDD with a specific PDS4 Version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#specify-enumerated-values-for-attributes-within-inherited-classes">Specify Enumerated Values for Attributes within Inherited Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#common-schematron-dd-rule-rules">Common Schematron (DD_Rule) Rules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#schematron-dd-rule-help">Schematron (DD_Rule) Help</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#specify-enumerated-values-for-inherited-attributes">Specify Enumerated Values for Inherited Attributes</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#using-schematron-value-of-functionality">Using Schematron <code class="docutils literal notranslate"><span class="pre">value-of</span></code> functionality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -288,8 +290,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="common-schematron-dd-rule-rules">
-<h2>Common Schematron (DD_Rule) Rules<a class="headerlink" href="#common-schematron-dd-rule-rules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="schematron-dd-rule-help">
+<h2>Schematron (DD_Rule) Help<a class="headerlink" href="#schematron-dd-rule-help" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="specify-enumerated-values-for-inherited-attributes">
 <h3>Specify Enumerated Values for Inherited Attributes<a class="headerlink" href="#specify-enumerated-values-for-inherited-attributes" title="Permalink to this headline">¶</a></h3>
 <p>Attributes from the PDS common dictionary (or discipline LDDs) are often inherited and used within Discipline and Mission LDDs (e.g. <code class="docutils literal notranslate"><span class="pre">pds:name</span></code>, etc.). When inherited within the specific Discipline or Mission, you may want to provide a specific set of values applicable for that particular context. In this case you will need to specify a DD_Rule to provide the enumerated value list. For example::</p>
@@ -307,6 +309,24 @@
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="using-schematron-value-of-functionality">
+<h2>Using Schematron <code class="docutils literal notranslate"><span class="pre">value-of</span></code> functionality<a class="headerlink" href="#using-schematron-value-of-functionality" title="Permalink to this headline">¶</a></h2>
+<p>To use the <code class="docutils literal notranslate"><span class="pre">sch:value-of</span></code> in your <code class="docutils literal notranslate"><span class="pre">DD_Rule</span></code> descriptions, you simply need to escape the XML entities. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">sch</span><span class="p">:</span><span class="n">rule</span> <span class="n">context</span><span class="o">=</span><span class="s2">&quot;msn:mission_phase_name&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">sch</span><span class="p">:</span><span class="n">let</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;num_colons&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;string-length(.) - string-length(translate(., &#39;:&#39;, &#39;&#39;))&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">sch</span><span class="p">:</span><span class="n">let</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;required_colons&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;4&quot;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">sch</span><span class="p">:</span><span class="k">assert</span> <span class="n">test</span><span class="o">=</span><span class="s2">&quot;$num_colons eq $required_colons&quot;</span><span class="o">&gt;</span>
+        <span class="n">In</span> <span class="n">Product_Collection</span><span class="p">,</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">colons</span> <span class="n">found</span><span class="p">:</span>
+        <span class="p">(</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">sch</span><span class="p">:</span><span class="n">value</span><span class="o">-</span><span class="n">of</span> <span class="n">select</span><span class="o">=</span><span class="s2">&quot;$num_colons&quot;</span><span class="o">/&amp;</span><span class="n">gt</span><span class="p">;)</span>
+        <span class="ow">is</span> <span class="n">inconsistent</span> <span class="k">with</span> <span class="n">the</span> <span class="n">number</span> <span class="n">expected</span><span class="p">:</span>
+        <span class="p">(</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">sch</span><span class="p">:</span><span class="n">value</span><span class="o">-</span><span class="n">of</span> <span class="n">select</span><span class="o">=</span><span class="s2">&quot;$required_colons&quot;</span><span class="o">/&amp;</span><span class="n">gt</span><span class="p">;)</span><span class="o">.</span>
+    <span class="o">&lt;/</span><span class="n">sch</span><span class="p">:</span><span class="k">assert</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">sch</span><span class="p">:</span><span class="n">rule</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">sch</span><span class="p">:</span><span class="n">pattern</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Note the <code class="docutils literal notranslate"><span class="pre">&amp;lt;`</span></code> and <code class="docutils literal notranslate"><span class="pre">&amp;gt;</span></code> used to replace the <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p>
 </div>
 <div class="section" id="tbd">
 <h2>TBD<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h2>

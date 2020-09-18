@@ -94,8 +94,8 @@ Classes from the PDS common dictionary (or discipline LDDs) are often inherited 
     </DD_Associate_External_Class>
 
 
-Common Schematron (DD_Rule) Rules
-+++++++++++++++++++++++++++++++++
+Schematron (DD_Rule) Help
++++++++++++++++++++++++++
 
 Specify Enumerated Values for Inherited Attributes 
 --------------------------------------------------
@@ -114,6 +114,25 @@ Attributes from the PDS common dictionary (or discipline LDDs) are often inherit
         </DD_Rule_Statement>
     </DD_Rule>
 
+
+Using Schematron ``value-of`` functionality
+++++++++++++++++++++++++++++++++++++++++++++
+
+To use the ``sch:value-of`` in your ``DD_Rule`` descriptions, you simply need to escape the XML entities. For example::
+
+    <sch:rule context="msn:mission_phase_name">
+        <sch:let name="num_colons" value="string-length(.) - string-length(translate(., ':', ''))"/>
+        <sch:let name="required_colons" value="4"/>
+        <sch:assert test="$num_colons eq $required_colons">
+            In Product_Collection, the number of colons found:
+            (&lt;sch:value-of select="$num_colons"/&gt;)
+            is inconsistent with the number expected:
+            (&lt;sch:value-of select="$required_colons"/&gt;).
+        </sch:assert>
+        </sch:rule>
+    </sch:pattern>
+
+Note the ``&lt;``` and ``&gt;`` used to replace the ``<`` and ``>``
 
 TBD
 +++
