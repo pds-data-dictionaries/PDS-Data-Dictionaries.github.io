@@ -4,6 +4,26 @@ The NASA Planetary Data System PDS4 Data Dictionaries Repo is used for managing 
 
 ---
 
+# Documentation
+
+The documentation can be found in the `docs/source` directory. Feel free to update and provide pull requests as you see fit.
+
+---
+
+# Build
+
+Install Python dependencies (preferable within a Python virtual environment)
+```
+pip install -r requirements
+```
+
+Make the docs
+```
+make clean html
+```
+
+---
+
 # Support
 
 Found a bug? Have a question? Or in need of any other 
