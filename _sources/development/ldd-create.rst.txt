@@ -40,14 +40,14 @@ Requesting A New Namespace ID
 
 Upon receiving approval to begin development on your new LDD, a namespace ID must be reserved.
 
-Contact `Steve Hughes <mailto:John.S.Hughes@jpl.nasa.gov>`_ to get your namespace added to the `PDS4 Namespace Registry <https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf>`_.
+Create a new "PDS Namespace Request" issue within the `PDS4 Information Model repo <https://github.com/NASA-PDS/pds4-information-model/issues/new/choose>`_ to get your namespace added to the `PDS4 Namespace Registry <https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf>`_.
 
 ----
 
 Kick-off Team and Repo Creation
 +++++++++++++++++++++++++++++++
 
-Contact the `PDS Dictionary Stewards Admin Team <https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members>`_ to assist you with creating the appropriate Github Teams and LDD Repository as laid out below. These actions all require Github Admin access. Please provide them with the following information:
+Contact the `PDS Team <https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members>`_ to assist you with creating the appropriate Github Teams and LDD Repository as laid out below. These actions all require Github Admin access. Please provide them with the following information:
 
 * namespace_id
 * Brief description of the LDD. spell out namespace_id if it is an acronym.
