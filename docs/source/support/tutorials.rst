@@ -45,17 +45,29 @@ c. You will then be taken to a screen to create your repo. Make sure ``Owner`` i
 ..  image:: /_static/images/screenshot_create_repo.png
     :target: ../_static/images/screenshot_create_repo.png
 
-d. Open Github Desktop. In the right column, either browse to or search for your repository, select ``Clone <username>/<repo-name>``
+d. You will now need to create a Github Token in order to allow the LDD automation to push to your repo.
+
+    1. go to https://github.com/settings/tokens
+    2. click "Generate new token"
+    3. select all checkboxes
+    4. copy the generated token
+    5. in your test repo you just cloned, go to `Settings` -> `Secrets`
+        * e.g. https://github.com/jordanpadams/my-ldd-test/settings/secrets
+    6. click "New Secret"
+    7. Name = ADMIN_GITHUB_TOKEN , Value: paste the token from #4
+    8. select add secret
+
+e. Open Github Desktop. In the right column, either browse to or search for your repository, select ``Clone <username>/<repo-name>``
 
 ..  image:: /_static/images/screenshot_clone_to_desktop.png
     :target: ../_static/images/screenshot_clone_to_desktop.png
 
-e. Choose the path you would like to save the repository to on your file system, and click ``Clone``.
+f. Choose the path you would like to save the repository to on your file system, and click ``Clone``.
 
 ..  image:: /_static/images/screenshot_repo_path.png
     :target: ../_static/images/screenshot_repo_path.png
 
-e. You should now see a screen in Github Desktop that says ``No Local Changes``, indicating your repo is connected and there are no changes to that repo on your local system (as expected).
+g. You should now see a screen in Github Desktop that says ``No Local Changes``, indicating your repo is connected and there are no changes to that repo on your local system (as expected).
 
 ..  image:: /_static/images/screenshot_github_desktop_init.png
     :target: ../_static/images/screenshot_github_desktop_init.png

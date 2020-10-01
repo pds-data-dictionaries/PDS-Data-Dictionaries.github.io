@@ -255,15 +255,35 @@
 <li><p>You will then be taken to a screen to create your repo. Make sure <code class="docutils literal notranslate"><span class="pre">Owner</span></code> is set to your personal account, give it a name, and click <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">repository</span> <span class="pre">from</span> <span class="pre">template</span></code></p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_create_repo.png"><img alt="../_images/screenshot_create_repo.png" src="../_images/screenshot_create_repo.png" /></a>
-<ol class="loweralpha simple" start="4">
+<ol class="loweralpha" start="4">
+<li><p>You will now need to create a Github Token in order to allow the LDD automation to push to your repo.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>go to <a class="reference external" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p></li>
+<li><p>click “Generate new token”</p></li>
+<li><p>select all checkboxes</p></li>
+<li><p>copy the generated token</p></li>
+<li><dl class="simple">
+<dt>in your test repo you just cloned, go to <cite>Settings</cite> -&gt; <cite>Secrets</cite></dt><dd><ul class="simple">
+<li><p>e.g. <a class="reference external" href="https://github.com/jordanpadams/my-ldd-test/settings/secrets">https://github.com/jordanpadams/my-ldd-test/settings/secrets</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>click “New Secret”</p></li>
+<li><p>Name = ADMIN_GITHUB_TOKEN , Value: paste the token from #4</p></li>
+<li><p>select add secret</p></li>
+</ol>
+</div></blockquote>
+</li>
 <li><p>Open Github Desktop. In the right column, either browse to or search for your repository, select <code class="docutils literal notranslate"><span class="pre">Clone</span> <span class="pre">&lt;username&gt;/&lt;repo-name&gt;</span></code></p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_clone_to_desktop.png"><img alt="../_images/screenshot_clone_to_desktop.png" src="../_images/screenshot_clone_to_desktop.png" /></a>
-<ol class="loweralpha simple" start="5">
+<ol class="loweralpha simple" start="6">
 <li><p>Choose the path you would like to save the repository to on your file system, and click <code class="docutils literal notranslate"><span class="pre">Clone</span></code>.</p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_repo_path.png"><img alt="../_images/screenshot_repo_path.png" src="../_images/screenshot_repo_path.png" /></a>
-<ol class="loweralpha simple" start="5">
+<ol class="loweralpha simple" start="7">
 <li><p>You should now see a screen in Github Desktop that says <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Local</span> <span class="pre">Changes</span></code>, indicating your repo is connected and there are no changes to that repo on your local system (as expected).</p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_github_desktop_init.png"><img alt="../_images/screenshot_github_desktop_init.png" src="../_images/screenshot_github_desktop_init.png" /></a>
