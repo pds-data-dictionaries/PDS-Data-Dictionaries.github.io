@@ -153,6 +153,11 @@ for **instrument-specific namespaces**, use the formation rule *mission_host_ins
 * bc_mtm_mcam for the MCAM instrument on the Mercury Transfer Module (MTM) instrument host of the BepiColombo mission
 
 
+Basics For Creating an Ingest LDD
++++++++++++++++++++++++++++++++++
+
+See the `Small Bodies Node wiki <http://sbndev.astro.umd.edu/wiki/Creating_the_Ingest_LDD_Dictionary_Input_File>` on creating an Ingest LDD file.
+
 
 TBD
 +++
