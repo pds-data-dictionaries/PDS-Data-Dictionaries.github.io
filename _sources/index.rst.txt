@@ -11,8 +11,8 @@ The NASA Planetary Data System PDS4 Data Dictionaries Repo is used for managing 
 This website is intended to provide a how-to for to developing, managing, and using PDS Local Data Dictionaries.
 
 ..  toctree::
-    :maxdepth: 3
     :glob:
+    :maxdepth: 3
     :caption: Getting Started:
 
     /getting-started
@@ -20,18 +20,21 @@ This website is intended to provide a how-to for to developing, managing, and us
 .. /overview
 
 ..  toctree::
+    :glob:
     :maxdepth: 3
     :caption: Development
 
     /development/*
 
 ..  toctree::
+    :glob:
     :maxdepth: 3
     :caption: Teams
 
     /teams/*
 
 ..  toctree::
+    :glob:
     :maxdepth: 3
     :caption: Support
 
