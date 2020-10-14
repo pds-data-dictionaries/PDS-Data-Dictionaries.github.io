@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LDD Change Control Board &mdash; PDS Data Dictionaries  documentation</title>
+  <title>LDD Release Process &mdash; PDS Data Dictionaries  documentation</title>
   
 
   
@@ -133,13 +133,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>LDD Change Control Board</li>
+      <li>LDD Release Process</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/teams/ldd-ccb.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/development/ldd-release.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -152,27 +152,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ldd-change-control-board">
-<h1>LDD Change Control Board<a class="headerlink" href="#ldd-change-control-board" title="Permalink to this headline">¶</a></h1>
-<p>Applicable only to Discipline Local Data Dictionaries, a PDS LDD Change Control Board will be formed to manage and monitor changes that occcur to dictionaries that could have impacts on various Discipline Node communities.</p>
-<hr class="docutils" />
-<div class="section" id="membership">
-<h2>Membership<a class="headerlink" href="#membership" title="Permalink to this headline">¶</a></h2>
-<p>The LDD Change Control Board (CCB) will have a rotating chair from Discipline Node staff, with voting members consisting of up to one member from each discipline node. Additional discipline node members can participate in CCB discussions as lurkers, whereas they have no voting rights.</p>
-<p>Current membership will maintained by the LDD CCB Chair and tracked by the <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pds-ldd-ccb">PDS LDD CCB Github Team</a>.</p>
+  <div class="section" id="ldd-release-process">
+<h1>LDD Release Process<a class="headerlink" href="#ldd-release-process" title="Permalink to this headline">¶</a></h1>
+<p>When a Local Data Dictionary (LDD) Steward is ready to submit a new version of an LDD for release you have two options:</p>
+<div class="toctree-wrapper compound">
 </div>
-<hr class="docutils" />
-<div class="section" id="communication">
-<h2>Communication<a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h2>
-<p>A Google Group or mailing list will be created for the LDD CCB, which will be managed and maintained by the LDD CCB Chair. All initial discussions and approvals will occur via the LDD CCB Google Group.</p>
+<div class="section" id="preferred-tag-a-release-in-github">
+<h2>(preferred) Tag a Release In Github<a class="headerlink" href="#preferred-tag-a-release-in-github" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Add your IngestLDD to the <code class="docutils literal notranslate"><span class="pre">src/</span></code> directory in your repo</p></li>
+<li><p>Create a branch with <code class="docutils literal notranslate"><span class="pre">release</span></code> in the name.</p></li>
+<li><p>Add your changes to the branch, commit, and put to Github</p></li>
+<li><p>You should then see the LDD auto-generated (after ~2-3 minutes) in both the <code class="docutils literal notranslate"><span class="pre">build/development</span></code> and <code class="docutils literal notranslate"><span class="pre">build/release</span></code> directories.</p></li>
+<li><p>Once you get approval from the appropriate stakeholders, merge your pull request.</p></li>
+<li><p>You should then see a new release tagged in your repo in a URL like <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-img/releases">https://github.com/pds-data-dictionaries/ldd-img/releases</a></p></li>
+<li><p>Then move on to <code class="docutils literal notranslate"><span class="pre">Submit</span> <span class="pre">Release</span> <span class="pre">Request</span></code></p></li>
+</ol>
 </div>
-<hr class="docutils" />
-<div class="section" id="voting-and-approvals-of-change-requests">
-<h2>Voting and Approvals of Change Requests<a class="headerlink" href="#voting-and-approvals-of-change-requests" title="Permalink to this headline">¶</a></h2>
-<p>Voting and approvals of proposed changes to an LDD will occur using the Github CODEOWNERS <a class="reference external" href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/approving-a-pull-request-with-required-reviews">Github Pull Request “required reviews” feature</a>.</p>
-<p>After a Pull Request is created, the PDS LDD CCB will automatically be assigned as a reviewer for the pull requesta and a notification will be sent to the user.</p>
-<p>TBD screenshot</p>
-<p>See the <span class="xref std std-doc">LDD Update Process</span> for more details.</p>
+<div class="section" id="submit-manually">
+<h2>Submit Manually<a class="headerlink" href="#submit-manually" title="Permalink to this headline">¶</a></h2>
+<p>If you are unable to submit to Github, see Submit Release Request to upload a zip of your generated artifacts.</p>
+</div>
+<div class="section" id="submit-release-request">
+<h2>Submit Release Request<a class="headerlink" href="#submit-release-request" title="Permalink to this headline">¶</a></h2>
+<p>Create a <a class="reference external" href="https://github.com/NASA-PDS/pdsen-operations/issues/new?assignees=c-suh%2C+elawsgh&amp;labels=ldd-release&amp;template=pds-ldd-release-request.md&amp;title=%5Bldd-release%5D+%3CLDD+Name%3E+LDD+Version%3A%3CLDD_version%3E+IM+Version%3A%3CIM_Version%3E">request ticket here</a>.</p>
 </div>
 </div>
 
