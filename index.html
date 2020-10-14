@@ -91,12 +91,11 @@
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="development/ldd-build.html">LDD Build Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-create.html">LDD Creation Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="development/ldd-how-to.html">LDD How-To Guides</a></li>
-<li class="toctree-l1"><a class="reference internal" href="development/ldd-release.html">LDD Release Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="development/ldd-test.html">LDD Regression Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-update.html">LDD Update Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-how-to.html">LDD How-To Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-release.html">LDD Release Process</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
@@ -213,15 +212,6 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Development</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="development/ldd-build.html">LDD Build Process</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-build.html#operational-release">Operational Release</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="development/ldd-build.html#point-build-release">Point Build Release</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-build.html#development-release">Development Release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-build.html#ldd-github-actions">LDD Github Actions</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-create.html">LDD Creation Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#proposing-a-new-discipline-ldd">Proposing a New Discipline LDD</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="development/ldd-create.html#is-this-ldd-needed">1. Is this LDD needed?</a></li>
@@ -242,6 +232,16 @@
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-create.html#retrofit-existing-ldd-repository-admin-stewards-only">Retrofit Existing LDD Repository (Admin / Stewards Only)</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-update.html">LDD Update Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#change-request-proposed">1. Change Request Proposed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#ldd-steward-initial-approval">2. LDD Steward Initial Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#update-ingestldd">3. Update IngestLDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#push-updates-to-github">4. Push Updates To Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#ldd-change-control-board-approval">5. LDD Change Control Board Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#approve-and-merge-changes">6. Approve and Merge Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#optional-contact-en-for-point-build">7. (optional) Contact EN for Point Build</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-how-to.html">LDD How-To Guides</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-how-to.html#trigger-ldd-build">Trigger LDD Build</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-how-to.html#generate-a-discipline-ldd">Generate a Discipline LDD</a></li>
@@ -258,27 +258,19 @@
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-how-to.html#tbd">TBD</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="development/ldd-build.html">LDD Build Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-build.html#operational-release">Operational Release</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="development/ldd-build.html#point-build-release">Point Build Release</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-build.html#development-release">Development Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/ldd-build.html#ldd-github-actions">LDD Github Actions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-release.html">LDD Release Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-release.html#preferred-tag-a-release-in-github">(preferred) Tag a Release In Github</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-release.html#submit-manually">Submit Manually</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development/ldd-release.html#submit-release-request">Submit Release Request</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="development/ldd-test.html">LDD Regression Testing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-test.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-test.html#regression-test-data">Regression Test Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-test.html#regression-test-data-rules">Regression Test Data Rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-test.html#test-data-directory-layout">Test Data Directory Layout</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="development/ldd-update.html">LDD Update Process</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#change-request-proposed">1. Change Request Proposed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#ldd-steward-initial-approval">2. LDD Steward Initial Approval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#update-ingestldd">3. Update IngestLDD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#push-updates-to-github">4. Push Updates To Github</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#ldd-change-control-board-approval">5. LDD Change Control Board Approval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#approve-and-merge-changes">6. Approve and Merge Changes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="development/ldd-update.html#optional-contact-en-for-point-build">7. (optional) Contact EN for Point Build</a></li>
 </ul>
 </li>
 </ul>

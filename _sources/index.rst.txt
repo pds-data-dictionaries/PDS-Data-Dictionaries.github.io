@@ -24,7 +24,11 @@ This website is intended to provide a how-to for to developing, managing, and us
     :maxdepth: 3
     :caption: Development
 
-    /development/*
+    /development/ldd-create
+    /development/ldd-update
+    /development/ldd-how-to
+    /development/ldd-build
+    /development/ldd-release
 
 ..  toctree::
     :glob:
