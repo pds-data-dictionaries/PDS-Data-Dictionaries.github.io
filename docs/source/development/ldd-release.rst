@@ -18,13 +18,13 @@ When a Local Data Dictionary (LDD) Steward is ready to submit a new version of a
 4. You should then see the LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.
 5. Once you get approval from the appropriate stakeholders, merge your pull request.
 6. You should then see a new release tagged in your repo in a URL like https://github.com/pds-data-dictionaries/ldd-img/releases
-7. Then move on to ``Submit Release Request``
+7. Then move on to **Submit Release Request** below.
 
 
 Submit Manually
 +++++++++++++++
 
-If you are unable to submit to Github, see Submit Release Request to upload a zip of your generated artifacts.
+If you are unable to submit to Github, see **Submit Release Request** to upload a zip of your generated artifacts.
 
 
 Submit Release Request

@@ -1,8 +1,13 @@
 LDD Build Process
 =================
 
-Using Github
-++++++++++++++++++++
+..  toctree::
+    :maxdepth: 3
+
+    *
+
+Build Using Github
+++++++++++++++++++
 
 Nominal Release with PDS4 Information Model
 -------------------------------------------
@@ -13,22 +18,32 @@ By default, all Discipline LDDs will be built at the time of PDS4 IM Release. Se
 Off-Nominal Release 
 -------------------
 
-In order to minimize overhead with releasing of LDDs, please coordinate with data providers to use the released dictionaries deployed during the Nominal Release process on the PDS4 Information Model build cycle. At any time, you can direct providers to the `build/development` directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.
+.. note::
+    Please try to avoid this wherever possible. In order to minimize overhead of manual processing of LDDs, please coordinate with data providers to stick to the `PDS4 Build Schedule <https://pds.jpl.nasa.gov/datastandards/about/>`_ wherever posisble.
 
-If an immediate bug fix and release is needed off PDS4 build cycle, see the :doc:`LDD Release Process </development/ldd-release>` for instructions for how to tag a release.
+    At any time, you can direct providers to the `build/development` directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.
+
+If an immediate bug fix and release is needed off PDS4 Build cycle, see the :doc:`LDD Release Process </development/ldd-release>` for instructions for how to tag a release.
 
 ----
 
-Development Release
-+++++++++++++++++++
+Development Build
++++++++++++++++++
 
-By default, as long as your Discipline LDD is using the ldd-template repository (TBD link), all Discipline LDD schemas, schematrons, and other default LDDTool outputs are generated whenever a Pull Request is created with a change to an IngestLDD.
+By default, as long as your Discipline LDD is using the `ldd-template repository <https://github.com/pds-data-dictionaries/ldd-template/>`_, all Discipline LDD schemas, schematrons, and other default LDDTool outputs are generated whenever a Pull Request is created with a change to an IngestLDD.
 
-The new schemas/schematrons are posted to the TBD directory in your repository. See :doc:`LDD Update and Build Tutorial </support/tutorials>` for an example generating these schemas/schematrons.
+The new schemas/schematrons are posted to the `build/development` directory in your repository. See :doc:`LDD Update and Build Tutorial </support/tutorials>` for an example generating these schemas/schematrons.
 
 
 For more details on how the dictionaries are generated, see `LDD Github Actions`.
 
+
+---
+
+Build Using LDDTool
++++++++++++++++++++
+
+See `LDDTool documentation <https://nasa-pds.github.io/pds4-information-model/model-lddtool/>`_.
 
 ----
 
@@ -43,3 +58,6 @@ LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using
         strategy:
           matrix:
             pds4_version: [ '1.12.0.0', '1.13.0.0' ]
+
+
+
