@@ -96,12 +96,13 @@
 <li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-how-to.html">LDD How-To Guides</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Build Process</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#operational-release">Operational Release</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#point-build-release">Point Build Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-github">Using Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nominal-release-with-pds4-information-model">Nominal Release with PDS4 Information Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#off-nominal-release">Off-Nominal Release</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#development-release">Development Release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ldd-github-actions">LDD Github Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changing-pds4-build-versions">Changing PDS4 Build Versions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-release.html">LDD Release Process</a></li>
@@ -188,12 +189,16 @@
             
   <div class="section" id="ldd-build-process">
 <h1>LDD Build Process<a class="headerlink" href="#ldd-build-process" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="operational-release">
-<h2>Operational Release<a class="headerlink" href="#operational-release" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-github">
+<h2>Using Github<a class="headerlink" href="#using-github" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="nominal-release-with-pds4-information-model">
+<h3>Nominal Release with PDS4 Information Model<a class="headerlink" href="#nominal-release-with-pds4-information-model" title="Permalink to this headline">¶</a></h3>
 <p>By default, all Discipline LDDs will be built at the time of PDS4 IM Release. See the <a class="reference external" href="https://pds.jpl.nasa.gov/datastandards/about/">PDS4 Build Schedule</a> for more details on the timing of those builds.</p>
-<div class="section" id="point-build-release">
-<h3>Point Build Release<a class="headerlink" href="#point-build-release" title="Permalink to this headline">¶</a></h3>
-<p>Create a Point Build Request issue (link TBD) to request EN to trigger a point build of your LDD.</p>
+</div>
+<div class="section" id="off-nominal-release">
+<h3>Off-Nominal Release<a class="headerlink" href="#off-nominal-release" title="Permalink to this headline">¶</a></h3>
+<p>In order to minimize overhead with releasing of LDDs, please coordinate with data providers to use the released dictionaries deployed during the Nominal Release process on the PDS4 Information Model build cycle. At any time, you can direct providers to the <cite>build/development</cite> directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.</p>
+<p>If an immediate bug fix and release is needed off PDS4 build cycle, see the <a class="reference internal" href="ldd-release.html"><span class="doc">LDD Release Process</span></a> for instructions for how to tag a release.</p>
 </div>
 </div>
 <hr class="docutils" />
@@ -204,9 +209,19 @@
 <p>For more details on how the dictionaries are generated, see <cite>LDD Github Actions</cite>.</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="ldd-github-actions">
-<h2>LDD Github Actions<a class="headerlink" href="#ldd-github-actions" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
+<div class="section" id="changing-pds4-build-versions">
+<h2>Changing PDS4 Build Versions<a class="headerlink" href="#changing-pds4-build-versions" title="Permalink to this headline">¶</a></h2>
+<p>LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using the ldd-template repo, your LDD will automatically be built with the latest version of the PDS4 IM. Here are the steps to change that version:</p>
+<ol class="arabic">
+<li><p>Open .github/workflows/ldd-ci.yml</p></li>
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">strategy.matrix.pds4_version</span></code> to be the version(s) you want (note: be sure to keep the brackets surrounding the version(s) [ ] ). For example to change to built with PDS4 versions 1.12.0.0 and 1.13.0.0:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">strategy</span><span class="p">:</span>
+  <span class="n">matrix</span><span class="p">:</span>
+    <span class="n">pds4_version</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;1.12.0.0&#39;</span><span class="p">,</span> <span class="s1">&#39;1.13.0.0&#39;</span> <span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 
