@@ -6,6 +6,7 @@ LDD How-To Guides
 
     /development/ldd-how-to
 
+----
 
 Trigger LDD Build
 +++++++++++++++++
@@ -19,6 +20,7 @@ For this example we will be using the `IMG Discipline LDD <https://github.com/pd
 5. Watch the magic happen on your Github Actions page: https://github.com/pds-data-dictionaries/ldd-img/actions
 6. After the action has completed successfully (hopefully), `update your local branch <https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/syncing-your-branch>`_ to get the generated dictionaries from Github.com
 
+----
 
 Generate a Discipline LDD
 +++++++++++++++++++++++++
@@ -35,6 +37,7 @@ Then execute LDDTool to generate the appropriate dictionary::
 
     lddtool -lp <my_ingest_ldd>
 
+----
 
 Generate a Mission LDD
 ++++++++++++++++++++++
@@ -52,6 +55,8 @@ Then execute LDDTool to generate the appropriate dictionary::
     lddtool -lp <my_ingest_ldd>
 
 
+----
+
 Generate a LDD with a specific PDS4 Version
 +++++++++++++++++++++++++++++++++++++++++++
 
@@ -61,6 +66,8 @@ By default, LDDTool builds with the latest version of the IM. As of LDDTool v12.
 
       -V, --IM Version - E.g., -V 1D00
 
+
+----
 
 Specify Enumerated Values for Attributes within Inherited Classes
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -93,6 +100,7 @@ Classes from the PDS common dictionary (or discipline LDDs) are often inherited 
       </DD_Context_Value_List>
     </DD_Associate_External_Class>
 
+----
 
 Schematron (DD_Rule) Help
 +++++++++++++++++++++++++
@@ -114,6 +122,7 @@ Attributes from the PDS common dictionary (or discipline LDDs) are often inherit
         </DD_Rule_Statement>
     </DD_Rule>
 
+----
 
 Using Schematron ``value-of`` functionality
 ++++++++++++++++++++++++++++++++++++++++++++
@@ -134,6 +143,7 @@ To use the ``sch:value-of`` in your ``DD_Rule`` descriptions, you simply need to
 
 Note the ``&lt;``` and ``&gt;`` used to replace the ``<`` and ``>``
 
+----
 
 Mission LDD Namespace Formation Guidelines
 ++++++++++++++++++++++++++++++++++++++++++++
@@ -152,13 +162,72 @@ for **instrument-specific namespaces**, use the formation rule *mission_host_ins
 
 * bc_mtm_mcam for the MCAM instrument on the Mercury Transfer Module (MTM) instrument host of the BepiColombo mission
 
+----
 
 Basics For Creating an Ingest LDD
 +++++++++++++++++++++++++++++++++
 
 See the `Small Bodies Node wiki <http://sbndev.astro.umd.edu/wiki/Creating_the_Ingest_LDD_Dictionary_Input_File>` on creating an Ingest LDD file.
 
+----
+
+Reviewing a Pull Request
+++++++++++++++++++++++++
+
+1. Go to ``Pull Requests`` tab of your repo, e.g. https://github.com/pds-data-dictionaries/ldd-spectral/pulls:
+
+.. image:: /_static/images/screenshot_pull_requests.png
+   :target: ../_static/images/screenshot_pull_requests.png
+
+2. Select the open Pull Request for the new release (e.g. https://github.com/pds-data-dictionaries/ldd-spectral/pull/13)
+
+.. image:: /_static/images/screenshot_release_pull_request.png
+   :target: ../_static/images/screenshot_release_pull_request.png
+
+3. The first check should always be if the LDD Github Build completed successfully. You should see a green check mark next to the last commit on the branch:
+
+.. image:: /_static/images/screenshot_action_success_1.png
+   :target: ../_static/images/screenshot_action_success_1.png
+
+.. image:: /_static/images/screenshot_action_failure_1.png
+   :target: ../_static/images/screenshot_action_failure_1.png
+
+Or you can go to the ``Actions`` tab (e.g. https://github.com/pds-data-dictionaries/ldd-spectral/actions) and verify the last build has a green checkmark next to it:
+
+.. image:: /_static/images/screenshot_action_success_2.png
+   :target: ../_static/images/screenshot_action_success_2.png
+
+.. image:: /_static/images/screenshot_action_failure_2.png
+   :target: ../_static/images/screenshot_action_failure_2.png
+
+
+4. Once the build has been verified, there are now 2 ways you can review the changes the files:
+    a. Select the ``Files changed`` tab, and look through the changed files (e.g. https://github.com/pds-data-dictionaries/ldd-spectral/pull/13/files). You can search on the page for `IngestLDD` if you simply want to review the changes to that file:
+
+    .. image:: /_static/images/screenshot_pr_files_changed.png
+       :target: ../_static/images/screenshot_pr_files_changed.png
+
+    b. Select the applicable branch, and browse through the files in the repository. The `IngestLDD` is located under the `src/` directory.
+
+    .. image:: /_static/images/screenshot_pr_branch.png
+       :target: ../_static/images/screenshot_pr_branch.png
+
+5. Once you have verified all changes, you can approve the Pull Request in Github by going to the ``Files changed`` tab of the Pull Request, and input your review:
+
+.. image:: /_static/images/screenshot_pr_review.png
+  :target: ../_static/images/screenshot_pr_review.png
+
+----
+
+Merging an Approved Pull Request
++++++++++++++++++++++++++++++++++
+
+See applicable Github docs: https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request
+
+----
 
 TBD
 +++
 Feel free to add some of your own or create a ticket in the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues>`_ so we can start to build up this documentation.
+
+

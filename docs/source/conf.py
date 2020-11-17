@@ -34,6 +34,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.autosummary',
+    'sphinx.ext.autosectionlabel',
     'sphinx_rtd_theme',
     'sphinxemoji.sphinxemoji'
 ]

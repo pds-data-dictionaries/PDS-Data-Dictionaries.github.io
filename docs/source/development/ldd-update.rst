@@ -6,6 +6,7 @@ LDD Update Process
 
     /development/ldd-update
 
+----
 
 The following are the necessary steps to propose and execute an update to a PDS4 Local Data Dictionary.
 
@@ -29,9 +30,11 @@ The update request is received by the LDD Steward, who makes an initial determin
 3. Update IngestLDD
 +++++++++++++++++++
 
-Once the LDD Steward approves the change, they will get the latest version of the LDD from Github, and complete the necessary updates to the IngestLDD file (TBD link).
+Once the LDD Steward approves the change, they will get the latest version of the LDD from Github, and complete the necessary updates to the IngestLDD file.
 
 The LDD Steward can download and use `LDDTool  <https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html>`_ for testing purposes, but only the IngestLDD will be needed for submission to Github.
+
+See LDD How-to Guides for assistance.
 
 
 4. Push Updates To Github
