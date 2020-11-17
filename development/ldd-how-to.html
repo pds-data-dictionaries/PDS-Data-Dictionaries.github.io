@@ -107,6 +107,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#using-schematron-value-of-functionality">Using Schematron <code class="docutils literal notranslate"><span class="pre">value-of</span></code> functionality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mission-ldd-namespace-formation-guidelines">Mission LDD Namespace Formation Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#basics-for-creating-an-ingest-ldd">Basics For Creating an Ingest LDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reviewing-a-pull-request">Reviewing a Pull Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merging-an-approved-pull-request">Merging an Approved Pull Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -210,11 +212,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#using-schematron-value-of-functionality">Using Schematron <code class="docutils literal notranslate"><span class="pre">value-of</span></code> functionality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mission-ldd-namespace-formation-guidelines">Mission LDD Namespace Formation Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#basics-for-creating-an-ingest-ldd">Basics For Creating an Ingest LDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reviewing-a-pull-request">Reviewing a Pull Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merging-an-approved-pull-request">Merging an Approved Pull Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<hr class="docutils" />
 <div class="section" id="trigger-ldd-build">
 <h2>Trigger LDD Build<a class="headerlink" href="#trigger-ldd-build" title="Permalink to this headline">¶</a></h2>
 <p>For this example we will be using the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-img">IMG Discipline LDD</a> repo. For your repo, just replace the <cite>ldd-img</cite> or references to <cite>IMG</cite> with your appropriate discipline dictionary.</p>
@@ -227,6 +232,7 @@
 <li><p>After the action has completed successfully (hopefully), <a class="reference external" href="https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/syncing-your-branch">update your local branch</a> to get the generated dictionaries from Github.com</p></li>
 </ol>
 </div>
+<hr class="docutils" />
 <div class="section" id="generate-a-discipline-ldd">
 <h2>Generate a Discipline LDD<a class="headerlink" href="#generate-a-discipline-ldd" title="Permalink to this headline">¶</a></h2>
 <p>To generate a Discipline LDD versus a Mission LDD, you must specify this information within the IngestLDD, for example:</p>
@@ -241,6 +247,7 @@
 </pre></div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="generate-a-mission-ldd">
 <h2>Generate a Mission LDD<a class="headerlink" href="#generate-a-mission-ldd" title="Permalink to this headline">¶</a></h2>
 <p>To generate a Mission LDD versus a Discipline LDD, you must specify this information within the IngestLDD, for example:</p>
@@ -255,6 +262,7 @@
 </pre></div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="generate-a-ldd-with-a-specific-pds4-version">
 <h2>Generate a LDD with a specific PDS4 Version<a class="headerlink" href="#generate-a-ldd-with-a-specific-pds4-version" title="Permalink to this headline">¶</a></h2>
 <p>LDDTool is a reflection of the PDS4 Information Model (IM), and in turn, has a major build in sync with the <a class="reference external" href="https://pds.nasa.gov/datastandards/about/">PDS4 Build Schedule</a> (every 6 months).</p>
@@ -263,6 +271,7 @@
 </pre></div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="specify-enumerated-values-for-attributes-within-inherited-classes">
 <h2>Specify Enumerated Values for Attributes within Inherited Classes<a class="headerlink" href="#specify-enumerated-values-for-attributes-within-inherited-classes" title="Permalink to this headline">¶</a></h2>
 <p>Classes from the PDS common dictionary (or discipline LDDs) are often inherited and used within Discipline and Mission LDDs (e.g. <code class="docutils literal notranslate"><span class="pre">Internal_Reference.reference_type</span></code>, etc.). When inherited within the specific Discipline or Mission, you may want to provide a specific set of values applicable for that particular context. In this case you would want to use the <a class="reference external" href="https://pds.nasa.gov/datastandards/documents/im/current/index_1E00.html#18.9%C2%A0%C2%A0class_pds_dd_associate_external_class">DD_Associate_External_Class</a>. For example::</p>
@@ -294,6 +303,7 @@
 </pre></div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="schematron-dd-rule-help">
 <h2>Schematron (DD_Rule) Help<a class="headerlink" href="#schematron-dd-rule-help" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="specify-enumerated-values-for-inherited-attributes">
@@ -314,6 +324,7 @@
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="section" id="using-schematron-value-of-functionality">
 <h2>Using Schematron <code class="docutils literal notranslate"><span class="pre">value-of</span></code> functionality<a class="headerlink" href="#using-schematron-value-of-functionality" title="Permalink to this headline">¶</a></h2>
 <p>To use the <code class="docutils literal notranslate"><span class="pre">sch:value-of</span></code> in your <code class="docutils literal notranslate"><span class="pre">DD_Rule</span></code> descriptions, you simply need to escape the XML entities. For example:</p>
@@ -332,6 +343,7 @@
 </div>
 <p>Note the <code class="docutils literal notranslate"><span class="pre">&amp;lt;`</span></code> and <code class="docutils literal notranslate"><span class="pre">&amp;gt;</span></code> used to replace the <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p>
 </div>
+<hr class="docutils" />
 <div class="section" id="mission-ldd-namespace-formation-guidelines">
 <h2>Mission LDD Namespace Formation Guidelines<a class="headerlink" href="#mission-ldd-namespace-formation-guidelines" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
@@ -350,10 +362,53 @@
 <li><p>bc_mtm_mcam for the MCAM instrument on the Mercury Transfer Module (MTM) instrument host of the BepiColombo mission</p></li>
 </ul>
 </div>
+<hr class="docutils" />
 <div class="section" id="basics-for-creating-an-ingest-ldd">
 <h2>Basics For Creating an Ingest LDD<a class="headerlink" href="#basics-for-creating-an-ingest-ldd" title="Permalink to this headline">¶</a></h2>
 <p>See the <cite>Small Bodies Node wiki &lt;http://sbndev.astro.umd.edu/wiki/Creating_the_Ingest_LDD_Dictionary_Input_File&gt;</cite> on creating an Ingest LDD file.</p>
 </div>
+<hr class="docutils" />
+<div class="section" id="reviewing-a-pull-request">
+<h2>Reviewing a Pull Request<a class="headerlink" href="#reviewing-a-pull-request" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Pull</span> <span class="pre">Requests</span></code> tab of your repo, e.g. <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-spectral/pulls">https://github.com/pds-data-dictionaries/ldd-spectral/pulls</a>:</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/images/screenshot_pull_requests.png"><img alt="../_images/screenshot_pull_requests.png" src="../_images/screenshot_pull_requests.png" /></a>
+<ol class="arabic simple" start="2">
+<li><p>Select the open Pull Request for the new release (e.g. <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-spectral/pull/13">https://github.com/pds-data-dictionaries/ldd-spectral/pull/13</a>)</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/images/screenshot_release_pull_request.png"><img alt="../_images/screenshot_release_pull_request.png" src="../_images/screenshot_release_pull_request.png" /></a>
+<ol class="arabic simple" start="3">
+<li><p>The first check should always be if the LDD Github Build completed successfully. You should see a green check mark next to the last commit on the branch:</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/images/screenshot_action_success_1.png"><img alt="../_images/screenshot_action_success_1.png" src="../_images/screenshot_action_success_1.png" /></a>
+<a class="reference external image-reference" href="../_static/images/screenshot_action_failure_1.png"><img alt="../_images/screenshot_action_failure_1.png" src="../_images/screenshot_action_failure_1.png" /></a>
+<p>Or you can go to the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> tab (e.g. <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-spectral/actions">https://github.com/pds-data-dictionaries/ldd-spectral/actions</a>) and verify the last build has a green checkmark next to it:</p>
+<a class="reference external image-reference" href="../_static/images/screenshot_action_success_2.png"><img alt="../_images/screenshot_action_success_2.png" src="../_images/screenshot_action_success_2.png" /></a>
+<a class="reference external image-reference" href="../_static/images/screenshot_action_failure_2.png"><img alt="../_images/screenshot_action_failure_2.png" src="../_images/screenshot_action_failure_2.png" /></a>
+<ol class="arabic" start="4">
+<li><dl>
+<dt>Once the build has been verified, there are now 2 ways you can review the changes the files:</dt><dd><ol class="loweralpha simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Files</span> <span class="pre">changed</span></code> tab, and look through the changed files (e.g. <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-spectral/pull/13/files">https://github.com/pds-data-dictionaries/ldd-spectral/pull/13/files</a>). You can search on the page for <cite>IngestLDD</cite> if you simply want to review the changes to that file:</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/images/screenshot_pr_files_changed.png"><img alt="../_images/screenshot_pr_files_changed.png" src="../_images/screenshot_pr_files_changed.png" /></a>
+<ol class="loweralpha simple" start="2">
+<li><p>Select the applicable branch, and browse through the files in the repository. The <cite>IngestLDD</cite> is located under the <cite>src/</cite> directory.</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/images/screenshot_pr_branch.png"><img alt="../_images/screenshot_pr_branch.png" src="../_images/screenshot_pr_branch.png" /></a>
+</dd>
+</dl>
+</li>
+<li><p>Once you have verified all changes, you can approve the Pull Request in Github by going to the <code class="docutils literal notranslate"><span class="pre">Files</span> <span class="pre">changed</span></code> tab of the Pull Request, and input your review:</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/images/screenshot_pr_review.png"><img alt="../_images/screenshot_pr_review.png" src="../_images/screenshot_pr_review.png" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="merging-an-approved-pull-request">
+<h2>Merging an Approved Pull Request<a class="headerlink" href="#merging-an-approved-pull-request" title="Permalink to this headline">¶</a></h2>
+<p>See applicable Github docs: <a class="reference external" href="https://docs.github.com/en/free-pro-team&#64;latest/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request">https://docs.github.com/en/free-pro-team&#64;latest/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request</a></p>
+</div>
+<hr class="docutils" />
 <div class="section" id="tbd">
 <h2>TBD<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h2>
 <p>Feel free to add some of your own or create a ticket in the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues">PDS4 LDD Issue Repo</a> so we can start to build up this documentation.</p>

@@ -97,9 +97,18 @@
 <li class="toctree-l1"><a class="reference internal" href="ldd-how-to.html">LDD How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Release Process</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#preferred-tag-a-release-in-github">(preferred) Tag a Release In Github</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#submit-manually">Submit Manually</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#submit-release-request">Submit Release Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-timeframe">Release Timeframe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nominal-release-with-pds4-information-model">Nominal Release with PDS4 Information Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#off-nominal-release">Off-Nominal Release</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-a-release">Preparing a Release</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preferred-tag-a-release-in-github">(preferred) Tag a Release In Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submit-manually">Submit Manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submit-release-request">Submit Release Request</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reviewing-a-staged-release">Reviewing a Staged Release</a></li>
 </ul>
 </li>
 </ul>
@@ -187,9 +196,46 @@
 <h1>LDD Release Process<a class="headerlink" href="#ldd-release-process" title="Permalink to this headline">¶</a></h1>
 <p>When a Local Data Dictionary (LDD) Steward is ready to submit a new version of an LDD for release you have two options:</p>
 <div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Release Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#release-timeframe">Release Timeframe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nominal-release-with-pds4-information-model">Nominal Release with PDS4 Information Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#off-nominal-release">Off-Nominal Release</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-a-release">Preparing a Release</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preferred-tag-a-release-in-github">(preferred) Tag a Release In Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submit-manually">Submit Manually</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#submit-release-request">Submit Release Request</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reviewing-a-staged-release">Reviewing a Staged Release</a></li>
+</ul>
+</li>
+</ul>
 </div>
+<hr class="docutils" />
+<div class="section" id="release-timeframe">
+<h2>Release Timeframe<a class="headerlink" href="#release-timeframe" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="nominal-release-with-pds4-information-model">
+<h3>Nominal Release with PDS4 Information Model<a class="headerlink" href="#nominal-release-with-pds4-information-model" title="Permalink to this headline">¶</a></h3>
+<p>By default, all Discipline LDDs will be built at the time of PDS4 IM Release. See the <a class="reference external" href="https://pds.jpl.nasa.gov/datastandards/about/">PDS4 Build Schedule</a> for more details on the timing of those builds.</p>
+</div>
+<div class="section" id="off-nominal-release">
+<h3>Off-Nominal Release<a class="headerlink" href="#off-nominal-release" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please try to avoid this wherever possible. In order to minimize overhead of manual processing of LDDs, please coordinate with data providers to stick to the <a class="reference external" href="https://pds.jpl.nasa.gov/datastandards/about/">PDS4 Build Schedule</a> wherever posisble.</p>
+<p>At any time, you can direct providers to the <cite>build/development</cite> directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.</p>
+</div>
+<p>If an immediate bug fix and release is needed off PDS4 Build cycle, see the <a class="reference internal" href="#preparing-a-release"><span class="std std-ref">Preparing a Release</span></a> for instructions for how to tag a release.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="preparing-a-release">
+<h2>Preparing a Release<a class="headerlink" href="#preparing-a-release" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="preferred-tag-a-release-in-github">
-<h2>(preferred) Tag a Release In Github<a class="headerlink" href="#preferred-tag-a-release-in-github" title="Permalink to this headline">¶</a></h2>
+<h3>(preferred) Tag a Release In Github<a class="headerlink" href="#preferred-tag-a-release-in-github" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Add your IngestLDD to the <code class="docutils literal notranslate"><span class="pre">src/</span></code> directory in your repo</p></li>
 <li><p>Create a branch with <code class="docutils literal notranslate"><span class="pre">release</span></code> in the name.</p></li>
@@ -201,12 +247,18 @@
 </ol>
 </div>
 <div class="section" id="submit-manually">
-<h2>Submit Manually<a class="headerlink" href="#submit-manually" title="Permalink to this headline">¶</a></h2>
+<h3>Submit Manually<a class="headerlink" href="#submit-manually" title="Permalink to this headline">¶</a></h3>
 <p>If you are unable to submit to Github, see <strong>Submit Release Request</strong> to upload a zip of your generated artifacts.</p>
 </div>
 <div class="section" id="submit-release-request">
-<h2>Submit Release Request<a class="headerlink" href="#submit-release-request" title="Permalink to this headline">¶</a></h2>
+<h3>Submit Release Request<a class="headerlink" href="#submit-release-request" title="Permalink to this headline">¶</a></h3>
 <p>Create a <a class="reference external" href="https://github.com/NASA-PDS/pdsen-operations/issues/new?assignees=c-suh%2C+elawsgh&amp;labels=ldd-release&amp;template=pds-ldd-release-request.md&amp;title=%5Bldd-release%5D+%3CLDD+Name%3E+LDD+Version%3A%3CLDD_version%3E+IM+Version%3A%3CIM_Version%3E">request ticket here</a>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="reviewing-a-staged-release">
+<h2>Reviewing a Staged Release<a class="headerlink" href="#reviewing-a-staged-release" title="Permalink to this headline">¶</a></h2>
+<p>See the <a class="reference internal" href="ldd-how-to.html"><span class="doc">Review a Pull Request How-to</span></a></p>
 </div>
 </div>
 
