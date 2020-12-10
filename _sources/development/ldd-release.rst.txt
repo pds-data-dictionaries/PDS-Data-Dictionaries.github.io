@@ -39,7 +39,10 @@ Preparing a Release
 
 1. Add your IngestLDD to the ``src/`` directory in your repo
 2. Create a branch with ``release`` in the name.
-3. Add your changes to the branch, commit, and put to Github
+3. Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit. For example::
+
+    git commit --allow-empty "Prep for tagging release"
+
 4. You should then see the LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.
 5. Once you get approval from the appropriate stakeholders, merge your pull request.
 6. You should then see a new release tagged in your repo in a URL like https://github.com/pds-data-dictionaries/ldd-img/releases

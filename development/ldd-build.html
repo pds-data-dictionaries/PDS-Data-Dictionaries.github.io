@@ -211,11 +211,11 @@
 <h2>Changing PDS4 Build Versions<a class="headerlink" href="#changing-pds4-build-versions" title="Permalink to this headline">¶</a></h2>
 <p>LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using the ldd-template repo, your LDD will automatically be built with the latest version of the PDS4 IM. Here are the steps to change that version:</p>
 <ol class="arabic">
-<li><p>Open .github/workflows/ldd-ci.yml</p></li>
-<li><p>Change the <code class="docutils literal notranslate"><span class="pre">strategy.matrix.pds4_version</span></code> to be the version(s) you want (note: be sure to keep the brackets surrounding the version(s) [ ] ). For example to change to built with PDS4 versions 1.12.0.0 and 1.13.0.0:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">strategy</span><span class="p">:</span>
-  <span class="n">matrix</span><span class="p">:</span>
-    <span class="n">pds4_version</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;1.12.0.0&#39;</span><span class="p">,</span> <span class="s1">&#39;1.13.0.0&#39;</span> <span class="p">]</span>
+<li><p>Open pds4_versions.txt (in the base of your repo)</p></li>
+<li><p>Change the add a new line with the applicable version you would like use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.13</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="mf">1.14</span><span class="o">.</span><span class="mf">0.0</span>
+<span class="mf">1.15</span><span class="o">.</span><span class="mf">0.0</span>
 </pre></div>
 </div>
 </li>

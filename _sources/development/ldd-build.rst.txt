@@ -32,12 +32,12 @@ Changing PDS4 Build Versions
 
 LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using the ldd-template repo, your LDD will automatically be built with the latest version of the PDS4 IM. Here are the steps to change that version:
 
-1.  Open .github/workflows/ldd-ci.yml
-2.  Change the ``strategy.matrix.pds4_version`` to be the version(s) you want (note: be sure to keep the brackets surrounding the version(s) [ ] ). For example to change to built with PDS4 versions 1.12.0.0 and 1.13.0.0::
+1.  Open pds4_versions.txt (in the base of your repo)
+2.  Change the add a new line with the applicable version you would like use::
  
-        strategy:
-          matrix:
-            pds4_version: [ '1.12.0.0', '1.13.0.0' ]
+        1.13.0.0
+        1.14.0.0
+        1.15.0.0
 
 
 

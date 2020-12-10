@@ -101,6 +101,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#repo-directory-structure">Repo Directory Structure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#readme-md">README.md</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pds4-versions-txt">pds4_versions.txt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#build">build/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#src">src/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#test">test/</a></li>
@@ -217,6 +218,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#repo-directory-structure">Repo Directory Structure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#readme-md">README.md</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pds4-versions-txt">pds4_versions.txt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#build">build/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#src">src/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#test">test/</a></li>
@@ -269,6 +271,7 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#repo-directory-structure">Repo Directory Structure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#readme-md">README.md</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pds4-versions-txt">pds4_versions.txt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#build">build/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#src">src/</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#test">test/</a></li>
@@ -312,6 +315,7 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 </div>
 <p>Below is an example of the default repo layout for the <strong>cart</strong> namespace. This is an example and the exact layout of the generated repo is subject to change, but the following subsections of this guide will be updated as needed. For the latest layout checkout the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template">ldd-template repo</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README.md
+├── pds4_versions.txt
 ├── build
 │   └── development
 │   └── release
@@ -330,6 +334,10 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 <li><p>Update the <code class="docutils literal notranslate"><span class="pre">Contribute</span></code> section of your new repos <code class="docutils literal notranslate"><span class="pre">README.md</span></code> with an appropriate description and steward contact information.</p></li>
 </ul>
 <p>For more general information on READMEs, see <a class="reference external" href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes">Github documentation</a>.</p>
+</div>
+<div class="section" id="pds4-versions-txt">
+<h3>pds4_versions.txt<a class="headerlink" href="#pds4-versions-txt" title="Permalink to this headline">¶</a></h3>
+<p>This text file contains the applicable PDS4 Versions to build against for LDDs in your repo. Feel free to remove versions that are not applicable or add new versions by adding a newline and the applicable version number. Note: The Github CI/CD only works for PDS4 IM versions 1.11.0.0 and later.</p>
 </div>
 <div class="section" id="build">
 <h3>build/<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h3>

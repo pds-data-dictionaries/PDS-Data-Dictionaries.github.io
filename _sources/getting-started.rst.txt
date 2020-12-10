@@ -89,6 +89,7 @@ Repo Directory Structure
 Below is an example of the default repo layout for the **cart** namespace. This is an example and the exact layout of the generated repo is subject to change, but the following subsections of this guide will be updated as needed. For the latest layout checkout the `ldd-template repo <https://github.com/pds-data-dictionaries/ldd-template>`_::
 
     ├── README.md
+    ├── pds4_versions.txt
     ├── build
     │   └── development
     │   └── release
@@ -107,6 +108,11 @@ README.md
 * Update the ``Contribute`` section of your new repos ``README.md`` with an appropriate description and steward contact information.
 
 For more general information on READMEs, see `Github documentation <https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes>`_.
+
+pds4_versions.txt
+-----------------
+
+This text file contains the applicable PDS4 Versions to build against for LDDs in your repo. Feel free to remove versions that are not applicable or add new versions by adding a newline and the applicable version number. Note: The Github CI/CD only works for PDS4 IM versions 1.11.0.0 and later.
 
 build/
 ------
