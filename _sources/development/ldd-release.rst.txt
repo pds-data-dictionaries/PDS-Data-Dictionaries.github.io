@@ -38,15 +38,18 @@ Preparing a Release
 -----------------------------------
 
 1. Add your IngestLDD to the ``src/`` directory in your repo
-2. Create a branch with ``release`` in the name.
-3. Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit. For example::
+2. Create a branch with ``release`` in the name, e.g. ``release/1.1.0.0``
+3. Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit via the command-line (not sure how to do this via Github Desktop). For example::
 
-    git commit --allow-empty "Prep for tagging release"
+    git commit --allow-empty -m "Prep for tagging release"
 
-4. You should then see the LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.
-5. Once you get approval from the appropriate stakeholders, merge your pull request.
-6. You should then see a new release tagged in your repo in a URL like https://github.com/pds-data-dictionaries/ldd-img/releases
-7. Then move on to **Submit Release Request** below.
+4. Push your new branch to Github
+5. Create a Pull Request for your branch.
+6. Optional: monitor the generation of the dictionaries via the ``Actions`` tab in your Github repository.
+7. Once the build completes, you should see the new LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.
+8. Once you get approval from the appropriate stakeholders, merge your pull request.
+9. You should then see a new release tagged in your repo in a URL like https://github.com/pds-data-dictionaries/ldd-img/releases
+10. Then move on to **Submit Release Request** below.
 
 
 Submit Manually

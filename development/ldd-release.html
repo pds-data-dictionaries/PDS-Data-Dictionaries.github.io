@@ -238,13 +238,16 @@
 <h3>(preferred) Tag a Release In Github<a class="headerlink" href="#preferred-tag-a-release-in-github" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
 <li><p>Add your IngestLDD to the <code class="docutils literal notranslate"><span class="pre">src/</span></code> directory in your repo</p></li>
-<li><p>Create a branch with <code class="docutils literal notranslate"><span class="pre">release</span></code> in the name.</p></li>
-<li><p>Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">empty</span> <span class="s2">&quot;Prep for tagging release&quot;</span>
+<li><p>Create a branch with <code class="docutils literal notranslate"><span class="pre">release</span></code> in the name, e.g. <code class="docutils literal notranslate"><span class="pre">release/1.1.0.0</span></code></p></li>
+<li><p>Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit via the command-line (not sure how to do this via Github Desktop). For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">empty</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Prep for tagging release&quot;</span>
 </pre></div>
 </div>
 </li>
-<li><p>You should then see the LDD auto-generated (after ~2-3 minutes) in both the <code class="docutils literal notranslate"><span class="pre">build/development</span></code> and <code class="docutils literal notranslate"><span class="pre">build/release</span></code> directories.</p></li>
+<li><p>Push your new branch to Github</p></li>
+<li><p>Create a Pull Request for your branch.</p></li>
+<li><p>Optional: monitor the generation of the dictionaries via the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> tab in your Github repository.</p></li>
+<li><p>Once the build completes, you should see the new LDD auto-generated (after ~2-3 minutes) in both the <code class="docutils literal notranslate"><span class="pre">build/development</span></code> and <code class="docutils literal notranslate"><span class="pre">build/release</span></code> directories.</p></li>
 <li><p>Once you get approval from the appropriate stakeholders, merge your pull request.</p></li>
 <li><p>You should then see a new release tagged in your repo in a URL like <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-img/releases">https://github.com/pds-data-dictionaries/ldd-img/releases</a></p></li>
 <li><p>Then move on to <strong>Submit Release Request</strong> below.</p></li>
