@@ -235,7 +235,7 @@ LDDTool + Oxygen can be used to generate human readable versions of the data dic
 * `PDS4 Data Dictionary (pdf) <https://pds.nasa.gov/datastandards/documents/dd/current/PDS4_PDS_DD_1F00.pdf>`_
 * `PDS4 Data Dictionary (WebHelp) <https://pds.nasa.gov/datastandards/documents/dd/current/PDS4_PDS_DD_1F00/webhelp/all/>`_
 
-This is described on the PDS4 Information Model and LDDTool wiki here: `<https://github.com/NASA-PDS/pds4-information-model/wiki/Generating-PDS-WebHelp>`_
+This is described on the PDS4 Information Model and LDDTool wiki here: `<https://github.com/NASA-PDS/pds4-information-model/wiki/Generating-Data-Dictionary-Documentation>`_
 
 ----
 
