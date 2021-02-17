@@ -226,6 +226,19 @@ See applicable Github docs: https://docs.github.com/en/free-pro-team@latest/gith
 
 ----
 
+Generate Human Readable Versions of the LDD
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+LDDTool + Oxygen can be used to generate human readable versions of the data dictionary, the XML file is processed into HTML, PDF, and a WebHelp format. For example:
+
+* `PDS4 Data Dictionary (html) <https://pds.nasa.gov/datastandards/documents/dd/current/PDS4_PDS_DD_1F00.html>`_
+* `PDS4 Data Dictionary (pdf) <https://pds.nasa.gov/datastandards/documents/dd/current/PDS4_PDS_DD_1F00.pdf>`_
+* `PDS4 Data Dictionary (WebHelp) <https://pds.nasa.gov/datastandards/documents/dd/current/PDS4_PDS_DD_1F00/webhelp/all/>`_
+
+This is described on the PDS4 Information Model and LDDTool wiki here: `<https://github.com/NASA-PDS/pds4-information-model/wiki/Generating-PDS-WebHelp>`_
+
+----
+
 TBD
 +++
 Feel free to add some of your own or create a ticket in the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues>`_ so we can start to build up this documentation.
