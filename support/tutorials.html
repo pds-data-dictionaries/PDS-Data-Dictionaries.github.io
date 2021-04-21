@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Tutorials &mdash; PDS Data Dictionaries  documentation</title>
@@ -84,12 +85,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+              <p><span class="caption-text">Getting Started:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Development</span></p>
+<p><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../development/ldd-create.html">LDD Creation Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development/ldd-update.html">LDD Update Process</a></li>
@@ -97,12 +98,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../development/ldd-build.html">LDD Build Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development/ldd-release.html">LDD Release Process</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Teams</span></p>
+<p><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Support</span></p>
+<p><span class="caption-text">Support</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Us</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
@@ -195,7 +196,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tutorials">
+  <section id="tutorials">
 <h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul class="current">
@@ -220,7 +221,7 @@
 </li>
 </ul>
 </div>
-<div class="section" id="ldd-update-and-build-tutorial">
+<section id="ldd-update-and-build-tutorial">
 <h2>LDD Update and Build Tutorial<a class="headerlink" href="#ldd-update-and-build-tutorial" title="Permalink to this headline">¶</a></h2>
 <p><strong>Objective:</strong></p>
 <blockquote>
@@ -242,7 +243,7 @@
 <p>The steps of this tutorial are specific to Github Desktop. However, there is nothing preventing you from completing this tutorial using the command-line of Github.com editors if you prefer.</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="clone-the-ldd-template-repository">
+<section id="clone-the-ldd-template-repository">
 <h3>1. Clone the ldd-template repository<a class="headerlink" href="#clone-the-ldd-template-repository" title="Permalink to this headline">¶</a></h3>
 <p>Let’s first, clone the repo from Github.com to our local computer.</p>
 <ol class="loweralpha simple">
@@ -286,9 +287,9 @@
 <li><p>You should now see a screen in Github Desktop that says <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Local</span> <span class="pre">Changes</span></code>, indicating your repo is connected and there are no changes to that repo on your local system (as expected).</p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_github_desktop_init.png"><img alt="../_images/screenshot_github_desktop_init.png" src="../_images/screenshot_github_desktop_init.png" /></a>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="create-a-branch-for-your-proposed-changes">
+<section id="create-a-branch-for-your-proposed-changes">
 <h3>2. Create a Branch for Your Proposed Changes<a class="headerlink" href="#create-a-branch-for-your-proposed-changes" title="Permalink to this headline">¶</a></h3>
 <p>Now that we have the repo on our local machine, let’s create a new branch to put our changes.</p>
 <ol class="loweralpha simple">
@@ -303,9 +304,9 @@
 <li><p>You should now be taken back to the main Github Desktop screen, and notice your <code class="docutils literal notranslate"><span class="pre">Current</span> <span class="pre">Branch</span></code> is now <code class="docutils literal notranslate"><span class="pre">my_first_branch</span></code>.</p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_my_first_branch.png"><img alt="../_images/screenshot_my_first_branch.png" src="../_images/screenshot_my_first_branch.png" /></a>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="make-an-update-and-push-to-branch">
+<section id="make-an-update-and-push-to-branch">
 <h3>3. Make an Update and Push to Branch<a class="headerlink" href="#make-an-update-and-push-to-branch" title="Permalink to this headline">¶</a></h3>
 <ol class="loweralpha">
 <li><p>We now want to edit the IngestLDD in the repo. This file is located within your new repo under <code class="docutils literal notranslate"><span class="pre">my-ldd-test/src/PDS4_EXAMPLE_IngestLDD.xml</span></code>. This file can be opened from your favorite Editor. The Github Desktop main screen should also provide a button to <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">the</span> <span class="pre">files</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">repository</span></code>, which will take you to the directory where the files exist on your local file system.</p></li>
@@ -353,9 +354,9 @@
 <ol class="loweralpha simple" start="8">
 <li><p>You can also go to the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/13">dummy issue</a> in Github and see that your commit should now be referenced there (refresh the page if you were already there). This shows the power of including issue references in your tickets.</p></li>
 </ol>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="continuous-integration-with-github-actions">
+<section id="continuous-integration-with-github-actions">
 <h3>4. Continuous Integration with Github Actions<a class="headerlink" href="#continuous-integration-with-github-actions" title="Permalink to this headline">¶</a></h3>
 <p>What you may not have noticed was once you pushed to that branch, a Github Action was executed to auto-generate your LDD.</p>
 <ol class="loweralpha simple">
@@ -378,9 +379,9 @@
 <p class="admonition-title">Note</p>
 <p>Every time you push an update to a branch, dictionaries will be auto-generated, basic validation to ensure the XSD and SCH generated are valid, and regression testing if tests exist in the <code class="docutils literal notranslate"><span class="pre">test/</span></code> directory of your repo. See <a class="reference internal" href="../development/ldd-build.html"><span class="doc">LDD Build Process</span></a> and <a class="reference internal" href="../development/ldd-test.html"><span class="doc">LDD Regression Testing</span></a></p>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="refresh-your-local-branch">
+<section id="refresh-your-local-branch">
 <h3>5. Refresh Your Local Branch<a class="headerlink" href="#refresh-your-local-branch" title="Permalink to this headline">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -401,9 +402,9 @@
 <ol class="loweralpha simple" start="3">
 <li><p>You can now open the XSD / SCH and notice that those files are now up-to-date with what is in Github.</p></li>
 </ol>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="create-a-pull-request-pr">
+<section id="create-a-pull-request-pr">
 <h3>6. Create a Pull Request (PR)<a class="headerlink" href="#create-a-pull-request-pr" title="Permalink to this headline">¶</a></h3>
 <p>Now that we have a branch and some changes committed, how do we get those changes into the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch? By creating a pull request.</p>
 <ol class="loweralpha simple">
@@ -414,21 +415,21 @@
 <ol class="loweralpha simple" start="3">
 <li><p>If this PR were created under a repo within the PDS Data Dictionaries organization, the LDD CCB would be automatically assigned as a reviewer on the PR. See <a class="reference internal" href="../development/ldd-update.html"><span class="doc">LDD Update Process</span></a> for more details on the review process.</p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="ldd-update-and-break-build-tutorial">
+<section id="ldd-update-and-break-build-tutorial">
 <h2>LDD Update and Break Build Tutorial<a class="headerlink" href="#ldd-update-and-break-build-tutorial" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial will help test out breaking the automated LDD build process so you can see some of the issues that may arise.</p>
-<div class="section" id="id2">
+<section id="id2">
 <h3>1. Clone the ldd-template repository<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>See #1 from LDD Update and Build Tutorial above for setting this up.</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h3>2. Create a Branch for Your Proposed Changes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>See #2 from LDD Update and Build Tutorial above for setting this up.</p>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h3>3. Make an Update and Push to Branch<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>See #2 from LDD Update and Build Tutorial above, except for step 2b. Here, make an invalid update to break the build:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">DD_Attribute</span><span class="o">&gt;</span>
@@ -447,15 +448,15 @@
 <span class="o">&lt;/</span><span class="n">DD_Attribute</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h3>4. Continuous Integration with Github Actions<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>You should now be able to go out to your Gitub Actions, see a failure, and trace through the logs to determine the issue.</p>
 <a class="reference external image-reference" href="../_static/images/screenshot_github_action_broken1.png"><img alt="../_images/screenshot_github_action_broken1.png" src="../_images/screenshot_github_action_broken1.png" /></a>
 <a class="reference external image-reference" href="../_static/images/screenshot_github_action_broken2.png"><img alt="../_images/screenshot_github_action_broken2.png" src="../_images/screenshot_github_action_broken2.png" /></a>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

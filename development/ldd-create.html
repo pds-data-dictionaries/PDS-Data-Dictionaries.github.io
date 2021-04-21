@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>LDD Creation Process &mdash; PDS Data Dictionaries  documentation</title>
@@ -85,12 +86,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+              <p><span class="caption-text">Getting Started:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Development</span></p>
+<p><span class="caption-text">Development</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Creation Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-discipline-ldd">Proposing a New Discipline LDD</a><ul>
@@ -117,12 +118,12 @@
 <li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-release.html">LDD Release Process</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Teams</span></p>
+<p><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Support</span></p>
+<p><span class="caption-text">Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../support/contact.html">Contact Us</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/contribute.html">Contribute</a></li>
@@ -197,7 +198,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ldd-creation-process">
+  <section id="ldd-creation-process">
 <h1>LDD Creation Process<a class="headerlink" href="#ldd-creation-process" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul class="current">
@@ -223,35 +224,35 @@
 </li>
 </ul>
 </div>
-<div class="section" id="proposing-a-new-discipline-ldd">
+<section id="proposing-a-new-discipline-ldd">
 <h2>Proposing a New Discipline LDD<a class="headerlink" href="#proposing-a-new-discipline-ldd" title="Permalink to this headline">¶</a></h2>
 <p>Creation of a new Discipline LDDs should be discussed and approved by the PDS LDD Change Control Board (TBD Email list or google group). During this process the following must be determined:</p>
-<div class="section" id="is-this-ldd-needed">
+<section id="is-this-ldd-needed">
 <h3>1. Is this LDD needed?<a class="headerlink" href="#is-this-ldd-needed" title="Permalink to this headline">¶</a></h3>
 <p>Does a similar dictionary exist? If so, what is the rationale for creating a new one instead of adding to an existing one?</p>
-</div>
-<div class="section" id="who-will-be-the-ldd-steward-s">
+</section>
+<section id="who-will-be-the-ldd-steward-s">
 <h3>2. Who will be the LDD Steward(s)?<a class="headerlink" href="#who-will-be-the-ldd-steward-s" title="Permalink to this headline">¶</a></h3>
 <p>One or more discipline node staff members must be appointed steward of the LDD.</p>
-</div>
-<div class="section" id="who-will-be-on-the-ldd-change-control-board">
+</section>
+<section id="who-will-be-on-the-ldd-change-control-board">
 <h3>3. Who will be on the LDD Change Control Board?<a class="headerlink" href="#who-will-be-on-the-ldd-change-control-board" title="Permalink to this headline">¶</a></h3>
 <p>If this LDD is of interest to your Discipline Node, request of the newly appointed LDD Steward(s) to be added to the CCB.</p>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="proposing-a-new-mission-ldd">
+<section id="proposing-a-new-mission-ldd">
 <h2>Proposing a New Mission LDD<a class="headerlink" href="#proposing-a-new-mission-ldd" title="Permalink to this headline">¶</a></h2>
 <p>Contact your Discipline Node to help you along this process. Many of the best practices and review rigor described below may not be necessary for Mission LDD development.</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="requesting-a-new-namespace-id">
+<section id="requesting-a-new-namespace-id">
 <h2>Requesting A New Namespace ID<a class="headerlink" href="#requesting-a-new-namespace-id" title="Permalink to this headline">¶</a></h2>
 <p>Upon receiving approval to begin development on your new LDD, a namespace ID must be reserved.</p>
 <p>Create a new “PDS Namespace Request” issue within the <a class="reference external" href="https://github.com/NASA-PDS/pds4-information-model/issues/new/choose">PDS4 Information Model repo</a> to get your namespace added to the <a class="reference external" href="https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf">PDS4 Namespace Registry</a>.</p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="kick-off-team-and-repo-creation">
+<section id="kick-off-team-and-repo-creation">
 <h2>Kick-off Team and Repo Creation<a class="headerlink" href="#kick-off-team-and-repo-creation" title="Permalink to this headline">¶</a></h2>
 <p>Contact the <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members">PDS Team</a> to assist you with creating the appropriate Github Teams and LDD Repository as laid out below. These actions all require Github Admin access. Please provide them with the following information:</p>
 <ul class="simple">
@@ -259,9 +260,9 @@
 <li><p>Brief description of the LDD. spell out namespace_id if it is an acronym.</p></li>
 <li><p>LDD Steward Github username</p></li>
 </ul>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="creating-new-ldd-repository-admin-only">
+<section id="creating-new-ldd-repository-admin-only">
 <h2>Creating New LDD Repository (Admin Only)<a class="headerlink" href="#creating-new-ldd-repository-admin-only" title="Permalink to this headline">¶</a></h2>
 <p>Once you have your <a class="reference external" href="#Requesting-A-New-Namespace-ID">Namespace ID</a>, you are ready to create the new Github repo for maintaining the LDD.</p>
 <div class="admonition note">
@@ -272,7 +273,7 @@
 <p class="admonition-title">Note</p>
 <p>This can probably be scripted someday using GithubAPI or within a Github Action.</p>
 </div>
-<div class="section" id="create-new-repo-from-ldd-template">
+<section id="create-new-repo-from-ldd-template">
 <h3>1. Create new repo from ldd-template<a class="headerlink" href="#create-new-repo-from-ldd-template" title="Permalink to this headline">¶</a></h3>
 <ol class="loweralpha simple">
 <li><p><a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template/generate">Create new repo</a></p></li>
@@ -288,8 +289,8 @@
 </dl>
 </li>
 </ol>
-</div>
-<div class="section" id="update-repo-settings">
+</section>
+<section id="update-repo-settings">
 <h3>2. Update Repo Settings<a class="headerlink" href="#update-repo-settings" title="Permalink to this headline">¶</a></h3>
 <p>We need to setup the teams and <code class="docutils literal notranslate"><span class="pre">master</span></code> branch protections.</p>
 <ol class="loweralpha simple">
@@ -318,8 +319,8 @@
 </dl>
 </li>
 </ol>
-</div>
-<div class="section" id="create-new-issue-template-in-pds4-ldd-issue-repo">
+</section>
+<section id="create-new-issue-template-in-pds4-ldd-issue-repo">
 <h3>3. Create new issue template in PDS4 LDD Issue Repo<a class="headerlink" href="#create-new-issue-template-in-pds4-ldd-issue-repo" title="Permalink to this headline">¶</a></h3>
 <ol class="loweralpha">
 <li><p><a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/labels">Create a new label</a> in the PDS4 LDD Issue Repo for the new repo (ldd-&lt;namespace_id&gt;)</p></li>
@@ -346,14 +347,14 @@ To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
 </li>
 <li><p>You should now see a <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose">new issue template created</a></p></li>
 </ol>
-</div>
-<div class="section" id="notify-ldd-steward">
+</section>
+<section id="notify-ldd-steward">
 <h3>4. Notify LDD Steward<a class="headerlink" href="#notify-ldd-steward" title="Permalink to this headline">¶</a></h3>
 <p>Notify the LDD Steward the new repo is ready.</p>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="retrofit-existing-ldd-repository-admin-stewards-only">
+<section id="retrofit-existing-ldd-repository-admin-stewards-only">
 <h2>Retrofit Existing LDD Repository (Admin / Stewards Only)<a class="headerlink" href="#retrofit-existing-ldd-repository-admin-stewards-only" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Clone the ldd-template repo and the LDD repo to be retrofitted. For this example, we will be retrofitting the <code class="docutils literal notranslate"><span class="pre">ldd-img</span></code> repo:</p>
@@ -380,8 +381,8 @@ To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
 <li><p>Remove local repo github issues, update permissions on the repository, and add branch protections per <span class="xref std std-doc">Update Repo Settings above</span></p></li>
 <li><p>Update README as appropriate to direct people to Contribute and Get Support. See the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template/blob/master/README.md">ldd-template README</a> for more details.</p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
