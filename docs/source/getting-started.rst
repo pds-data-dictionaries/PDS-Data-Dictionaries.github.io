@@ -23,7 +23,6 @@ When you prepare data for delivery to PDS, you will certainly be involved in cre
 
 For more details, see the `PDS4 Data Provider's Handbook (DPH) <https://pds.jpl.nasa.gov/datastandards/documents/dph/current/>`_, `PDS4 Standards Reference (SR) <https://pds.jpl.nasa.gov/datastandards/documents/sr/current/>`_, and of the other `PDS4 Standards Documentation <https://pds.jpl.nasa.gov/datastandards/documents/>`_.
 
-
 Additional PDS4 Documentation
 +++++++++++++++++++++++++++++
 
