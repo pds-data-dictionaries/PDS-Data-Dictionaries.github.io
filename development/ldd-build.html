@@ -3,10 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>LDD Build Process &mdash; PDS Data Dictionaries  documentation</title>
   
@@ -14,10 +13,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
+
   
+  
+
   
 
   
@@ -27,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -52,7 +56,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> PDS Data Dictionaries
+            <a href="../index.html" class="icon icon-home"> PDS Data Dictionaries
           
 
           
@@ -86,12 +90,12 @@
               
             
             
-              <p><span class="caption-text">Getting Started:</span></p>
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
-<p><span class="caption-text">Development</span></p>
+<p class="caption"><span class="caption-text">Development</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="ldd-create.html">LDD Creation Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
@@ -104,12 +108,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-release.html">LDD Release Process</a></li>
 </ul>
-<p><span class="caption-text">Teams</span></p>
+<p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 </ul>
-<p><span class="caption-text">Support</span></p>
+<p class="caption"><span class="caption-text">Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../support/contact.html">Contact Us</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/contribute.html">Contribute</a></li>
@@ -159,6 +163,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -170,7 +176,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/development/ldd-build.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -184,7 +190,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="ldd-build-process">
+  <div class="section" id="ldd-build-process">
 <h1>LDD Build Process<a class="headerlink" href="#ldd-build-process" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul class="current">
@@ -196,70 +202,62 @@
 </li>
 </ul>
 </div>
-<section id="build-ldd-using-github">
+<div class="section" id="build-ldd-using-github">
 <h2>Build LDD Using Github<a class="headerlink" href="#build-ldd-using-github" title="Permalink to this headline">¶</a></h2>
 <p>By default, as long as your Discipline LDD is using the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template/">ldd-template repository</a>, all Discipline LDD schemas, schematrons, and other default LDDTool outputs are generated whenever a Pull Request is created with a change to an IngestLDD.</p>
 <p>The new schemas/schematrons are posted to the <cite>build/development</cite> directory in your repository. See <a class="reference internal" href="../support/tutorials.html"><span class="doc">LDD Update and Build Tutorial</span></a> for an example generating these schemas/schematrons.</p>
 <p>For more details on how the dictionaries are generated, see <cite>LDD Github Actions</cite>.</p>
 <p>—</p>
-</section>
-<section id="build-ldd-using-lddtool">
+</div>
+<div class="section" id="build-ldd-using-lddtool">
 <h2>Build LDD Using LDDTool<a class="headerlink" href="#build-ldd-using-lddtool" title="Permalink to this headline">¶</a></h2>
 <p>See <a class="reference external" href="https://nasa-pds.github.io/pds4-information-model/model-lddtool/">LDDTool documentation</a>.</p>
-</section>
+</div>
 <hr class="docutils" />
-<section id="changing-pds4-build-versions">
+<div class="section" id="changing-pds4-build-versions">
 <h2>Changing PDS4 Build Versions<a class="headerlink" href="#changing-pds4-build-versions" title="Permalink to this headline">¶</a></h2>
 <p>LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using the ldd-template repo, your LDD will automatically be built with the latest version of the PDS4 IM. Here are the steps to change that version:</p>
 <ol class="arabic">
 <li><p>Open pds4_versions.txt (in the base of your repo)</p></li>
 <li><p>Change the add a new line with the applicable version you would like use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.13</span><span class="o">.</span><span class="mf">0.0</span>
-<span class="mf">1.14</span><span class="o">.</span><span class="mf">0.0</span>
-<span class="mf">1.15</span><span class="o">.</span><span class="mf">0.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.13.0.0</span>
+<span class="mf">1.14.0.0</span>
+<span class="mf">1.15.0.0</span>
 </pre></div>
 </div>
 </li>
 </ol>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ldd-release.html" class="btn btn-neutral float-right" title="LDD Release Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ldd-how-to.html" class="btn btn-neutral float-left" title="LDD How-To Guides" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="ldd-release.html" class="btn btn-neutral float-right" title="LDD Release Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ldd-how-to.html" class="btn btn-neutral float-left" title="LDD How-To Guides" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020 California Institute of Technology
+        &#169; Copyright 2020 California Institute of Technology.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

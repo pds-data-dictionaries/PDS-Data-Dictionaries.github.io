@@ -3,10 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>LDD Regression Testing &mdash; PDS Data Dictionaries  documentation</title>
   
@@ -14,10 +13,15 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
+
   
+  
+
   
 
   
@@ -27,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -50,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> PDS Data Dictionaries
+            <a href="../index.html" class="icon icon-home"> PDS Data Dictionaries
           
 
           
@@ -84,12 +88,12 @@
               
             
             
-              <p><span class="caption-text">Getting Started:</span></p>
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started.html#getting-to-know-your-ldd-repo">Getting to Know Your LDD Repo</a></li>
 </ul>
-<p><span class="caption-text">Development</span></p>
+<p class="caption"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ldd-create.html">LDD Creation Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
@@ -97,12 +101,12 @@
 <li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-release.html">LDD Release Process</a></li>
 </ul>
-<p><span class="caption-text">Teams</span></p>
+<p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 </ul>
-<p><span class="caption-text">Support</span></p>
+<p class="caption"><span class="caption-text">Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../support/contact.html">Contact Us</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/contribute.html">Contribute</a></li>
@@ -152,6 +156,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -163,7 +169,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="../_sources/development/ldd-test.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -177,7 +183,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="ldd-regression-testing">
+  <div class="section" id="ldd-regression-testing">
 <h1>LDD Regression Testing<a class="headerlink" href="#ldd-regression-testing" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul class="current">
@@ -190,16 +196,16 @@
 </li>
 </ul>
 </div>
-<section id="overview">
+<div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Local Data Dictionary (LDD) stewards are expected to provide example labels that can be used for regression testing LDDs delivered for release. The number and complexity of examples developed are dependent upon the dictionary steward and what is determined to be a high-priority or is thought to be something that are critical to the dictionary. The following page describes some examples of regression tests as well as where/how these files should be provided to PDS Engineering Node to complete that testing.</p>
-</section>
-<section id="regression-test-data">
+</div>
+<div class="section" id="regression-test-data">
 <h2>Regression Test Data<a class="headerlink" href="#regression-test-data" title="Permalink to this headline">¶</a></h2>
 <p>Regression tests should be made up of PDS4 example products that either successfully or unsuccessfully validate using the <a class="reference external" href="https://nasa-pds.github.io/validate/">PDS Validate Tool</a>.</p>
 <p>For simple examples of generating simple regression test cases, see the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template">LDD Template repository</a>.</p>
-</section>
-<section id="regression-test-data-rules">
+</div>
+<div class="section" id="regression-test-data-rules">
 <h2>Regression Test Data Rules<a class="headerlink" href="#regression-test-data-rules" title="Permalink to this headline">¶</a></h2>
 <p>In order for your regression test data to be autonomously tested during the automated LDD Generation process, you must follow the following rules when posting your test data to Github:</p>
 <ol class="arabic simple">
@@ -207,8 +213,8 @@
 <li><p><strong>No schemaLocations</strong> - do not include schemaLocation references in the labels. the pipeline will automatically add the newly generated schematrons to the validation.</p></li>
 <li><p><strong>Include ``[IM_VERSION]`` for information_model_version</strong> - use <code class="docutils literal notranslate"><span class="pre">[IM_VERSION]</span></code> value for <code class="docutils literal notranslate"><span class="pre">information_model_version</span></code> attribute so it can be dynamically replaced by the pipeline</p></li>
 </ol>
-</section>
-<section id="test-data-directory-layout">
+</div>
+<div class="section" id="test-data-directory-layout">
 <h2>Test Data Directory Layout<a class="headerlink" href="#test-data-directory-layout" title="Permalink to this headline">¶</a></h2>
 <p>Regression test products should be maintained within the <code class="docutils literal notranslate"><span class="pre">test/</span></code> directory of your LDD Repo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ldd-test/
@@ -225,36 +231,33 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">*FAIL*</span></code> - all PDS4 XML labels that will fail validation against delivered dictionaries. Output from Validate Tool should go into <code class="docutils literal notranslate"><span class="pre">*FAIL*.log</span></code> files in order to compare output from EN Validate execution.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">*VALID*</span></code> - all PDS4 XML labels that will complete successful validation against delivered dictionaries.</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020 California Institute of Technology
+        &#169; Copyright 2020 California Institute of Technology.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
