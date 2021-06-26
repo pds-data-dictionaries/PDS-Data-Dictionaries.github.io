@@ -31,7 +31,7 @@ To generate a Discipline LDD versus a Mission LDD, you must specify this informa
         <ldd_version_id>1.0.0.0</ldd_version_id>
         <dictionary_type>Discipline</dictionary_type>
 
-See the `Imaging Discipline LDD <https://github.com/pds-data-dictionaries/ldd-img/blob/master/src/PDS4_IMG_IngestLDD.xml>`_ for a more detailed example.
+See the `Imaging Discipline LDD <https://github.com/pds-data-dictionaries/ldd-img/blob/main/src/PDS4_IMG_IngestLDD.xml>`_ for a more detailed example.
 
 Then execute LDDTool to generate the appropriate dictionary::
 
@@ -48,7 +48,7 @@ To generate a Mission LDD versus a Discipline LDD, you must specify this informa
         <ldd_version_id>1.0.0.0</ldd_version_id>
         <dictionary_type>Mission</dictionary_type>
 
-See the `Mars 2020 Mission LDD <https://github.com/pds-data-dictionaries/ldd-m2020/blob/master/src/PDS4_M2020_IngestLDD.xml>`_ for a more detailed example.
+See the `Mars 2020 Mission LDD <https://github.com/pds-data-dictionaries/ldd-m2020/blob/main/src/PDS4_M2020_IngestLDD.xml>`_ for a more detailed example.
 
 Then execute LDDTool to generate the appropriate dictionary::
 

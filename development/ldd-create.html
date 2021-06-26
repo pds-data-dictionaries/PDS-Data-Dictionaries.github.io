@@ -298,7 +298,7 @@
 </div>
 <div class="section" id="update-repo-settings">
 <h3>2. Update Repo Settings<a class="headerlink" href="#update-repo-settings" title="Permalink to this headline">¶</a></h3>
-<p>We need to setup the teams and <code class="docutils literal notranslate"><span class="pre">master</span></code> branch protections.</p>
+<p>We need to setup the teams and <code class="docutils literal notranslate"><span class="pre">main</span></code> branch protections.</p>
 <ol class="loweralpha simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Settings</span></code></p></li>
 <li><p>Disable issues being created on this repo (they will be created in the PDS4 LDD Issue Repo).</p></li>
@@ -316,7 +316,7 @@
 <dt>Set branches protections</dt><dd><ul class="simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Branches</span></code></p></li>
 <li><p>Under <strong>Branch protection rules</strong>, click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">rule</span></code></p></li>
-<li><p>Enter <strong>Branch name pattern:</strong> <code class="docutils literal notranslate"><span class="pre">master</span></code></p></li>
+<li><p>Enter <strong>Branch name pattern:</strong> <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">Require</span> <span class="pre">pull</span> <span class="pre">request</span> <span class="pre">reviews</span> <span class="pre">before</span> <span class="pre">merging</span></code></p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">Require</span> <span class="pre">review</span> <span class="pre">from</span> <span class="pre">Code</span> <span class="pre">Owners</span></code></p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">Restrict</span> <span class="pre">who</span> <span class="pre">can</span> <span class="pre">push</span> <span class="pre">to</span> <span class="pre">matching</span> <span class="pre">branches</span></code></p></li>
@@ -331,10 +331,10 @@
 <ol class="loweralpha">
 <li><p><a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/labels">Create a new label</a> in the PDS4 LDD Issue Repo for the new repo (ldd-&lt;namespace_id&gt;)</p></li>
 <li><p>Clone the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/">PDS4 LDD Issue Repo</a></p></li>
-<li><p>Execute the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/master/bin/generate-issue-template.sh">generate-issue-template.sh bash script</a>. This will automatically generate an issue template from the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/master/templates/ldd-issue-template.md">LDD Issue Template</a> and push to the repo:</p>
+<li><p>Execute the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/main/bin/generate-issue-template.sh">generate-issue-template.sh bash script</a>. This will automatically generate an issue template from the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/main/templates/ldd-issue-template.md">LDD Issue Template</a> and push to the repo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bin/generate-issue-template.sh cart Cartography thareUSGS
 New issue template created: /Users/jpadams/Documents/proj/pds/pdsen/workspace/pds4-ldd-issue-repo/bin/../.github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
-[master 950bedb] Add cart issue template
+[main 950bedb] Add cart issue template
  1 file changed, 33 insertions(+)
  create mode 100644 .github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
 Enumerating objects: 8, done.
@@ -347,7 +347,7 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 remote: This repository moved. Please use the new location:
 remote:   git@github.com:pds-data-dictionaries/PDS4-LDD-Issue-Repo.git
 To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
-   b0abee5..950bedb  master -&gt; master
+   b0abee5..950bedb  main -&gt; main
 </pre></div>
 </div>
 </li>
@@ -385,7 +385,7 @@ To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
 <li><p>Re-arrange directories to match that of the <code class="docutils literal notranslate"><span class="pre">ldd-template</span></code> repo. Specifically note the <code class="docutils literal notranslate"><span class="pre">build/development</span></code> and <code class="docutils literal notranslate"><span class="pre">build/release</span></code> directories.</p></li>
 <li><p>Create a branch and pull request, and verify the Github Action executes successfully. e.g. <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-img/actions/">https://github.com/pds-data-dictionaries/ldd-img/actions/</a></p></li>
 <li><p>Remove local repo github issues, update permissions on the repository, and add branch protections per <span class="xref std std-doc">Update Repo Settings above</span></p></li>
-<li><p>Update README as appropriate to direct people to Contribute and Get Support. See the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template/blob/master/README.md">ldd-template README</a> for more details.</p></li>
+<li><p>Update README as appropriate to direct people to Contribute and Get Support. See the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template/blob/main/README.md">ldd-template README</a> for more details.</p></li>
 </ol>
 </div>
 </div>

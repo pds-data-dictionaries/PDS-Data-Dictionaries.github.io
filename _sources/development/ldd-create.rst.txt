@@ -83,7 +83,7 @@ b. Set the following parameters:
 2. Update Repo Settings
 -----------------------
 
-We need to setup the teams and ``master`` branch protections.
+We need to setup the teams and ``main`` branch protections.
 
 a. Go to ``Settings``
 
@@ -98,7 +98,7 @@ c. Add appropriate teams with access to repo
 d. Set branches protections
     * Go to ``Branches``
     * Under **Branch protection rules**, click ``Add rule``
-    * Enter **Branch name pattern:** ``master``
+    * Enter **Branch name pattern:** ``main``
     * Select ``Require pull request reviews before merging``
     * Select ``Require review from Code Owners``
     * Select ``Restrict who can push to matching branches``
@@ -111,11 +111,11 @@ a. `Create a new label <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-
 
 b. Clone the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/>`_
 
-c. Execute the `generate-issue-template.sh bash script <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/master/bin/generate-issue-template.sh>`_. This will automatically generate an issue template from the `LDD Issue Template <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/master/templates/ldd-issue-template.md>`_ and push to the repo::
+c. Execute the `generate-issue-template.sh bash script <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/main/bin/generate-issue-template.sh>`_. This will automatically generate an issue template from the `LDD Issue Template <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/main/templates/ldd-issue-template.md>`_ and push to the repo::
 
         $ bin/generate-issue-template.sh cart Cartography thareUSGS
         New issue template created: /Users/jpadams/Documents/proj/pds/pdsen/workspace/pds4-ldd-issue-repo/bin/../.github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
-        [master 950bedb] Add cart issue template
+        [main 950bedb] Add cart issue template
          1 file changed, 33 insertions(+)
          create mode 100644 .github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
         Enumerating objects: 8, done.
@@ -128,7 +128,7 @@ c. Execute the `generate-issue-template.sh bash script <https://github.com/pds-d
         remote: This repository moved. Please use the new location:
         remote:   git@github.com:pds-data-dictionaries/PDS4-LDD-Issue-Repo.git
         To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
-           b0abee5..950bedb  master -> master
+           b0abee5..950bedb  main -> main
 
 d. You should now see a `new issue template created <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose>`_
 
@@ -166,4 +166,4 @@ Retrofit Existing LDD Repository (Admin / Stewards Only)
 
 6. Remove local repo github issues, update permissions on the repository, and add branch protections per :doc:`Update Repo Settings above <ldd-create#update-repo-settings>`
 
-7. Update README as appropriate to direct people to Contribute and Get Support. See the `ldd-template README <https://github.com/pds-data-dictionaries/ldd-template/blob/master/README.md>`_ for more details.
+7. Update README as appropriate to direct people to Contribute and Get Support. See the `ldd-template README <https://github.com/pds-data-dictionaries/ldd-template/blob/main/README.md>`_ for more details.
