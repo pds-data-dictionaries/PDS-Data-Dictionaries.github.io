@@ -3,10 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Getting Started &mdash; PDS Data Dictionaries  documentation</title>
   
@@ -14,10 +13,15 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
+
   
+  
+
   
 
   
@@ -27,10 +31,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -52,7 +56,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> PDS Data Dictionaries
+            <a href="index.html" class="icon icon-home"> PDS Data Dictionaries
           
 
           
@@ -86,7 +90,7 @@
               
             
             
-              <p><span class="caption-text">Getting Started:</span></p>
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
@@ -113,7 +117,7 @@
 </ul>
 </li>
 </ul>
-<p><span class="caption-text">Development</span></p>
+<p class="caption"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-create.html">LDD Creation Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-update.html">LDD Update Process</a></li>
@@ -121,12 +125,12 @@
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-build.html">LDD Build Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development/ldd-release.html">LDD Release Process</a></li>
 </ul>
-<p><span class="caption-text">Teams</span></p>
+<p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="teams/ldd-ccb.html">LDD Change Control Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
 </ul>
-<p><span class="caption-text">Support</span></p>
+<p class="caption"><span class="caption-text">Support</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="support/contact.html">Contact Us</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support/contribute.html">Contribute</a></li>
@@ -176,6 +180,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -187,7 +193,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/getting-started.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -201,7 +207,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="getting-started">
+  <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul class="current">
@@ -232,18 +238,18 @@
 </ul>
 </div>
 <hr class="docutils" />
-<section id="background">
+<div class="section" id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p>The PDS4 Information Model, PDS4 Data Dictionary, and their XML representation in the PDS4 Common Schema and Schematron serve as a library of generic definitions for each PDS4 product type. PDS also maintains data dictionaries for specialized disciplines such as geometry and cartography and for specific planetary missions; these are called Local Data Dictionaries or LDDs. They are also expressed as XML schemas for use in PDS labels. The PDS4 Schema and all current Local Data Dictionary schemas are available at <a class="reference external" href="https://pds.nasa.gov/datastandards/schema/released/">https://pds.nasa.gov/datastandards/schema/released/</a>.</p>
 <p>When a schema is used in a PDS4 label it is associated with a namespace. A namespace is a
 context for the terms defined in the schema. The common PDS4 schema has the namespace pds,
 and it is the default namespace in a PDS4 label. Other namespaces correspond to Local Data
 Dictionaries such as cart for the <a class="reference external" href="https://pds.nasa.gov/datastandards/dictionaries/#cart">Cartography Dictionary</a>, disp for the <a class="reference external" href="https://pds.nasa.gov/datastandards/dictionaries/#disp">Display Dictionary</a>, and mvn
-for the <a class="reference external" href="https://pds.nasa.gov/datastandards/dictionaries/#mvn">MAVEN Mission Dictionary</a> If classes or attributes from other namespaces are used in the label, the terms are prefixed with that namespace, as in <code class="docutils literal notranslate"><span class="pre">cart:map_projection_name</span></code> and <code class="docutils literal notranslate"><span class="pre">disp:vertical_display_direction</span></code>. Only namespaces that are registered in the Namespace Registry may be used in PDS4 labels (<a class="reference external" href="https://pds.nasa.gov/datastandards/schema/pdsnamespace-registry.pdf">https://pds.nasa.gov/datastandards/schema/pdsnamespace-registry.pdf</a>).</p>
+for the <a class="reference external" href="https://pds.nasa.gov/datastandards/dictionaries/#mvn">MAVEN Mission Dictionary</a> If classes or attributes from other namespaces are used in the label, the terms are prefixed with that namespace, as in <code class="docutils literal notranslate"><span class="pre">cart:map_projection_name</span></code> and <code class="docutils literal notranslate"><span class="pre">disp:vertical_display_direction</span></code>. Only namespaces that are registered in the <a class="reference external" href="https://github.com/NASA-PDS/pds4-information-model/blob/master/docs/namespace-registry/pds-namespace-registry.xlsx">Namespace Registry</a> may be used in PDS4 labels. To request a new namespace, <a class="reference external" href="https://pds-data-dictionaries.github.io/development/ldd-create.html#requesting-a-new-namespace-id">see instructions here</a>.</p>
 <p>When you prepare data for delivery to PDS, you will certainly be involved in creating labels; you may also be involved in creating discipline- or mission-specific LDDs. This section will focus on the components of labels, design choices you will need to make, and tools you can use. Basic information about XML and XML schemas can be found in Appendix C, specific instructions for editing PDS XML labels are in Appendix D, and a discussion about creating Local Data Dictionaries is available on the Small Bodies Node PDS4 Wiki (<a class="reference external" href="https://sbnwiki.astro.umd.edu">https://sbnwiki.astro.umd.edu</a>).</p>
 <p>For more details, see the <a class="reference external" href="https://pds.jpl.nasa.gov/datastandards/documents/dph/current/">PDS4 Data Provider’s Handbook (DPH)</a>, <a class="reference external" href="https://pds.jpl.nasa.gov/datastandards/documents/sr/current/">PDS4 Standards Reference (SR)</a>, and of the other <a class="reference external" href="https://pds.jpl.nasa.gov/datastandards/documents/">PDS4 Standards Documentation</a>.</p>
-</section>
-<section id="additional-pds4-documentation">
+</div>
+<div class="section" id="additional-pds4-documentation">
 <h2>Additional PDS4 Documentation<a class="headerlink" href="#additional-pds4-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Here are some additional websites that may help provide more details about NASA Planetary Data System (PDS), our international partners at the International Planetary Data Alliance (IPDA), and the PDS4 Data Standard:</p>
 <ul class="simple">
@@ -251,10 +257,10 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 <li><p>International Planetary Data Alliance (IPDA) Homepage - <a class="reference external" href="https://planetarydata.org/">https://planetarydata.org/</a></p></li>
 <li><p>PDS4 Data Standards - <a class="reference external" href="https://pds.nasa.gov/datastandards/about/">https://pds.nasa.gov/datastandards/about/</a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 <hr class="docutils" />
-<section id="getting-to-know-your-ldd-repo">
+<div class="section" id="getting-to-know-your-ldd-repo">
 <h1>Getting to Know Your LDD Repo<a class="headerlink" href="#getting-to-know-your-ldd-repo" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul class="current">
@@ -284,16 +290,16 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 </li>
 </ul>
 </div>
-<section id="overview">
+<div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Assuming a new <a class="reference internal" href="development/ldd-create.html"><span class="doc">LDD Github Repo has been generated for you</span></a>, this section and its subsections will describe the directories, associated files, and and the automated dictionary generation and validate performed automatically by the repo through Github Actions.</p>
 <p>The default directory structure and file locations are very important to ensuring the continuous integration built into the repository executes successfully.</p>
-</section>
+</div>
 <hr class="docutils" />
-<section id="ldd-generation-and-validation">
+<div class="section" id="ldd-generation-and-validation">
 <h2>LDD Generation and Validation<a class="headerlink" href="#ldd-generation-and-validation" title="Permalink to this headline">¶</a></h2>
 <p>Each LDD Github repo generated from the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template">ldd-template repo</a> will contain <a class="reference external" href="https://github.com/features/actions">Github Actions</a> to do the following:</p>
-<section id="generating-schemas-and-schematrons">
+<div class="section" id="generating-schemas-and-schematrons">
 <h3>Generating schemas and schematrons<a class="headerlink" href="#generating-schemas-and-schematrons" title="Permalink to this headline">¶</a></h3>
 <p>The github action will download and run the latest <a class="reference external" href="https://nasa-pds.github.io/pds4-information-model/model-lddtool/">LDDTool</a> and generate the schemas and schematrons from your Ingest LDD using the expected LDDTool flags.</p>
 <p><strong>What does this mean?</strong></p>
@@ -301,14 +307,14 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 <p>Additionally,*you should <strong>NOT</strong> generate and push schemas or schematrons to your repository manually*. To minimize inconsistencies across LDDs, all schemas and schematrons posted on Github should be auto-generated by Github, or generated and pushed by <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/en-operations-team">EN Operations staff</a>.</p>
 <p><strong>What does this NOT mean?</strong></p>
 <p>This does not mean you shouldn’t <a class="reference external" href="https://nasa-pds.github.io/pds4-information-model/model-lddtool/">download LDDTool</a> and test locally. Github Actions are great, but can be kind of slow generating the schemas, so I would recommend running LDDTool locally to test before pushing an update to Github per the <a class="reference internal" href="development/ldd-update.html"><span class="doc">LDD Update Process</span></a>.</p>
-</section>
-<section id="ldd-validation">
+</div>
+<div class="section" id="ldd-validation">
 <h3>LDD Validation<a class="headerlink" href="#ldd-validation" title="Permalink to this headline">¶</a></h3>
 <p>The github action also downloads <a class="reference external" href="https://nasa-pds.github.io/validate/">Validate Tool</a>, performs basic validation of your schemas and schematrons, and performs regression testing against any tests in the <code class="docutils literal notranslate"><span class="pre">test/</span></code> directory of your repo. See :doc:<a class="reference internal" href="development/ldd-test.html"><span class="doc">LDD Regression Testing</span></a> for more info on how to populate the <code class="docutils literal notranslate"><span class="pre">test</span></code> directory.</p>
-</section>
-</section>
+</div>
+</div>
 <hr class="docutils" />
-<section id="repo-directory-structure">
+<div class="section" id="repo-directory-structure">
 <h2>Repo Directory Structure<a class="headerlink" href="#repo-directory-structure" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -329,45 +335,45 @@ for the <a class="reference external" href="https://pds.nasa.gov/datastandards/d
 │   └── test1_VALID.xml
 </pre></div>
 </div>
-<section id="readme-md">
+<div class="section" id="readme-md">
 <h3>README.md<a class="headerlink" href="#readme-md" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Update the <code class="docutils literal notranslate"><span class="pre">Contribute</span></code> section of your new repos <code class="docutils literal notranslate"><span class="pre">README.md</span></code> with an appropriate description and steward contact information.</p></li>
 </ul>
 <p>For more general information on READMEs, see <a class="reference external" href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes">Github documentation</a>.</p>
-</section>
-<section id="pds4-versions-txt">
+</div>
+<div class="section" id="pds4-versions-txt">
 <h3>pds4_versions.txt<a class="headerlink" href="#pds4-versions-txt" title="Permalink to this headline">¶</a></h3>
 <p>This text file contains the applicable PDS4 Versions to build against for LDDs in your repo. Feel free to remove versions that are not applicable or add new versions by adding a newline and the applicable version number. Note: The Github CI/CD only works for PDS4 IM versions 1.11.0.0 and later.</p>
-</section>
-<section id="build">
+</div>
+<div class="section" id="build">
 <h3>build/<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h3>
 <p>This directory is where all the schemas, schematrons and other files generated from LDDTool are placed.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">development</span></code> - this directory will contain the current development version of the schema. You should always be able to direct someone here if they want to be able to test with the schemas that are currently in development for next build.</p></li>
 </ul>
 <p>** <code class="docutils literal notranslate"><span class="pre">release</span></code> - this directory will contain all released versions of the LDD from PDS4 Stadard Version 1.15.0.0 and later. This directory is maintained for <strong>configuration management only</strong>. Users should be directed to download from the archival, released version at <a class="reference external" href="https://pds.nasa.gov/datastandards/dictionaries/">pds.nasa.gov</a>.</p>
-</section>
-<section id="src">
+</div>
+<div class="section" id="src">
 <h3>src/<a class="headerlink" href="#src" title="Permalink to this headline">¶</a></h3>
 <p>This directory is where the IngestLDD and it’s associated <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> are located.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">IngestLDD.xml</span></code> - this file must be located in this directory in order for the continuous integration to work properly. The file name must also (1) contain <code class="docutils literal notranslate"><span class="pre">IngestLDD</span></code> and (2) have a file suffix of <code class="docutils literal notranslate"><span class="pre">.xml</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dependencies/</span></code> - in the event that your Discipline Dictionary inherits classes from another Discipline Dictionary, this directory will use Github submodules to link to the other repository. If that does not apply to your dictionary, you can remove this directory. If it does, contact the PDS Steward Admins to get help setting this up.</p></li>
 </ul>
-</section>
-<section id="test">
+</div>
+<div class="section" id="test">
 <h3>test/<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
 <p>See <a class="reference internal" href="development/ldd-test.html"><span class="doc">LDD Regression Testing</span></a> for more details.</p>
-</section>
-</section>
+</div>
+</div>
 <hr class="docutils" />
-<section id="trying-it-out">
+<div class="section" id="trying-it-out">
 <h2>Trying It Out<a class="headerlink" href="#trying-it-out" title="Permalink to this headline">¶</a></h2>
 <p>Before trying it out on your own repository, I recommend reviewing the <a class="reference external" href="/development/ldd-update">LDD Update Process</a> and completing the <a class="reference external" href="/support/tutorials">LDD Update and Build Tutorial</a></p>
-</section>
+</div>
 <hr class="docutils" />
-<section id="handling-ldd-dependencies">
+<div class="section" id="handling-ldd-dependencies">
 <h2>Handling LDD dependencies<a class="headerlink" href="#handling-ldd-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>If your Discipline LDD has a dependency on another Discipline LDD, you will need to complete the following changes to your repository after it has been created:</p>
 <ol class="arabic">
@@ -391,45 +397,37 @@ ldd-geom/
 </li>
 <li><p>Commit and push your changes to a branch and merge.</p></li>
 </ol>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="development/ldd-create.html" class="btn btn-neutral float-right" title="LDD Creation Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="PDS4 Local Data Dictionaries (LDDs)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="development/ldd-create.html" class="btn btn-neutral float-right" title="LDD Creation Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="PDS4 Local Data Dictionaries (LDDs)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020 California Institute of Technology
+        &#169; Copyright 2020 California Institute of Technology.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
