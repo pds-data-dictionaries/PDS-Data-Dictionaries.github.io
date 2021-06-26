@@ -204,7 +204,7 @@ c. You can now open the XSD / SCH and notice that those files are now up-to-date
 6. Create a Pull Request (PR)
 -----------------------------
 
-Now that we have a branch and some changes committed, how do we get those changes into the ``master`` branch? By creating a pull request.
+Now that we have a branch and some changes committed, how do we get those changes into the ``main`` branch? By creating a pull request.
 
 a. Once you have all the changes you want to commit for this particular issue, we can create a pull request. From Github Desktop, select the ``Create Pull Request`` button, which will take you to Github.
 
