@@ -17,11 +17,11 @@ Creation of a new Discipline LDDs should be discussed and approved by the PDS LD
 Does a similar dictionary exist? If so, what is the rationale for creating a new one instead of adding to an existing one?
 
 
-2. Who is the dLDD Stewardship Team?
+2. Who is the LDD Stewardship Team?
 ------------------------------------
 
-* Responsible for reviewing changes of existing dLDDs, design and implementation of new dLDDs and/or changes existing dLDDs.
-* Membership includes **one lead dLDD steward** and one or more stakeholders who are identified either by the lead dLDD steward and/or dLDD Approval Board.
+* Responsible for design, implementation, and review LDD development.
+* Membership includes **one lead LDD steward** and one or more stakeholders who are identified either by the lead LDD steward and/or dLDD Approval Board.
 
 
 3. Who is the dLDD Modeling Team?
