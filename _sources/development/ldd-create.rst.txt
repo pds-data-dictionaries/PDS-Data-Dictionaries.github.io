@@ -45,7 +45,7 @@ Submit Request For New LDD Creation
 
 Upon receiving approval to begin development on your new LDD, it must be initialized by reserving a namespace ID and creating a new repo.
 
-Create a new "[ldd-request] Initialize New PDS LDD" issue within the `PDSEN Operations repo <https://github.com/NASA-PDS/pdsen-operations/issues/new/choose`_ and fill out the issue template with the applicable information.
+Create a new ``[ldd-request] Initialize New PDS LDD`` issue within the `PDSEN Operations repo <https://github.com/NASA-PDS/pdsen-operations/issues/new/choose`_ and fill out the issue template with the applicable information.
 
 Part of the initilization procedure will include a new namespace added to the PDS4 Information Model and `PDS4 Namespace Registry <https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf>`_ and a new repo will be created.
 
@@ -71,8 +71,8 @@ Initializing New LDD
 Create LDD Stewardship Team
 ---------------------------
 
-Create a new team `here <https://github.com/orgs/pds-data-dictionaries/new-team>`_
-* **Team name:** ``[namespace_id] LDD Stewarship Team``
+Create a new team `here <https://github.com/orgs/pds-data-dictionaries/new-team>`_:
+* **Team name:** ``[namespace_id] LDD Stewardship Team``
 * **Team visibility:** ``Visible``
 
 Add the users noted in the LDD Initialization Ticket.
