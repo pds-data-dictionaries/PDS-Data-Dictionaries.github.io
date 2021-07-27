@@ -71,7 +71,8 @@ Initializing New LDD
 Create LDD Stewardship Team
 ---------------------------
 
-Create a new team `here <https://github.com/orgs/pds-data-dictionaries/new-team>`_:
+Create a new team `here <https://github.com/orgs/pds-data-dictionaries/new-team>`_ :
+
 * **Team name:** ``[namespace_id] LDD Stewardship Team``
 * **Team visibility:** ``Visible``
 

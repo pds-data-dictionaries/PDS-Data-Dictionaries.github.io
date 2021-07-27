@@ -23,7 +23,7 @@ Off-Nominal Release
 -------------------
 
 .. note::
-    Please try to avoid this wherever possible. In order to minimize overhead of manual processing of LDDs, please coordinate with data providers to stick to the `PDS4 Build Schedule <https://pds.jpl.nasa.gov/datastandards/about/>`_ wherever posisble.
+    Please try to avoid this wherever possible. In order to minimize overhead of manual processing of LDDs, please coordinate with data providers to stick to the `PDS4 Build Schedule <https://pds.nasa.gov/datastandards/about/>`_ wherever posisble.
 
     At any time, you can direct providers to the `build/development` directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.
 
@@ -61,7 +61,7 @@ If you are unable to submit to Github, see :ref:`Submit Release Request` to uplo
 Submit Release Request
 ----------------------
 
-Create a `request ticket here <https://github.com/NASA-PDS/pdsen-operations/issues/new?assignees=c-suh%2C+elawsgh&labels=ldd-release&template=pds-ldd-release-request.md&title=%5Bldd-release%5D+%3CLDD+Name%3E+LDD+Version%3A%3CLDD_version%3E+IM+Version%3A%3CIM_Version%3E>`_.
+Submit a `PDS LDD Release` request request ticket `here <https://github.com/NASA-PDS/pdsen-operations/issues/new/choose>`_.
 
 ----
 
