@@ -16,15 +16,20 @@ Creation of a new Discipline LDDs should be discussed and approved by the PDS LD
 
 Does a similar dictionary exist? If so, what is the rationale for creating a new one instead of adding to an existing one?
 
-2. Who will be the LDD Steward(s)?
-----------------------------------
 
-One or more discipline node staff members must be appointed steward of the LDD.
+2. Who is the dLDD Stewardship Team?
+------------------------------------
 
-3. Who will be on the LDD Change Control Board?
------------------------------------------------
+* Responsible for reviewing changes of existing dLDDs, design and implementation of new dLDDs and/or changes existing dLDDs.
+* Membership includes **one lead dLDD steward** and one or more stakeholders who are identified either by the lead dLDD steward and/or dLDD Approval Board.
 
-If this LDD is of interest to your Discipline Node, request of the newly appointed LDD Steward(s) to be added to the CCB.
+
+3. Who is the dLDD Modeling Team?
+---------------------------------
+
+* Responsible for reviewing and approving changes to the dLDDs to be released.
+* Membership includes one or more PDS Engineering Node data engineers who have in depth experience in information modeling and ontology.
+
 
 ----
 
@@ -35,40 +40,60 @@ Contact your Discipline Node to help you along this process. Many of the best pr
 
 ----
 
-Requesting A New Namespace ID
-+++++++++++++++++++++++++++++
+Submit Request For New LDD Creation
++++++++++++++++++++++++++++++++++++
 
-Upon receiving approval to begin development on your new LDD, a namespace ID must be reserved.
+Upon receiving approval to begin development on your new LDD, it must be initialized by reserving a namespace ID and creating a new repo.
 
-Create a new "PDS Namespace Request" issue within the `PDS4 Information Model repo <https://github.com/NASA-PDS/pds4-information-model/issues/new/choose>`_ to get your namespace added to the `PDS4 Namespace Registry <https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf>`_.
+Create a new "[ldd-request] Initialize New PDS LDD" issue within the `PDSEN Operations repo <https://github.com/NASA-PDS/pdsen-operations/issues/new/choose`_ and fill out the issue template with the applicable information.
 
-----
+Part of the initilization procedure will include a new namespace added to the PDS4 Information Model and `PDS4 Namespace Registry <https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf>`_ and a new repo will be created.
 
-Kick-off Team and Repo Creation
-+++++++++++++++++++++++++++++++
-
-Contact the `PDS Team <https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members>`_ to assist you with creating the appropriate Github Teams and LDD Repository as laid out below. These actions all require Github Admin access. Please provide them with the following information:
-
-* namespace_id
-* Brief description of the LDD. spell out namespace_id if it is an acronym.
-* LDD Steward Github username
+The EN Operations Team will notify you once the repo is ready to use.
 
 ----
 
-Creating New LDD Repository (Admin Only)
-++++++++++++++++++++++++++++++++++++++++
-
-Once you have your `Namespace ID <#Requesting-A-New-Namespace-ID>`_, you are ready to create the new Github repo for maintaining the LDD.
+Initializing New LDD
+++++++++++++++++++++
 
 .. note::
-    Responsible Party: Member of `PDS Dictionary Stewards Admin Team <https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members>`_
+    Responsible Party: Member of `PDSEN Operations <https://github.com/orgs/pds-data-dictionaries/teams/pdsen-operations/members>`_
+
+.. note::
+    This can probably be scripted someday using GithubAPI or within a Github Action.
+
+1. Create ``PDS Namespace Request`` issue in `PDS4 Information Model repo <https://github.com/NASA-PDS/pds4-information-model/issues/new/choose>`_ with info from and reference to the ticket in PDSEN Operations repo.
+
+2. Once namespace request has been completed, :ref:`Create LDD Stewardship Team`.
+
+3. Once team has been created, :ref:`Creating New LDD Repository`
+
+Create LDD Stewardship Team
+---------------------------
+
+Create a new team `here <https://github.com/orgs/pds-data-dictionaries/new-team>`_
+* **Team name:** ``[namespace_id] LDD Stewarship Team``
+* **Team visibility:** ``Visible``
+
+Add the users noted in the LDD Initialization Ticket.
+
+Next step: :ref:`Creating New LDD Repository`
+
+
+Creating New LDD Repository
+---------------------------
+
+.. note::
+    Responsible Party: Member of `PDSEN Operations <https://github.com/orgs/pds-data-dictionaries/teams/pdsen-operations/members>`_
 
 .. note::
     This can probably be scripted someday using GithubAPI or within a Github Action.
 
 
-1. Create new repo from ldd-template
-------------------------------------
+Once the namespace request has been completed. We can create the repo from the ldd-template
+
+
+**Create new repo from ldd-template**
 
 a. `Create new repo <https://github.com/pds-data-dictionaries/ldd-template/generate>`_
 
@@ -80,8 +105,7 @@ b. Set the following parameters:
     * Check the box ``Include all branches``
 
 
-2. Update Repo Settings
------------------------
+**Update Repo Settings**
 
 We need to setup the teams and ``main`` branch protections.
 
@@ -92,8 +116,9 @@ b. Disable issues being created on this repo (they will be created in the PDS4 L
 c. Add appropriate teams with access to repo
     * Go to ``Manage Access``
     * Click on ``Invite teams or people``
-    * Add the LDD Steward with Admin access
-    * Add the LDD CCB Team with Write access
+    * Add the ``LDD Stewardship Team`` with Admin access
+    * Add the ``@pdsen-operations-team`` with Admin access
+    * If this is a Discipline LDD Repo, add the ``@dldd-data-modeling-team`` with Write access
 
 d. Set branches protections
     * Go to ``Branches``
@@ -104,8 +129,7 @@ d. Set branches protections
     * Select ``Restrict who can push to matching branches``
 
 
-3. Create new issue template in PDS4 LDD Issue Repo
-----------------------------------------------------
+**Create new issue template in PDS4 LDD Issue Repo**
 
 a. `Create a new label <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/labels>`_ in the PDS4 LDD Issue Repo for the new repo (ldd-<namespace_id>)
 
@@ -133,11 +157,13 @@ c. Execute the `generate-issue-template.sh bash script <https://github.com/pds-d
 d. You should now see a `new issue template created <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose>`_
 
 
-4. Notify LDD Steward
----------------------
+**Notify LDD Stewardship Team**
 
-Notify the LDD Steward the new repo is ready.
+Notify the LDD Stewardship Team the new repo is ready in the PDSEN Operations issue, e.g.:
 
+..
+
+    @pds-data-dictionaries/mars2020-ldd-stewardship-team your LDD repo is now ready for use at https://github.com/pds-data-dictionaries/ldd-mars2020
 
 ----
 
