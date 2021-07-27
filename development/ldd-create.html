@@ -100,18 +100,15 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Creation Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-discipline-ldd">Proposing a New Discipline LDD</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#is-this-ldd-needed">1. Is this LDD needed?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#who-will-be-the-ldd-steward-s">2. Who will be the LDD Steward(s)?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#who-will-be-on-the-ldd-change-control-board">3. Who will be on the LDD Change Control Board?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-is-the-dldd-stewardship-team">2. Who is the dLDD Stewardship Team?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-is-the-dldd-modeling-team">3. Who is the dLDD Modeling Team?</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-mission-ldd">Proposing a New Mission LDD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#requesting-a-new-namespace-id">Requesting A New Namespace ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#kick-off-team-and-repo-creation">Kick-off Team and Repo Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-new-ldd-repository-admin-only">Creating New LDD Repository (Admin Only)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#create-new-repo-from-ldd-template">1. Create new repo from ldd-template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#update-repo-settings">2. Update Repo Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-new-issue-template-in-pds4-ldd-issue-repo">3. Create new issue template in PDS4 LDD Issue Repo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#notify-ldd-steward">4. Notify LDD Steward</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submit-request-for-new-ldd-creation">Submit Request For New LDD Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initializing-new-ldd">Initializing New LDD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-ldd-stewardship-team">Create LDD Stewardship Team</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-new-ldd-repository">Creating New LDD Repository</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#retrofit-existing-ldd-repository-admin-stewards-only">Retrofit Existing LDD Repository (Admin / Stewards Only)</a></li>
@@ -211,18 +208,15 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Creation Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-discipline-ldd">Proposing a New Discipline LDD</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#is-this-ldd-needed">1. Is this LDD needed?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#who-will-be-the-ldd-steward-s">2. Who will be the LDD Steward(s)?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#who-will-be-on-the-ldd-change-control-board">3. Who will be on the LDD Change Control Board?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-is-the-dldd-stewardship-team">2. Who is the dLDD Stewardship Team?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-is-the-dldd-modeling-team">3. Who is the dLDD Modeling Team?</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-mission-ldd">Proposing a New Mission LDD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#requesting-a-new-namespace-id">Requesting A New Namespace ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#kick-off-team-and-repo-creation">Kick-off Team and Repo Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-new-ldd-repository-admin-only">Creating New LDD Repository (Admin Only)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#create-new-repo-from-ldd-template">1. Create new repo from ldd-template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#update-repo-settings">2. Update Repo Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-new-issue-template-in-pds4-ldd-issue-repo">3. Create new issue template in PDS4 LDD Issue Repo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#notify-ldd-steward">4. Notify LDD Steward</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submit-request-for-new-ldd-creation">Submit Request For New LDD Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initializing-new-ldd">Initializing New LDD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-ldd-stewardship-team">Create LDD Stewardship Team</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-new-ldd-repository">Creating New LDD Repository</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#retrofit-existing-ldd-repository-admin-stewards-only">Retrofit Existing LDD Repository (Admin / Stewards Only)</a></li>
@@ -237,13 +231,19 @@
 <h3>1. Is this LDD needed?<a class="headerlink" href="#is-this-ldd-needed" title="Permalink to this headline">¶</a></h3>
 <p>Does a similar dictionary exist? If so, what is the rationale for creating a new one instead of adding to an existing one?</p>
 </div>
-<div class="section" id="who-will-be-the-ldd-steward-s">
-<h3>2. Who will be the LDD Steward(s)?<a class="headerlink" href="#who-will-be-the-ldd-steward-s" title="Permalink to this headline">¶</a></h3>
-<p>One or more discipline node staff members must be appointed steward of the LDD.</p>
+<div class="section" id="who-is-the-dldd-stewardship-team">
+<h3>2. Who is the dLDD Stewardship Team?<a class="headerlink" href="#who-is-the-dldd-stewardship-team" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Responsible for reviewing changes of existing dLDDs, design and implementation of new dLDDs and/or changes existing dLDDs.</p></li>
+<li><p>Membership includes <strong>one lead dLDD steward</strong> and one or more stakeholders who are identified either by the lead dLDD steward and/or dLDD Approval Board.</p></li>
+</ul>
 </div>
-<div class="section" id="who-will-be-on-the-ldd-change-control-board">
-<h3>3. Who will be on the LDD Change Control Board?<a class="headerlink" href="#who-will-be-on-the-ldd-change-control-board" title="Permalink to this headline">¶</a></h3>
-<p>If this LDD is of interest to your Discipline Node, request of the newly appointed LDD Steward(s) to be added to the CCB.</p>
+<div class="section" id="who-is-the-dldd-modeling-team">
+<h3>3. Who is the dLDD Modeling Team?<a class="headerlink" href="#who-is-the-dldd-modeling-team" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Responsible for reviewing and approving changes to the dLDDs to be released.</p></li>
+<li><p>Membership includes one or more PDS Engineering Node data engineers who have in depth experience in information modeling and ontology.</p></li>
+</ul>
 </div>
 </div>
 <hr class="docutils" />
@@ -252,35 +252,49 @@
 <p>Contact your Discipline Node to help you along this process. Many of the best practices and review rigor described below may not be necessary for Mission LDD development.</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="requesting-a-new-namespace-id">
-<h2>Requesting A New Namespace ID<a class="headerlink" href="#requesting-a-new-namespace-id" title="Permalink to this headline">¶</a></h2>
-<p>Upon receiving approval to begin development on your new LDD, a namespace ID must be reserved.</p>
-<p>Create a new “PDS Namespace Request” issue within the <a class="reference external" href="https://github.com/NASA-PDS/pds4-information-model/issues/new/choose">PDS4 Information Model repo</a> to get your namespace added to the <a class="reference external" href="https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf">PDS4 Namespace Registry</a>.</p>
+<div class="section" id="submit-request-for-new-ldd-creation">
+<h2>Submit Request For New LDD Creation<a class="headerlink" href="#submit-request-for-new-ldd-creation" title="Permalink to this headline">¶</a></h2>
+<p>Upon receiving approval to begin development on your new LDD, it must be initialized by reserving a namespace ID and creating a new repo.</p>
+<p>Create a new “[ldd-request] Initialize New PDS LDD” issue within the <a href="#id2"><span class="problematic" id="id3">`PDSEN Operations repo &lt;https://github.com/NASA-PDS/pdsen-operations/issues/new/choose`_</span></a> and fill out the issue template with the applicable information.</p>
+<p>Part of the initilization procedure will include a new namespace added to the PDS4 Information Model and <a class="reference external" href="https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf">PDS4 Namespace Registry</a> and a new repo will be created.</p>
+<p>The EN Operations Team will notify you once the repo is ready to use.</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="kick-off-team-and-repo-creation">
-<h2>Kick-off Team and Repo Creation<a class="headerlink" href="#kick-off-team-and-repo-creation" title="Permalink to this headline">¶</a></h2>
-<p>Contact the <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members">PDS Team</a> to assist you with creating the appropriate Github Teams and LDD Repository as laid out below. These actions all require Github Admin access. Please provide them with the following information:</p>
-<ul class="simple">
-<li><p>namespace_id</p></li>
-<li><p>Brief description of the LDD. spell out namespace_id if it is an acronym.</p></li>
-<li><p>LDD Steward Github username</p></li>
-</ul>
-</div>
-<hr class="docutils" />
-<div class="section" id="creating-new-ldd-repository-admin-only">
-<h2>Creating New LDD Repository (Admin Only)<a class="headerlink" href="#creating-new-ldd-repository-admin-only" title="Permalink to this headline">¶</a></h2>
-<p>Once you have your <a class="reference external" href="#Requesting-A-New-Namespace-ID">Namespace ID</a>, you are ready to create the new Github repo for maintaining the LDD.</p>
+<div class="section" id="initializing-new-ldd">
+<h2>Initializing New LDD<a class="headerlink" href="#initializing-new-ldd" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Responsible Party: Member of <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pds-dictionary-steward-admins/members">PDS Dictionary Stewards Admin Team</a></p>
+<p>Responsible Party: Member of <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pdsen-operations/members">PDSEN Operations</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This can probably be scripted someday using GithubAPI or within a Github Action.</p>
 </div>
-<div class="section" id="create-new-repo-from-ldd-template">
-<h3>1. Create new repo from ldd-template<a class="headerlink" href="#create-new-repo-from-ldd-template" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Create <code class="docutils literal notranslate"><span class="pre">PDS</span> <span class="pre">Namespace</span> <span class="pre">Request</span></code> issue in <a class="reference external" href="https://github.com/NASA-PDS/pds4-information-model/issues/new/choose">PDS4 Information Model repo</a> with info from and reference to the ticket in PDSEN Operations repo.</p></li>
+<li><p>Once namespace request has been completed, <a class="reference internal" href="#create-ldd-stewardship-team"><span class="std std-ref">Create LDD Stewardship Team</span></a>.</p></li>
+<li><p>Once team has been created, <a class="reference internal" href="#creating-new-ldd-repository"><span class="std std-ref">Creating New LDD Repository</span></a></p></li>
+</ol>
+<div class="section" id="create-ldd-stewardship-team">
+<h3>Create LDD Stewardship Team<a class="headerlink" href="#create-ldd-stewardship-team" title="Permalink to this headline">¶</a></h3>
+<p>Create a new team <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/new-team">here</a>
+* <strong>Team name:</strong> <code class="docutils literal notranslate"><span class="pre">[namespace_id]</span> <span class="pre">LDD</span> <span class="pre">Stewarship</span> <span class="pre">Team</span></code>
+* <strong>Team visibility:</strong> <code class="docutils literal notranslate"><span class="pre">Visible</span></code></p>
+<p>Add the users noted in the LDD Initialization Ticket.</p>
+<p>Next step: <a class="reference internal" href="#creating-new-ldd-repository"><span class="std std-ref">Creating New LDD Repository</span></a></p>
+</div>
+<div class="section" id="creating-new-ldd-repository">
+<h3>Creating New LDD Repository<a class="headerlink" href="#creating-new-ldd-repository" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Responsible Party: Member of <a class="reference external" href="https://github.com/orgs/pds-data-dictionaries/teams/pdsen-operations/members">PDSEN Operations</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This can probably be scripted someday using GithubAPI or within a Github Action.</p>
+</div>
+<p>Once the namespace request has been completed. We can create the repo from the ldd-template</p>
+<p><strong>Create new repo from ldd-template</strong></p>
 <ol class="loweralpha simple">
 <li><p><a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template/generate">Create new repo</a></p></li>
 <li><dl class="simple">
@@ -295,9 +309,7 @@
 </dl>
 </li>
 </ol>
-</div>
-<div class="section" id="update-repo-settings">
-<h3>2. Update Repo Settings<a class="headerlink" href="#update-repo-settings" title="Permalink to this headline">¶</a></h3>
+<p><strong>Update Repo Settings</strong></p>
 <p>We need to setup the teams and <code class="docutils literal notranslate"><span class="pre">main</span></code> branch protections.</p>
 <ol class="loweralpha simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Settings</span></code></p></li>
@@ -306,8 +318,9 @@
 <dt>Add appropriate teams with access to repo</dt><dd><ul class="simple">
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Access</span></code></p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Invite</span> <span class="pre">teams</span> <span class="pre">or</span> <span class="pre">people</span></code></p></li>
-<li><p>Add the LDD Steward with Admin access</p></li>
-<li><p>Add the LDD CCB Team with Write access</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">LDD</span> <span class="pre">Stewardship</span> <span class="pre">Team</span></code> with Admin access</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">&#64;pdsen-operations-team</span></code> with Admin access</p></li>
+<li><p>If this is a Discipline LDD Repo, add the <code class="docutils literal notranslate"><span class="pre">&#64;dldd-data-modeling-team</span></code> with Write access</p></li>
 </ul>
 </dd>
 </dl>
@@ -325,9 +338,7 @@
 </dl>
 </li>
 </ol>
-</div>
-<div class="section" id="create-new-issue-template-in-pds4-ldd-issue-repo">
-<h3>3. Create new issue template in PDS4 LDD Issue Repo<a class="headerlink" href="#create-new-issue-template-in-pds4-ldd-issue-repo" title="Permalink to this headline">¶</a></h3>
+<p><strong>Create new issue template in PDS4 LDD Issue Repo</strong></p>
 <ol class="loweralpha">
 <li><p><a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/labels">Create a new label</a> in the PDS4 LDD Issue Repo for the new repo (ldd-&lt;namespace_id&gt;)</p></li>
 <li><p>Clone the <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/">PDS4 LDD Issue Repo</a></p></li>
@@ -353,10 +364,11 @@ To github.com:pds-data-dictionaries/pds4-ldd-issue-repo.git
 </li>
 <li><p>You should now see a <a class="reference external" href="https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose">new issue template created</a></p></li>
 </ol>
-</div>
-<div class="section" id="notify-ldd-steward">
-<h3>4. Notify LDD Steward<a class="headerlink" href="#notify-ldd-steward" title="Permalink to this headline">¶</a></h3>
-<p>Notify the LDD Steward the new repo is ready.</p>
+<p><strong>Notify LDD Stewardship Team</strong></p>
+<p>Notify the LDD Stewardship Team the new repo is ready in the PDSEN Operations issue, e.g.:</p>
+<blockquote>
+<div><p>&#64;pds-data-dictionaries/mars2020-ldd-stewardship-team your LDD repo is now ready for use at <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-mars2020">https://github.com/pds-data-dictionaries/ldd-mars2020</a></p>
+</div></blockquote>
 </div>
 </div>
 <hr class="docutils" />
