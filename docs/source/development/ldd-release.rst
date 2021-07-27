@@ -49,13 +49,13 @@ Preparing a Release
 7. Once the build completes, you should see the new LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.
 8. Once you get approval from the appropriate stakeholders, merge your pull request.
 9. You should then see a new release tagged in your repo in a URL like https://github.com/pds-data-dictionaries/ldd-img/releases
-10. Then move on to **Submit Release Request** below.
+10. Then move on to :ref:`Submit Release Request` below to submit ticket to the EN Operations Github repo.
 
 
 Submit Manually
 ---------------
 
-If you are unable to submit to Github, see **Submit Release Request** to upload a zip of your generated artifacts.
+If you are unable to submit to Github, see :ref:`Submit Release Request` to upload a zip of your generated artifacts.
 
 
 Submit Release Request
