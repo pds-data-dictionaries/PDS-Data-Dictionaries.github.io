@@ -127,6 +127,7 @@ d. Set branches protections
     * Enter **Branch name pattern:** ``main``
     * Select ``Require pull request reviews before merging``
     * Select ``Require review from Code Owners``
+    * Select ``Require status checks to pass before merging``
     * Select ``Restrict who can push to matching branches``
 
 
