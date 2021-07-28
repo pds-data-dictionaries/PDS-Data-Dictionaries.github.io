@@ -47,7 +47,7 @@ Upon receiving approval to begin development on your new LDD, it must be initial
 
 Create a new ``[ldd-request] Initialize New PDS LDD`` issue within the `PDSEN Operations repo <https://github.com/NASA-PDS/pdsen-operations/issues/new/choose`_ and fill out the issue template with the applicable information.
 
-Part of the initilization procedure will include a new namespace added to the PDS4 Information Model and `PDS4 Namespace Registry <https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf>`_ and a new repo will be created.
+Part of the initialization procedure will include a new namespace added to the PDS4 Information Model and `PDS4 Namespace Registry <https://pds.nasa.gov/datastandards/schema/pds-namespace-registry.pdf>`_ and a new repo will be created.
 
 The EN Operations Team will notify you once the repo is ready to use.
 
@@ -139,7 +139,7 @@ b. Clone the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4
 
 c. Execute the `generate-issue-template.sh bash script <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/main/bin/generate-issue-template.sh>`_. This will automatically generate an issue template from the `LDD Issue Template <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/blob/main/templates/ldd-issue-template.md>`_ and push to the repo::
 
-        $ bin/generate-issue-template.sh cart Cartography thareUSGS
+        $ bin/generate-issue-template.sh <namespace_id> '<namespace_name>' <ldd_steward_username>
         New issue template created: /Users/jpadams/Documents/proj/pds/pdsen/workspace/pds4-ldd-issue-repo/bin/../.github/ISSUE_TEMPLATE/-ldd-cart--ldd-update-request.md
         [main 950bedb] Add cart issue template
          1 file changed, 33 insertions(+)
@@ -165,7 +165,7 @@ Notify the LDD Stewardship Team the new repo is ready in the PDSEN Operations is
 
 ..
 
-    @pds-data-dictionaries/mars2020-ldd-stewardship-team your LDD repo is now ready for use at https://github.com/pds-data-dictionaries/ldd-mars2020
+    @<stewardship_team_member_0>, @<stewardship_team_member_1>, and @<stewardship_team_member_n> your LDD repo is now ready for use at https://github.com/pds-data-dictionaries/ldd-<namespace_id>. Read through `Getting to Know Your LDD Repo <https://pds-data-dictionaries.github.io/getting-started.html#getting-to-know-your-ldd-repo>`_ to get started.
 
 ----
 
