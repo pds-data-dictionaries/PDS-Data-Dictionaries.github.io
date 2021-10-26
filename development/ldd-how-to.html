@@ -115,6 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#reviewing-a-pull-request">Reviewing a Pull Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#merging-an-approved-pull-request">Merging an Approved Pull Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generate-human-readable-versions-of-the-ldd">Generate Human Readable Versions of the LDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-multiple-files-to-define-a-single-namespace">Use Multiple Files to Define a Single Namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -223,6 +224,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#reviewing-a-pull-request">Reviewing a Pull Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#merging-an-approved-pull-request">Merging an Approved Pull Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generate-human-readable-versions-of-the-ldd">Generate Human Readable Versions of the LDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-multiple-files-to-define-a-single-namespace">Use Multiple Files to Define a Single Namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -427,6 +429,17 @@
 <li><p><a class="reference external" href="https://pds.nasa.gov/datastandards/documents/dd/current/PDS4_PDS_DD_1F00/webhelp/all/">PDS4 Data Dictionary (WebHelp)</a></p></li>
 </ul>
 <p>This is described on the PDS4 Information Model and LDDTool wiki here: <a class="reference external" href="https://github.com/NASA-PDS/pds4-information-model/wiki/Generating-Data-Dictionary-Documentation">https://github.com/NASA-PDS/pds4-information-model/wiki/Generating-Data-Dictionary-Documentation</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="use-multiple-files-to-define-a-single-namespace">
+<h2>Use Multiple Files to Define a Single Namespace<a class="headerlink" href="#use-multiple-files-to-define-a-single-namespace" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes a namespace requires more than one steward to provide expertise on different aspects of the namespace. The
+<a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-geom/tree/main/src">Geometry Discipline namespace</a>, for example, has separate
+stewards for the classes related to fly-by and orbiter observations and lander observations. In a case like this you might find it preferable to split the namespace definition
+into one file for each steward.</p>
+<p>The LDD repo and LDDTool can build a single namespace from multiple files, but developing and maintaining this set of files comes with some special problems and considerations
+you should be aware of before you start. If you’re considering this option for your namespace,
+read <a class="reference external" href="https://pds-data-dictionaries.github.io/development/ldd-multifile-namespace.html">Multi-File Namespaces</a>.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="tbd">
