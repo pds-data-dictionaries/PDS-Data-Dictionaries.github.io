@@ -239,6 +239,20 @@ This is described on the PDS4 Information Model and LDDTool wiki here: `<https:/
 
 ----
 
+Use Multiple Files to Define a Single Namespace
++++++++++++++++++++++++++++++++++++++++++++++++
+
+Sometimes a namespace requires more than one steward to provide expertise on different aspects of the namespace. The 
+`Geometry Discipline namespace <https://github.com/pds-data-dictionaries/ldd-geom/tree/main/src>`_, for example, has separate
+stewards for the classes related to fly-by and orbiter observations and lander observations. In a case like this you might find it preferable to split the namespace definition 
+into one file for each steward.
+
+The LDD repo and LDDTool can build a single namespace from multiple files, but developing and maintaining this set of files comes with some special problems and considerations
+you should be aware of before you start. If you're considering this option for your namespace, 
+read `Multi-File Namespaces <https://pds-data-dictionaries.github.io/development/ldd-multifile-namespace.html>`_.
+
+----
+
 TBD
 +++
 Feel free to add some of your own or create a ticket in the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues>`_ so we can start to build up this documentation.
