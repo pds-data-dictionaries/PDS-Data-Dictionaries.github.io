@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>LDD Multifile Namespaces &mdash; PDS Data Dictionaries  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PDS Data Dictionaries
+          
+
+          
+            
+            <img src="../_static/PDS_Planets.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/ldd-repo-overview.html">Getting to Know Your LDD Repo</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ldd-create.html">LDD Creation Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-how-to.html">LDD How-To Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ldd-release.html">LDD Release Process</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teams</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teams/ldd-ccb.html">LDD Change Control Board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teams/pds-dd-stewards.html">PDS DD Stewards</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support/contact.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#request-a-new-ldd">Request a New LDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#request-a-new-ldd-class-or-attribute">Request a New LDD Class or Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#report-a-bug">Report a Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contribute.html#user-forum">User Forum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/github-help.html">Github Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/tutorials.html">Tutorials</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PDS Data Dictionaries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>LDD Multifile Namespaces</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/development/ldd-multifile-namespace.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ldd-multifile-namespaces">
+<h1>LDD Multifile Namespaces<a class="headerlink" href="#ldd-multifile-namespaces" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Multifile Namespaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-multifile-namespace">What is a Multifile Namespace?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#when-should-i-create-a-multifile-namespace">When Should I Create a Multifile Namespace?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-should-i-not-create-a-multifile-namespace">When Should I <em>Not</em> Create a Multifile Namespace?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#developing-a-multifile-namespace">Developing a Multifile Namespace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#considerations-for-splitting-a-namespace-definition">Considerations for Splitting a Namespace Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-development-practice">Recommended Development Practice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coding-the-ingestldd-files">Coding the IngestLDD Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="what-is-a-multifile-namespace">
+<h2>What is a Multifile Namespace?<a class="headerlink" href="#what-is-a-multifile-namespace" title="Permalink to this headline">¶</a></h2>
+<p>A multifile namespace is a single namespace for which the definition has been
+split across more than one <em>IngestLDD</em> file. These input files
+are all fed into <em>LDDTool</em> in a single call, which produces a single, integrated set of output schemas.</p>
+<div class="section" id="when-should-i-create-a-multifile-namespace">
+<h3>When Should I Create a Multifile Namespace?<a class="headerlink" href="#when-should-i-create-a-multifile-namespace" title="Permalink to this headline">¶</a></h3>
+<p>A namespace should be split into multiple files only when there is a significant benefit
+to the dictionary steward(s) responsible for developing and maintaining the namespace.
+A namespace can be split structurally, so that different stewards can maintain separate class
+hierarchies within the namespace, or syntactically, to help a single steward wrangle a particularly
+large namespace.</p>
+<div class="section" id="structural-division">
+<h4>Structural Division<a class="headerlink" href="#structural-division" title="Permalink to this headline">¶</a></h4>
+<p>A multifile namespace is a reasonable way to deal with a very large namespace that naturally breaks into
+several separate hierarchies that require
+expertise from different people for definition and maintenance. Splitting the namespace definition into
+a set of <em>IngestLDD</em> files allows multiple stewards to focus on specific subsets of the namespace.
+For example, a mission with both an orbiter and a lander may have a namespace model containing a small
+mission class for common parameters and large, complex classes for each of the orbiter and lander.</p>
+</div>
+<div class="section" id="syntactical-division">
+<h4>Syntactical Division<a class="headerlink" href="#syntactical-division" title="Permalink to this headline">¶</a></h4>
+<p>It is also possible to split a namespace definition into
+separate files for attribute definitions, class definitions, and Schematron rules.
+This might have bookkeeping benefits for a complex namespace that must be maintained by a
+single steward.
+Many humans, for example, find that a once an IngestLDD file is several thousand lines long, editing
+it becomes exponentially more onerous as it continues to grow.
+In a case like that, separate files can be used to create more easily managed pieces.</p>
+</div>
+</div>
+<div class="section" id="when-should-i-not-create-a-multifile-namespace">
+<h3>When Should I <em>Not</em> Create a Multifile Namespace?<a class="headerlink" href="#when-should-i-not-create-a-multifile-namespace" title="Permalink to this headline">¶</a></h3>
+<p>Splitting a namespace structurally into separate files will likely not help if the
+separate parts of the namespace
+have large areas of overlap, because the amount of coordination and cross-checking required when
+one part changes will likely negate any advantage to having separate files.
+A namespace in which the classes consist of different groupings of the same attributes,
+or that has many smaller classes that are “mixed and matched” into larger groups depending on the
+observational circumstances, is probably best defined in a single IngestLDD file to avoid
+inadvertent duplication and name collisions.</p>
+<p>Splitting a namespace syntactically into separate files is not likely to have many benefits when
+the single IngestLDD version is less than a several thousand lines and well organized. In fact a
+set of smaller, poorly organized files will probably not present an improvement on a single
+large, poorly organized file, either.</p>
+<p>A multifile namespace solution is <em>not</em> recommended if there is no version control system
+(like, for example, the <a class="reference external" href="https://github.com/pds-data-dictionaries">PDS Data Dictionaries repo</a>) used
+by all stewards involved for managing the coordination of updating, building, and testing the
+LDDTool output.</p>
+</div>
+</div>
+<div class="section" id="developing-a-multifile-namespace">
+<h2>Developing a Multifile Namespace<a class="headerlink" href="#developing-a-multifile-namespace" title="Permalink to this headline">¶</a></h2>
+<p>Remember that a namespace is an <em>information model</em> for a specific context. It should be formally
+designed even if it is expected to be rather small, and that design should include not just
+classes and attributes, but also the Schematron rules needed for validation of the associated
+metadata.</p>
+<p>** Structural division of a namespace should be done when the namespace is designed, NOT after it
+is developed. Dividing a large, existing namespace is a complex and tedious process fraught with
+peril. Avoid it if at all possible. **</p>
+<div class="section" id="considerations-for-splitting-a-namespace-definition">
+<h3>Considerations for Splitting a Namespace Definition<a class="headerlink" href="#considerations-for-splitting-a-namespace-definition" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Each <em>IngestLDD</em> containing part of the namespace definition <em>must</em> be a complete and syntactically</p></li>
+</ul>
+<p>valid <em>IngestLDD</em> in its own right. When multiple files are used to coonstruct a single namespace,
+it is possible to have only attribute definitions in one file, only class definitions in another,
+and only Schematron rules in a third, but all files must have the same namespace identification
+information at the top of the file.
+- The requirements on what a namespace must contain (like at least one class defined with the
+<code class="docutils literal notranslate"><span class="pre">`&lt;element_flag&gt;`</span></code> attribute set to <code class="docutils literal notranslate"><span class="pre">`true`</span></code>) apply across the set of files, not to individual
+files.
+- Any attribute or class defined in any of the files may be referenced in any of the other files.
+While this means that no special syntax or ordering of files is required, it also means that the
+stewards for the various parts need to coordinate attribute and class definitions entirely themselves
+to avoid name collisions. It is possible to create name collision errors across files
+that LDDTool would not be able to recognize and report.
+- Likewise, the stewards of the individual parts must coordinate on the version numbering of the
+namespace. All IngestLDD files comprising the namespace definition <em>must</em> have the same value for
+<code class="docutils literal notranslate"><span class="pre">`&lt;ldd_version_id&gt;`</span></code>.</p>
+</div>
+<div class="section" id="recommended-development-practice">
+<h3>Recommended Development Practice<a class="headerlink" href="#recommended-development-practice" title="Permalink to this headline">¶</a></h3>
+<p>It is easier to plan to partition a namespace structurally into multiple files from the start
+than attempt to break an existing namespace up.
+If separating your namespace into files for each major class hierarchy seems like a good
+idea, start with a formal namespace design.
+Mapping the class structure and dependencies out explicitly
+should make it clear whether the model is a good candidate to be partitioned into
+multiple input files.  If so, here are some addition development suggestions:</p>
+<p># If the design contains classes and attributes that would be referenced in multiple files of
+the namespace, consider grouping those into a “common” or “shared” file. Having one file
+where common attributes and classes are defined will likely be easier to maintain than having to
+track inter-file dependencies among all your input files, at least in cases where the namespace
+is split among three or more files.
+# The stewards should agree on and document (for themselves, at least) the nomenclature and
+name formation standards to
+use across all the IngestLDD files. Inconsistency in use of capitalization, punctuation, and
+abbreviations in class and attribute names within a single namespace tends to undermine
+user confidence in the information provided, as well as annoying programmers trying to make
+use of your namespace metadata.
+# Similarly, stewards should probably agree on and certainly document how each constituent
+IngestLDD file is ordered (are attributes alphabetical or grouped by function; are classes
+defined in label order or some other order; etc.). This will make it easier for the steward
+of one file to check another file for possible collisions/duplications rather than hoping
+LDDTool can catch them all.
+# Test labels and user documents are recommended for all namespaces (they are required
+for discipline namespaces). In the case of multi-file namespaces, it is <em>strongly</em> recommended
+that stewards for each file supply regression test labels for the part of the namespace
+they are developing to help insure that there is no inadvertent collision between input
+files that slips past LDDTool processing. Documentation is a further tool for helping to
+ensure harmony among the input files.</p>
+</div>
+<div class="section" id="coding-the-ingestldd-files">
+<h3>Coding the IngestLDD Files<a class="headerlink" href="#coding-the-ingestldd-files" title="Permalink to this headline">¶</a></h3>
+<p>Once the namespace is designed and partitioned, the coding of the separate IngestLDD files is
+not much different from coding for a single-file namespace, but there are some things to
+keep in mind:</p>
+<ul class="simple">
+<li><p>As with a single-file namespace, there must be one class defined as an XML <em>element</em> (with</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`&lt;element_flag&gt;true&lt;/element_flag&gt;`</span></code> in its definition in one of the input files.
+This will be the “wrapper class” or “entry point” for the namespace - the highest-level
+class a user can include in a label. Having more than one entry point is generally not
+advised, although sometimes that makes sense (check with your PDS node when in doubt).
+- It is harder to test
+a single input file in isolation. LDDTool will do the best it can to produce valid output,
+but you will get errors
+for missing attribute and class definitions (and other namespace compliance issues) if there
+are any dependencies on things defined in other namespace files.
+o For testing the build of a single file of a multipart namespace, you might need a second
+file to provide a <em>wrapper class</em> for testing only. Testing classes should <em>always</em> be in a
+separate file from the “real namespace” because they should not be visible to end users
+of your namespace schemas.
+o If your part of the namespace depends on definitions in a common/shared file, you will need
+that to build you test schemas with as well.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The Geometry Discipline namespace has been structurally divided.</p>
+<p>As yet, no namespace has been divided syntactically.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020 California Institute of Technology.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
