@@ -93,7 +93,7 @@ Classes from the PDS common dictionary (or discipline LDDs) are often inherited 
              <value>spectral_characteristics_to_table_object</value>
              <value_meaning>
                The spectral parameters describe the table or specific
-               fields in the table associated with the given 
+               fields in the table associated with the given
                'local_identifier'.
              </value_meaning>
          </DD_Permissible_Value>
@@ -105,7 +105,7 @@ Classes from the PDS common dictionary (or discipline LDDs) are often inherited 
 Schematron (DD_Rule) Help
 +++++++++++++++++++++++++
 
-Specify Enumerated Values for Inherited Attributes 
+Specify Enumerated Values for Inherited Attributes
 --------------------------------------------------
 
 Attributes from the PDS common dictionary (or discipline LDDs) are often inherited and used within Discipline and Mission LDDs (e.g. ``pds:name``, etc.). When inherited within the specific Discipline or Mission, you may want to provide a specific set of values applicable for that particular context. In this case you will need to specify a DD_Rule to provide the enumerated value list. For example:::
@@ -116,7 +116,7 @@ Attributes from the PDS common dictionary (or discipline LDDs) are often inherit
         <DD_Rule_Statement>
           <rule_type>Assert</rule_type>
           <rule_test>img:color_filter_array_state = ('Encoded', 'Decoded', 'No CFA')</rule_test>
-          <rule_message>IMG:error:img:color_filter_array_state_check: img:color_filter_array_state must be equal to one of the following values: 
+          <rule_message>IMG:error:img:color_filter_array_state_check: img:color_filter_array_state must be equal to one of the following values:
             'Encoded', 'Decoded', 'No CFA'.
           </rule_message>
         </DD_Rule_Statement>
@@ -242,19 +242,17 @@ This is described on the PDS4 Information Model and LDDTool wiki here: `<https:/
 Use Multiple Files to Define a Single Namespace
 +++++++++++++++++++++++++++++++++++++++++++++++
 
-Sometimes a namespace requires more than one steward to provide expertise on different aspects of the namespace. The 
+Sometimes a namespace requires more than one steward to provide expertise on different aspects of the namespace. The
 `Geometry Discipline namespace <https://github.com/pds-data-dictionaries/ldd-geom/tree/main/src>`_, for example, has separate
-stewards for the classes related to fly-by and orbiter observations and lander observations. In a case like this you might find it preferable to split the namespace definition 
+stewards for the classes related to fly-by/orbiter observations and lander observations. In a case like this you might find it preferable to split the namespace definition
 into one file for each steward.
 
 The LDD repo and LDDTool can build a single namespace from multiple files, but developing and maintaining this set of files comes with some special problems and considerations
-you should be aware of before you start. If you're considering this option for your namespace, 
-read `Multi-File Namespaces <https://pds-data-dictionaries.github.io/development/ldd-multifile-namespace.html>`_.
+you should be aware of before you start. If you're considering this option for your namespace,
+read `Multifile Namespaces <https://pds-data-dictionaries.github.io/development/ldd-multifile-namespace.html>`_.
 
 ----
 
 TBD
 +++
 Feel free to add some of your own or create a ticket in the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues>`_ so we can start to build up this documentation.
-
-
