@@ -19,7 +19,11 @@ pip install -r requirements
 
 Make the docs
 ```
+cd docs
 make clean html
+
+# preview the html in your browser
+open build/html/index.html
 ```
 
 ---
