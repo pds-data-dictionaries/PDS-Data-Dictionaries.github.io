@@ -329,6 +329,19 @@ ensure harmony among the input files.</p></li>
 not much different from coding for a single-file namespace, but there are some things to
 keep in mind:</p>
 <ul>
+<li><p>At the beginning of every <em>IngestLDD</em> file, these attributes must have the <strong>same values
+in all files</strong>:</p>
+<dl class="simple">
+<dt>&lt;name&gt;</dt><dd><p>The name of the namespace itself</p>
+</dd>
+<dt>&lt;ldd_version_id&gt;</dt><dd><p>The version of the namespace</p>
+</dd>
+<dt>&lt;dictionary_type&gt;</dt><dd><p><em>Discipline</em> or <em>Mission</em></p>
+</dd>
+<dt>&lt;namespace_id&gt;</dt><dd><p>The prefix used to identify this namespace in labels</p>
+</dd>
+</dl>
+</li>
 <li><p>As with a single-file namespace, there must be one class defined as an XML <em>element</em> (with
 <code class="docutils literal notranslate"><span class="pre">&lt;element_flag&gt;true&lt;/element_flag&gt;</span></code> in its definition in one of the input files.
 This will be the “wrapper class” or “entry point” for the namespace - the highest-level
@@ -337,14 +350,12 @@ advised, although sometimes that makes sense (check with your PDS node when in d
 <li><p>It is harder to test a single input file in isolation. <em>LDDTool</em> will do the best
 it can to produce valid output, but you will get errors
 for missing attribute and class definitions (and other namespace compliance issues) if there
-are any dependencies on things defined in other namespace files.
-- For testing the build of a single file of a multipart namespace, you might need a second</p>
-<blockquote>
-<div><p>file to provide a <em>wrapper class</em> for testing only. Testing classes should <em>always</em> be in a
-separate file from the “real namespace” because they should not be visible to end users
-of your namespace schemas.</p>
-</div></blockquote>
+are any dependencies on things defined in other namespace files.</p>
 <ul class="simple">
+<li><p>For testing the build of a single file of a multipart namespace, you might need a second
+file to provide a <em>wrapper class</em> for testing only. Testing classes should <em>always</em> be in a
+separate file from the “real namespace” because they should not be visible to end users
+of your namespace schemas.</p></li>
 <li><p>If your part of the namespace depends on definitions in a common/shared file, you will need
 that to build you test schemas with as well.</p></li>
 </ul>
