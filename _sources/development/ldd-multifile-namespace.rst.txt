@@ -141,6 +141,18 @@ Once the namespace is designed and partitioned, the coding of the separate *Inge
 not much different from coding for a single-file namespace, but there are some things to
 keep in mind:
 
+- At the beginning of every *IngestLDD* file, these attributes must have the **same values
+  in all files**:
+    
+  <name>
+    The name of the namespace itself
+  <ldd_version_id> 
+    The version of the namespace
+  <dictionary_type>
+    *Discipline* or *Mission*
+  <namespace_id> 
+    The prefix used to identify this namespace in labels
+  
 - As with a single-file namespace, there must be one class defined as an XML *element* (with
   ``<element_flag>true</element_flag>`` in its definition in one of the input files.
   This will be the "wrapper class" or "entry point" for the namespace - the highest-level
@@ -150,6 +162,7 @@ keep in mind:
   it can to produce valid output, but you will get errors
   for missing attribute and class definitions (and other namespace compliance issues) if there
   are any dependencies on things defined in other namespace files.
+  
   - For testing the build of a single file of a multipart namespace, you might need a second
     file to provide a *wrapper class* for testing only. Testing classes should *always* be in a
     separate file from the "real namespace" because they should not be visible to end users
