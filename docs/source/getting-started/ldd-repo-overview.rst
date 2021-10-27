@@ -127,10 +127,11 @@ If your LDD has a dependency on another LDD, you will need to complete the follo
 
         mkdir -p src/dependencies
 
-2. Create a submodule to the LDD is in the dependent repo::
+2. Create a submodule to the LDD is in the dependent repo and set the branch to pull from::
 
         cd src/dependencies
         git submodule add https://github.com/pds-data-dictionaries/ldd-geom
+        git submodule set-branch --branch main src/dependencies/ldd-geom/
 
 3. You should now see a ``src/dependencies/ldd_geom`` directory::
 
