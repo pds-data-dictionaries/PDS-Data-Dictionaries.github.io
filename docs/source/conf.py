@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PDS Data Dictionaries'
-copyright = '2020 California Institute of Technology'
+copyright = '2021 California Institute of Technology'
 author = 'NASA Planetary Data System'
 
 
