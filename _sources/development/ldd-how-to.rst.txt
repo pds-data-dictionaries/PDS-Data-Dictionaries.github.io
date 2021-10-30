@@ -253,6 +253,33 @@ read `Multifile Namespaces <https://pds-data-dictionaries.github.io/development/
 
 ----
 
+Merge A New Release Branch Into My Current Working Branch
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+In the event that you are working on updates to your LDD in a branch or pull request when a PDS4 system release is about to take place, you may wind up with a new branch and pull request being created.
+
+If you plan to include your updates in the next release, the best route to take is to merge your updates into the newly created release branch.
+
+Here are the steps to do so:
+
+1. Checkout your branch from Github (e.g. ``my_working_branch_v1``)
+2. Checkout the newly auto-generated release branch (e.g. ``release/1.17.0.0``)
+3. Merge your working branch into the release branch.
+
+Via command-line::
+
+    git merge origin my_working_branch_v1
+    
+Via Github Desktop:
+
+.. image:: /_static/images/screenshot_merge1.png
+  :target: ../_static/images/screenshot_merge1.png
+  
+.. image:: /_static/images/screenshot_merge2.png
+  :target: ../_static/images/screenshot_merge2.png
+
+----
+
 TBD
 +++
 Feel free to add some of your own or create a ticket in the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues>`_ so we can start to build up this documentation.

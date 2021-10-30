@@ -116,6 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#merging-an-approved-pull-request">Merging an Approved Pull Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generate-human-readable-versions-of-the-ldd">Generate Human Readable Versions of the LDD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-multiple-files-to-define-a-single-namespace">Use Multiple Files to Define a Single Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merge-a-new-release-branch-into-my-current-working-branch">Merge A New Release Branch Into My Current Working Branch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -225,6 +226,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#merging-an-approved-pull-request">Merging an Approved Pull Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generate-human-readable-versions-of-the-ldd">Generate Human Readable Versions of the LDD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-multiple-files-to-define-a-single-namespace">Use Multiple Files to Define a Single Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#merge-a-new-release-branch-into-my-current-working-branch">Merge A New Release Branch Into My Current Working Branch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -440,6 +442,25 @@ into one file for each steward.</p>
 <p>The LDD repo and LDDTool can build a single namespace from multiple files, but developing and maintaining this set of files comes with some special problems and considerations
 you should be aware of before you start. If you’re considering this option for your namespace,
 read <a class="reference external" href="https://pds-data-dictionaries.github.io/development/ldd-multifile-namespace.html">Multifile Namespaces</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="merge-a-new-release-branch-into-my-current-working-branch">
+<h2>Merge A New Release Branch Into My Current Working Branch<a class="headerlink" href="#merge-a-new-release-branch-into-my-current-working-branch" title="Permalink to this headline">¶</a></h2>
+<p>In the event that you are working on updates to your LDD in a branch or pull request when a PDS4 system release is about to take place, you may wind up with a new branch and pull request being created.</p>
+<p>If you plan to include your updates in the next release, the best route to take is to merge your updates into the newly created release branch.</p>
+<p>Here are the steps to do so:</p>
+<ol class="arabic simple">
+<li><p>Checkout your branch from Github (e.g. <code class="docutils literal notranslate"><span class="pre">my_working_branch_v1</span></code>)</p></li>
+<li><p>Checkout the newly auto-generated release branch (e.g. <code class="docutils literal notranslate"><span class="pre">release/1.17.0.0</span></code>)</p></li>
+<li><p>Merge your working branch into the release branch.</p></li>
+</ol>
+<p>Via command-line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">merge</span> <span class="n">origin</span> <span class="n">my_working_branch_v1</span>
+</pre></div>
+</div>
+<p>Via Github Desktop:</p>
+<a class="reference external image-reference" href="../_static/images/screenshot_merge1.png"><img alt="_static/images/screenshot_merge1.png" src="_static/images/screenshot_merge1.png" /></a>
+<a class="reference external image-reference" href="../_static/images/screenshot_merge2.png"><img alt="_static/images/screenshot_merge2.png" src="_static/images/screenshot_merge2.png" /></a>
 </div>
 <hr class="docutils" />
 <div class="section" id="tbd">
