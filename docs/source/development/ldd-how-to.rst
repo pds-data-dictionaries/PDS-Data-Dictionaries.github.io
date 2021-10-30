@@ -266,6 +266,9 @@ Here are the steps to do so:
 2. Checkout the newly auto-generated release branch (e.g. ``release/1.17.0.0``)
 3. Merge your working branch into the release branch.
 
+.. note::
+    Be sure to merge ``my_working_branch_v1`` into ``release/1.17.0.0`` (``release/1.17.0.0`` should become your new working branch) so ensure the release is tagged and included in the system release.
+
 Via command-line::
 
     git merge origin my_working_branch_v1
