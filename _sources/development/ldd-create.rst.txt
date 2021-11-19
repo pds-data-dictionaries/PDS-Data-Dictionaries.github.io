@@ -128,6 +128,7 @@ d. Set branches protections
     * Select ``Require pull request reviews before merging``
     * Select ``Require review from Code Owners``
     * Select ``Require status checks to pass before merging``
+       * Search and select the ``LDD Generation Check`` action.
     * Select ``Restrict who can push to matching branches``
 
 
