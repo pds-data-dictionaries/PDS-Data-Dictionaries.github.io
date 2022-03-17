@@ -51,11 +51,11 @@ c. You will then be taken to a screen to create your repo. Make sure ``Owner`` i
 
 d. You will now need to add the Github Token to your repo Secrets in order to allow the LDD automation to push to your repo.
 
-    1. in your test repo you just cloned, go to `Settings` -> `Secrets`
+    1. In your test repo you just cloned, go to `Settings` -> `Secrets`
         * e.g. https://github.com/jordanpadams/my-ldd-test/settings/secrets
-    2. click "New Secret"
+    2. Click "New Secret"
     3. Name = ADMIN_GITHUB_TOKEN , Value: paste the temporary token sent you by Engineering Node
-    4. select add secret
+    4. Select add secret
 
 e. Open Github Desktop. In the right column, either browse to or search for your repository, select ``Clone <username>/<repo-name>``
 
