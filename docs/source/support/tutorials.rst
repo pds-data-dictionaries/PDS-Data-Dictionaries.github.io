@@ -28,6 +28,10 @@ LDD Update and Build Tutorial
 
 ----
 
+0. Request Test Token from EN
+----------------------------------------
+For the time being, in order to successfully auto-generate the LDD, you will need to request a Test Token from EN. The auto-generation is not necessarily required to complete the tutorial, but are available upon request. Email `PDS Help Desk <mailto:pds-operator@jpl.nasa.gov>`_ and request a Temporary Test Token for the PDS LDD Tutorial. This will expire in 1 week.
+
 1. Clone the ldd-template repository
 -------------------------------------
 
@@ -45,17 +49,13 @@ c. You will then be taken to a screen to create your repo. Make sure ``Owner`` i
 ..  image:: /_static/images/screenshot_create_repo.png
     :target: ../_static/images/screenshot_create_repo.png
 
-d. You will now need to create a Github Token in order to allow the LDD automation to push to your repo.
+d. You will now need to add the Github Token to your repo Secrets in order to allow the LDD automation to push to your repo.
 
-    1. go to https://github.com/settings/tokens
-    2. click "Generate new token"
-    3. select all checkboxes
-    4. copy the generated token
-    5. in your test repo you just cloned, go to `Settings` -> `Secrets`
+    1. in your test repo you just cloned, go to `Settings` -> `Secrets`
         * e.g. https://github.com/jordanpadams/my-ldd-test/settings/secrets
-    6. click "New Secret"
-    7. Name = ADMIN_GITHUB_TOKEN , Value: paste the token from #4
-    8. select add secret
+    2. click "New Secret"
+    3. Name = ADMIN_GITHUB_TOKEN , Value: paste the token from #4
+    4. select add secret
 
 e. Open Github Desktop. In the right column, either browse to or search for your repository, select ``Clone <username>/<repo-name>``
 
