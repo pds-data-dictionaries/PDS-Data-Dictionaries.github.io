@@ -118,6 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="github-help.html">Github Help</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ldd-update-and-build-tutorial">LDD Update and Build Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#request-test-token-from-en">0. Request Test Token from EN</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clone-the-ldd-template-repository">1. Clone the ldd-template repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-branch-for-your-proposed-changes">2. Create a Branch for Your Proposed Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#make-an-update-and-push-to-branch">3. Make an Update and Push to Branch</a></li>
@@ -208,6 +209,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ldd-update-and-build-tutorial">LDD Update and Build Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#request-test-token-from-en">0. Request Test Token from EN</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clone-the-ldd-template-repository">1. Clone the ldd-template repository</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-branch-for-your-proposed-changes">2. Create a Branch for Your Proposed Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#make-an-update-and-push-to-branch">3. Make an Update and Push to Branch</a></li>
@@ -249,6 +251,10 @@
 <p>The steps of this tutorial are specific to Github Desktop. However, there is nothing preventing you from completing this tutorial using the command-line of Github.com editors if you prefer.</p>
 </div>
 <hr class="docutils" />
+<div class="section" id="request-test-token-from-en">
+<h3>0. Request Test Token from EN<a class="headerlink" href="#request-test-token-from-en" title="Permalink to this headline">¶</a></h3>
+<p>For the time being, in order to successfully auto-generate the LDD, you will need to request a Test Token from EN. The auto-generation is not necessarily required to complete the tutorial, but are available upon request. Email <a class="reference external" href="mailto:pds-operator&#37;&#52;&#48;jpl&#46;nasa&#46;gov">PDS Help Desk</a> and request a Temporary Test Token for the PDS LDD Tutorial. This will expire in 1 week.</p>
+</div>
 <div class="section" id="clone-the-ldd-template-repository">
 <h3>1. Clone the ldd-template repository<a class="headerlink" href="#clone-the-ldd-template-repository" title="Permalink to this headline">¶</a></h3>
 <p>Let’s first, clone the repo from Github.com to our local computer.</p>
@@ -262,13 +268,9 @@
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_create_repo.png"><img alt="../_images/screenshot_create_repo.png" src="../_images/screenshot_create_repo.png" /></a>
 <ol class="loweralpha" start="4">
-<li><p>You will now need to create a Github Token in order to allow the LDD automation to push to your repo.</p>
+<li><p>You will now need to add the Github Token to your repo Secrets in order to allow the LDD automation to push to your repo.</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>go to <a class="reference external" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p></li>
-<li><p>click “Generate new token”</p></li>
-<li><p>select all checkboxes</p></li>
-<li><p>copy the generated token</p></li>
 <li><dl class="simple">
 <dt>in your test repo you just cloned, go to <cite>Settings</cite> -&gt; <cite>Secrets</cite></dt><dd><ul class="simple">
 <li><p>e.g. <a class="reference external" href="https://github.com/jordanpadams/my-ldd-test/settings/secrets">https://github.com/jordanpadams/my-ldd-test/settings/secrets</a></p></li>
