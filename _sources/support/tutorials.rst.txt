@@ -54,7 +54,7 @@ d. You will now need to add the Github Token to your repo Secrets in order to al
     1. in your test repo you just cloned, go to `Settings` -> `Secrets`
         * e.g. https://github.com/jordanpadams/my-ldd-test/settings/secrets
     2. click "New Secret"
-    3. Name = ADMIN_GITHUB_TOKEN , Value: paste the token from #4
+    3. Name = ADMIN_GITHUB_TOKEN , Value: paste the temporary token sent you by Engineering Node
     4. select add secret
 
 e. Open Github Desktop. In the right column, either browse to or search for your repository, select ``Clone <username>/<repo-name>``
