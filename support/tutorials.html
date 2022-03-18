@@ -254,6 +254,7 @@
 <div class="section" id="request-test-token-from-en">
 <h3>0. Request Test Token from EN<a class="headerlink" href="#request-test-token-from-en" title="Permalink to this headline">¶</a></h3>
 <p>For the time being, in order to successfully auto-generate the LDD, you will need to request a Test Token from EN. The auto-generation is not necessarily required to complete the tutorial, but are available upon request. Email <a class="reference external" href="mailto:pds-operator&#37;&#52;&#48;jpl&#46;nasa&#46;gov">PDS Help Desk</a> and request a Temporary Test Token for the PDS LDD Tutorial. This will expire in 1 week.</p>
+<p>Feel free to proceed with the steps up to <code class="docutils literal notranslate"><span class="pre">1e</span></code> where the Test Token is needed.</p>
 </div>
 <div class="section" id="clone-the-ldd-template-repository">
 <h3>1. Clone the ldd-template repository<a class="headerlink" href="#clone-the-ldd-template-repository" title="Permalink to this headline">¶</a></h3>
@@ -268,30 +269,39 @@
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_create_repo.png"><img alt="../_images/screenshot_create_repo.png" src="../_images/screenshot_create_repo.png" /></a>
 <ol class="loweralpha" start="4">
-<li><p>You will now need to add the Github Token to your repo Secrets in order to allow the LDD automation to push to your repo.</p>
+<li><dl class="simple">
+<dt>Add the pdsen-ci user as a collaborator so the LDD Automation will work properly with the PDSEN CI Bot.</dt><dd><ol class="arabic simple">
+<li><p>In your test repo you just cloned, go to <code class="docutils literal notranslate"><span class="pre">Settings</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Collaborators</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">People</span></code>, search for and add <code class="docutils literal notranslate"><span class="pre">pdsen-ci</span></code> user (PDSEN CI Bot).</p></li>
+<li><p>The EN Team will then notify you when the request has been accepted.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Next, once you get the Github Test Token from EN, you will now need to add it to your repository Secrets to allow the PDSEN CI Bot to push to your repository.</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><dl class="simple">
-<dt>In your test repo you just cloned, go to <cite>Settings</cite> -&gt; <cite>Secrets</cite></dt><dd><ul class="simple">
+<dt>In your test repo you just cloned, go to <code class="docutils literal notranslate"><span class="pre">Settings</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Secrets</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Actions</span></code></dt><dd><ul class="simple">
 <li><p>e.g. <a class="reference external" href="https://github.com/jordanpadams/my-ldd-test/settings/secrets">https://github.com/jordanpadams/my-ldd-test/settings/secrets</a></p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Click “New Secret”</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Repository</span> <span class="pre">Secret</span></code></p></li>
 <li><p>Name = ADMIN_GITHUB_TOKEN , Value: paste the temporary token sent you by Engineering Node</p></li>
-<li><p>Select add secret</p></li>
+<li><p>Select Add Secret</p></li>
 </ol>
 </div></blockquote>
 </li>
 <li><p>Open Github Desktop. In the right column, either browse to or search for your repository, select <code class="docutils literal notranslate"><span class="pre">Clone</span> <span class="pre">&lt;username&gt;/&lt;repo-name&gt;</span></code></p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_clone_to_desktop.png"><img alt="../_images/screenshot_clone_to_desktop.png" src="../_images/screenshot_clone_to_desktop.png" /></a>
-<ol class="loweralpha simple" start="6">
+<ol class="loweralpha simple" start="7">
 <li><p>Choose the path you would like to save the repository to on your file system, and click <code class="docutils literal notranslate"><span class="pre">Clone</span></code>.</p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_repo_path.png"><img alt="../_images/screenshot_repo_path.png" src="../_images/screenshot_repo_path.png" /></a>
-<ol class="loweralpha simple" start="7">
+<ol class="loweralpha simple" start="8">
 <li><p>You should now see a screen in Github Desktop that says <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Local</span> <span class="pre">Changes</span></code>, indicating your repo is connected and there are no changes to that repo on your local system (as expected).</p></li>
 </ol>
 <a class="reference external image-reference" href="../_static/images/screenshot_github_desktop_init.png"><img alt="../_images/screenshot_github_desktop_init.png" src="../_images/screenshot_github_desktop_init.png" /></a>
