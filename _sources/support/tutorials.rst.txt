@@ -32,6 +32,8 @@ LDD Update and Build Tutorial
 ----------------------------------------
 For the time being, in order to successfully auto-generate the LDD, you will need to request a Test Token from EN. The auto-generation is not necessarily required to complete the tutorial, but are available upon request. Email `PDS Help Desk <mailto:pds-operator@jpl.nasa.gov>`_ and request a Temporary Test Token for the PDS LDD Tutorial. This will expire in 1 week.
 
+Feel free to proceed with the steps up to ``1e`` where the Test Token is needed.
+
 1. Clone the ldd-template repository
 -------------------------------------
 
@@ -49,25 +51,30 @@ c. You will then be taken to a screen to create your repo. Make sure ``Owner`` i
 ..  image:: /_static/images/screenshot_create_repo.png
     :target: ../_static/images/screenshot_create_repo.png
 
-d. You will now need to add the Github Token to your repo Secrets in order to allow the LDD automation to push to your repo.
+d. Add the pdsen-ci user as a collaborator so the LDD Automation will work properly with the PDSEN CI Bot.
+    1. In your test repo you just cloned, go to ``Settings`` -> ``Collaborators``
+    2. Click ``Add People``, search for and add ``pdsen-ci`` user (PDSEN CI Bot).
+    3. The EN Team will then notify you when the request has been accepted.
 
-    1. In your test repo you just cloned, go to `Settings` -> `Secrets`
+e. Next, once you get the Github Test Token from EN, you will now need to add it to your repository Secrets to allow the PDSEN CI Bot to push to your repository.
+
+    1. In your test repo you just cloned, go to ``Settings`` -> ``Secrets`` -> ``Actions``
         * e.g. https://github.com/jordanpadams/my-ldd-test/settings/secrets
-    2. Click "New Secret"
+    2. Click ``New Repository Secret``
     3. Name = ADMIN_GITHUB_TOKEN , Value: paste the temporary token sent you by Engineering Node
-    4. Select add secret
+    4. Select Add Secret
 
-e. Open Github Desktop. In the right column, either browse to or search for your repository, select ``Clone <username>/<repo-name>``
+f. Open Github Desktop. In the right column, either browse to or search for your repository, select ``Clone <username>/<repo-name>``
 
 ..  image:: /_static/images/screenshot_clone_to_desktop.png
     :target: ../_static/images/screenshot_clone_to_desktop.png
 
-f. Choose the path you would like to save the repository to on your file system, and click ``Clone``.
+g. Choose the path you would like to save the repository to on your file system, and click ``Clone``.
 
 ..  image:: /_static/images/screenshot_repo_path.png
     :target: ../_static/images/screenshot_repo_path.png
 
-g. You should now see a screen in Github Desktop that says ``No Local Changes``, indicating your repo is connected and there are no changes to that repo on your local system (as expected).
+h. You should now see a screen in Github Desktop that says ``No Local Changes``, indicating your repo is connected and there are no changes to that repo on your local system (as expected).
 
 ..  image:: /_static/images/screenshot_github_desktop_init.png
     :target: ../_static/images/screenshot_github_desktop_init.png
