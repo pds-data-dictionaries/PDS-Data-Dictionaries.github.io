@@ -51,9 +51,15 @@ Github Tutorials
 
 Github has many tutorials and exampels through `Github Learning Lab <https://lab.github.com/>`_.
 
-We also have a :doc:`<support/tutorials>` to test using the LDD Repositories.
+We also have a :doc:`Tutorials <support/tutorials>` to test using the LDD Repositories.
 
 ----
+
+Github Notifications
+++++++++++++++++++++
+Here is some more info on `how to manage your GitHub Notifications <https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#github-notifications>`_ and setting up email filters to help manage them.
+
+---
 
 Github Tips and Tricks
 ++++++++++++++++++++++
@@ -61,5 +67,3 @@ Github Tips and Tricks
 * **Push and Pull often** - Pushing and pulling often with your repositories ensures you are regularly up-to-date with the Github repo. Leaving files sitting around partially modified, and/or pulling once a month on your Github repo is how issues happen. You get out of sync with updates as they happen, which can have lots of negative consequences. If in doubt, pull then push.
 
 * **Commit messages are worth a few minutes** - Good commit messages really help debug decision making and solutions in the future. They can also help self-document the updates. As much as possible, take some time to make good commit messages. See `PDS Commit Message Best Practices <https://nasa-pds.github.io/developer/pds_git_and_github_guide.html#commit-message-best-practices>`_ for more details.
-
-* TBD
