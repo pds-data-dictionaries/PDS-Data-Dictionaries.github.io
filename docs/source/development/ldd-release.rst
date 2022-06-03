@@ -10,22 +10,59 @@ When a Local Data Dictionary (LDD) Steward is ready to submit a new version of a
 
 ----
 
-Release Timeframe
-+++++++++++++++++
+Release
++++++++
 
-Nominal Release with PDS4 Information Model
--------------------------------------------
+Nominal Development and Release
+-------------------------------
 
-By default, all Discipline LDDs will be built at the time of PDS4 IM Release. See the `PDS4 Build Schedule <https://pds.jpl.nasa.gov/datastandards/about/>`_ for more details on the timing of those builds.
+The ideal workflow for tagging a release happens every 6 months in line with the `PDS4 Build Schedule <https://pds.jpl.nasa.gov/datastandards/about/>`_. Here is the process:
+
+1. Develop
+~~~~~~~~~~
+**Responsible Party: Sub-Model Steward**
+
+In between build cycles, you are free to develop/enhance/upgrade your sub-model, making sure to update the sub-model version as appropriate and all your updates are merged into the ``main`` branch.
+
+2. Wait
+~~~~~~~
+**Responsible Party: Sub-Model Steward**
+
+If you have completed development, you do not need to do anything else to prepare or tag your release. This will be done later by Engineering Node automation. See `Key Dates <https://nasa-pds.github.io/releases/current/plan.html#key-dates>`_ for more information on timeframe for release.
+
+3. Staging Nominal Release
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Responsible Party: Engineering Node**
+
+EN will "stage the release" of the sub-model by automatically generating a Pull Request on your repository. The Pull Request will include an update to include the latest PDS4 Information Model version, all schemas/schematrons will be regenerated and tests executed via the Sub-Model Automation.
+
+4. Review and Merge Pull Request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Responsible Party: Sub-Model Steward**
+
+Once you receive notification of the staged release, it is the responsibility of the **Sub-Model Steward** to:
+
+a. `Review the pull request </development/ldd-how-to.html#reviewing-a-pull-request>`_ - the Sub-Model Steward and associated Stewardship Team (as applicable) should review the regression tests passed as expected, and the schemas/schematrons generated are correct.
+
+b. `Merge the pull request </development/ldd-how-to.html#merging-an-approved-pull-request>`_ - merge the pull request to automatically tag a new version of the sub-model in GitHub.
+
+*NOTE: If the Sub-Model Steward does not merge the pull request, the sub-model will not be released with the latest version of the Information Model. Text will be included on the web page notifying users they can submit a request that a new version be produced.*
+
+
+5. Deploy Nominal Release
+~~~~~~~~~~~~~~~~~~~~~~~~~
+**Responsible Party: Engineering Node**
+
+On the PDS System Release Date, EN will pull all the tagged releases from all the repos, generate the applicable web pages, and release all of the sub-models online.
 
 
 Off-Nominal Release 
 -------------------
 
 .. note::
-    Please try to avoid this wherever possible. In order to minimize overhead of manual processing of LDDs, please coordinate with data providers to stick to the `PDS4 Build Schedule <https://pds.nasa.gov/datastandards/about/>`_ wherever posisble.
+    Please try to avoid this wherever possible. In order to minimize overhead of manual processing of sub-models, please coordinate with data providers to stick to the `PDS4 Build Schedule <https://pds.nasa.gov/datastandards/about/>`_ wherever posisble.
 
-    At any time, you can direct providers to the `build/development` directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.
+    At any time, you can direct providers to the ``build/development`` directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.
 
 If an immediate bug fix and release is needed off PDS4 Build cycle, see the :ref:`Preparing a Release` for instructions for how to tag a release.
 
