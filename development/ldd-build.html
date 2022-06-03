@@ -103,7 +103,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Build Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#build-ldd-using-github">Build LDD Using Github</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build-ldd-using-lddtool">Build LDD Using LDDTool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#changing-pds4-build-versions">Changing PDS4 Build Versions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-release.html">LDD Release Process</a></li>
@@ -197,7 +196,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Build Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#build-ldd-using-github">Build LDD Using Github</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build-ldd-using-lddtool">Build LDD Using LDDTool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#changing-pds4-build-versions">Changing PDS4 Build Versions</a></li>
 </ul>
 </li>
 </ul>
@@ -207,26 +205,11 @@
 <p>By default, as long as your Discipline LDD is using the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template/">ldd-template repository</a>, all Discipline LDD schemas, schematrons, and other default LDDTool outputs are generated whenever a Pull Request is created with a change to an IngestLDD.</p>
 <p>The new schemas/schematrons are posted to the <cite>build/development</cite> directory in your repository. See <a class="reference internal" href="../support/tutorials.html"><span class="doc">LDD Update and Build Tutorial</span></a> for an example generating these schemas/schematrons.</p>
 <p>For more details on how the dictionaries are generated, see <cite>LDD Github Actions</cite>.</p>
-<p>—</p>
 </div>
+<hr class="docutils" />
 <div class="section" id="build-ldd-using-lddtool">
 <h2>Build LDD Using LDDTool<a class="headerlink" href="#build-ldd-using-lddtool" title="Permalink to this headline">¶</a></h2>
 <p>See <a class="reference external" href="https://nasa-pds.github.io/pds4-information-model/model-lddtool/">LDDTool documentation</a>.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="changing-pds4-build-versions">
-<h2>Changing PDS4 Build Versions<a class="headerlink" href="#changing-pds4-build-versions" title="Permalink to this headline">¶</a></h2>
-<p>LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using the ldd-template repo, your LDD will automatically be built with the latest version of the PDS4 IM. Here are the steps to change that version:</p>
-<ol class="arabic">
-<li><p>Open pds4_versions.txt (in the base of your repo)</p></li>
-<li><p>Change the add a new line with the applicable version you would like use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.13.0.0</span>
-<span class="mf">1.14.0.0</span>
-<span class="mf">1.15.0.0</span>
-</pre></div>
-</div>
-</li>
-</ol>
 </div>
 </div>
 
