@@ -1,7 +1,7 @@
 LDD Release Process
 ===================
 
-When a Local Data Dictionary (LDD) Steward is ready to submit a new version of an LDD for release you have two options:
+When a Sub-Model Steward is ready to submit a new version of an LDD for release you have two options:
 
 ..  toctree::
     :maxdepth: 3
@@ -46,7 +46,9 @@ a. `Review the pull request </development/ldd-how-to.html#reviewing-a-pull-reque
 
 b. `Merge the pull request </development/ldd-how-to.html#merging-an-approved-pull-request>`_ - merge the pull request to automatically tag a new version of the sub-model in GitHub.
 
-*NOTE: If the Sub-Model Steward does not merge the pull request, the sub-model will not be released with the latest version of the Information Model. Text will be included on the web page notifying users they can submit a request that a new version be produced.*
+*NOTE 1: If the Sub-Model Steward does not merge the pull request, the sub-model will not be released with the latest version of the Information Model. Text will be included on the web page notifying users they can submit a request that a new version be produced.*
+
+*NOTE 2: Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final "Deploy Nominal Release" step. A separate :ref:`Release Request` is required for any past version(s) of the sub-model you would like released.*
 
 
 5. Deploy Nominal Release
@@ -55,6 +57,9 @@ b. `Merge the pull request </development/ldd-how-to.html#merging-an-approved-pul
 
 On the PDS System Release Date, EN will pull all the tagged releases from all the repos, generate the applicable web pages, and release all of the sub-models online.
 
+*NOTE: Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final "Deploy Nominal Release" step. A separate :ref:`Release Request` is required for any past version(s) of the sub-model you would like released.*
+
+----
 
 Off-Nominal Release 
 -------------------
@@ -62,7 +67,7 @@ Off-Nominal Release
 .. note::
     Please try to avoid this wherever possible. In order to minimize overhead of manual processing of sub-models, please coordinate with data providers to stick to the `PDS4 Build Schedule <https://pds.nasa.gov/datastandards/about/>`_ wherever posisble.
 
-    At any time, you can direct providers to the ``build/development`` directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.
+    At any time, you can direct providers to the ``build/development`` directory of your Sub-Model repository in order for them to have immediate access to the dictionaries for development and testing purposes.
 
 If an immediate bug fix and release is needed off PDS4 Build cycle, see the :ref:`Preparing a Release` for instructions for how to tag a release.
 
@@ -71,9 +76,16 @@ If an immediate bug fix and release is needed off PDS4 Build cycle, see the :ref
 Preparing a Release
 +++++++++++++++++++
 
-(preferred) Tag a Release In Github
------------------------------------
+Check Github for Tagged Released
+--------------------------------
+Before you tag a release in Github, verify the version you would like released has not already been tagged by EN Automation.
 
+1. Go to your repo's release page, e.g. https://github.com/pds-data-dictionaries/ldd-img/releases.
+2. If the version you would like released appears in the list, proceed to :ref:`Submit Release Request`, otherwise proceed to "Tag a Release in Github".
+
+
+Tag a Release In Github
+-----------------------
 1. Add your IngestLDD to the ``src/`` directory in your repo
 2. Create a branch with ``release`` in the name, e.g. ``release/1.1.0.0``
 3. Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit via the command-line (not sure how to do this via Github Desktop). For example::
@@ -98,7 +110,7 @@ If you are unable to submit to Github, see :ref:`Submit Release Request` to uplo
 Submit Release Request
 ----------------------
 
-Submit a `PDS LDD Release` request request ticket `here <https://github.com/NASA-PDS/pdsen-operations/issues/new/choose>`_.
+Submit a ``PDS LDD Release`` request request ticket `here <https://github.com/NASA-PDS/pdsen-operations/issues/new/choose>`_.
 
 ----
 
