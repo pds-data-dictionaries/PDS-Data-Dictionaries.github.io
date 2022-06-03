@@ -117,6 +117,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#generate-human-readable-versions-of-the-ldd">Generate Human Readable Versions of the LDD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-multiple-files-to-define-a-single-namespace">Use Multiple Files to Define a Single Namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#merge-a-new-release-branch-into-my-current-working-branch">Merge A New Release Branch Into My Current Working Branch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-change-pds4-build-versions">How to Change PDS4 Build Versions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -227,6 +228,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#generate-human-readable-versions-of-the-ldd">Generate Human Readable Versions of the LDD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-multiple-files-to-define-a-single-namespace">Use Multiple Files to Define a Single Namespace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#merge-a-new-release-branch-into-my-current-working-branch">Merge A New Release Branch Into My Current Working Branch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-change-pds4-build-versions">How to Change PDS4 Build Versions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
@@ -465,6 +467,21 @@ read <a class="reference external" href="https://pds-data-dictionaries.github.io
 <p>Via Github Desktop:</p>
 <a class="reference external image-reference" href="../_static/images/screenshot_merge1.png"><img alt="../_images/screenshot_merge1.png" src="../_images/screenshot_merge1.png" /></a>
 <a class="reference external image-reference" href="../_static/images/screenshot_merge2.png"><img alt="../_images/screenshot_merge2.png" src="../_images/screenshot_merge2.png" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="how-to-change-pds4-build-versions">
+<h2>How to Change PDS4 Build Versions<a class="headerlink" href="#how-to-change-pds4-build-versions" title="Permalink to this headline">¶</a></h2>
+<p>LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using the sub-model template repo, your sub-model automatically builds with the latest version of the PDS4 IM. Here are the steps to change that version or add additional versions:</p>
+<ol class="arabic">
+<li><p>Open pds4_versions.txt (in the base of your repo), e.g. <a class="reference external" href="https://github.com/pds-data-dictionaries/template/blob/main/pds4_versions.txt">https://github.com/pds-data-dictionaries/template/blob/main/pds4_versions.txt</a></p></li>
+<li><p>Add new line with the applicable version you would like use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.13.0.0</span>
+<span class="mf">1.14.0.0</span>
+<span class="mf">1.15.0.0</span>
+</pre></div>
+</div>
+</li>
+</ol>
 </div>
 <hr class="docutils" />
 <div class="section" id="tbd">

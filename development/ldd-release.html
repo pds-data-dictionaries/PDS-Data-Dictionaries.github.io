@@ -117,7 +117,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#preparing-a-release">Preparing a Release</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#check-github-for-tagged-released">Check Github for Tagged Released</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tag-a-release-in-github">Tag a Release In Github</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#submit-manually">Submit Manually</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#submit-release-request">Submit Release Request</a></li>
 </ul>
 </li>
@@ -221,7 +220,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#preparing-a-release">Preparing a Release</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#check-github-for-tagged-released">Check Github for Tagged Released</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tag-a-release-in-github">Tag a Release In Github</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#submit-manually">Submit Manually</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#submit-release-request">Submit Release Request</a></li>
 </ul>
 </li>
@@ -259,14 +257,19 @@
 <li><p><a class="reference external" href="/development/ldd-how-to.html#reviewing-a-pull-request">Review the pull request</a> - the Sub-Model Steward and associated Stewardship Team (as applicable) should review the regression tests passed as expected, and the schemas/schematrons generated are correct.</p></li>
 <li><p><a class="reference external" href="/development/ldd-how-to.html#merging-an-approved-pull-request">Merge the pull request</a> - merge the pull request to automatically tag a new version of the sub-model in GitHub.</p></li>
 </ol>
-<p><em>NOTE 1: If the Sub-Model Steward does not merge the pull request, the sub-model will not be released with the latest version of the Information Model. Text will be included on the web page notifying users they can submit a request that a new version be produced.</em></p>
-<p><em>NOTE 2: Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final “Deploy Nominal Release” step. A separate :ref:`Release Request` is required for any past version(s) of the sub-model you would like released.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the Sub-Model Steward does not merge the pull request, the sub-model will not be released with the latest version of the Information Model. Text will be included on the web page notifying users they can submit a request that a new version be produced.</p>
+</div>
 </div>
 <div class="section" id="deploy-nominal-release">
 <h4>5. Deploy Nominal Release<a class="headerlink" href="#deploy-nominal-release" title="Permalink to this headline">¶</a></h4>
 <p><strong>Responsible Party: Engineering Node</strong></p>
 <p>On the PDS System Release Date, EN will pull all the tagged releases from all the repos, generate the applicable web pages, and release all of the sub-models online.</p>
-<p><em>NOTE: Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final “Deploy Nominal Release” step. A separate :ref:`Release Request` is required for any past version(s) of the sub-model you would like released.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final “Deploy Nominal Release” step. A separate <span class="xref std std-ref">Release Request</span> is required for any past version(s) of the sub-model you would like released.*</p>
+</div>
 </div>
 </div>
 <hr class="docutils" />
@@ -295,7 +298,8 @@
 <h3>Tag a Release In Github<a class="headerlink" href="#tag-a-release-in-github" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
 <li><p>Add your IngestLDD to the <code class="docutils literal notranslate"><span class="pre">src/</span></code> directory in your repo</p></li>
-<li><p>Create a branch with <code class="docutils literal notranslate"><span class="pre">release</span></code> in the name, e.g. <code class="docutils literal notranslate"><span class="pre">release/1.1.0.0</span></code></p></li>
+<li><p>Create a branch with <code class="docutils literal notranslate"><span class="pre">release</span></code> in the name, e.g. <code class="docutils literal notranslate"><span class="pre">release/1.18.0.0_1.1.0.0</span></code></p></li>
+<li><p>If the intent is to release a sub-model with a past PDS4 Information Model version, see documentation for <a class="reference external" href="/development/ldd-how-to.html#how-to-change-pds4-build-versions">Changing PDS4 Build Versions</a>.</p></li>
 <li><p>Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit via the command-line (not sure how to do this via Github Desktop). For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">empty</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Prep for tagging release&quot;</span>
 </pre></div>
@@ -309,10 +313,6 @@
 <li><p>You should then see a new release tagged in your repo in a URL like <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-img/releases">https://github.com/pds-data-dictionaries/ldd-img/releases</a></p></li>
 <li><p>Then move on to <a class="reference internal" href="#submit-release-request"><span class="std std-ref">Submit Release Request</span></a> below to submit ticket to the EN Operations Github repo.</p></li>
 </ol>
-</div>
-<div class="section" id="submit-manually">
-<h3>Submit Manually<a class="headerlink" href="#submit-manually" title="Permalink to this headline">¶</a></h3>
-<p>If you are unable to submit to Github, see <a class="reference internal" href="#submit-release-request"><span class="std std-ref">Submit Release Request</span></a> to upload a zip of your generated artifacts.</p>
 </div>
 <div class="section" id="submit-release-request">
 <h3>Submit Release Request<a class="headerlink" href="#submit-release-request" title="Permalink to this headline">¶</a></h3>
