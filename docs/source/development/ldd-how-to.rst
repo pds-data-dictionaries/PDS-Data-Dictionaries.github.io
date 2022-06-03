@@ -283,6 +283,24 @@ Via Github Desktop:
 
 ----
 
+How to Change PDS4 Build Versions
++++++++++++++++++++++++++++++++++
+
+LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using the sub-model template repo, your sub-model automatically builds with the latest version of the PDS4 IM. Here are the steps to change that version or add additional versions:
+
+1.  Open pds4_versions.txt (in the base of your repo), e.g. https://github.com/pds-data-dictionaries/template/blob/main/pds4_versions.txt
+
+2.  Add new line with the applicable version you would like use::
+ 
+        1.13.0.0
+        1.14.0.0
+        1.15.0.0
+
+.. warn::
+   The Sub-Model automated generation only builds the last 4 versions specified in the pds4_versions.txt file. For later versions of the PDS4 Information Model, move that version number to the end of the file.
+
+----
+
 TBD
 +++
 Feel free to add some of your own or create a ticket in the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues>`_ so we can start to build up this documentation.

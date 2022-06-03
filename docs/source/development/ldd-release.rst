@@ -46,9 +46,11 @@ a. `Review the pull request </development/ldd-how-to.html#reviewing-a-pull-reque
 
 b. `Merge the pull request </development/ldd-how-to.html#merging-an-approved-pull-request>`_ - merge the pull request to automatically tag a new version of the sub-model in GitHub.
 
-*NOTE 1: If the Sub-Model Steward does not merge the pull request, the sub-model will not be released with the latest version of the Information Model. Text will be included on the web page notifying users they can submit a request that a new version be produced.*
+.. note::
+    If the Sub-Model Steward does not merge the pull request, the sub-model will not be released with the latest version of the Information Model. Text will be included on the web page notifying users they can submit a request that a new version be produced.
 
-*NOTE 2: Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final "Deploy Nominal Release" step. A separate :ref:`Release Request` is required for any past version(s) of the sub-model you would like released.*
+.. warn::
+    Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final "Deploy Nominal Release" step. A separate :ref:`Release Request` is required for any past version(s) of the sub-model you would like released.
 
 
 5. Deploy Nominal Release
@@ -57,7 +59,8 @@ b. `Merge the pull request </development/ldd-how-to.html#merging-an-approved-pul
 
 On the PDS System Release Date, EN will pull all the tagged releases from all the repos, generate the applicable web pages, and release all of the sub-models online.
 
-*NOTE: Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final "Deploy Nominal Release" step. A separate :ref:`Release Request` is required for any past version(s) of the sub-model you would like released.*
+.. note::
+    Only the version of the sub-model associated with the new PDS4 Information Model will be included in the final "Deploy Nominal Release" step. A separate :ref:`Release Request` is required for any past version(s) of the sub-model you would like released.*
 
 ----
 
@@ -87,24 +90,19 @@ Before you tag a release in Github, verify the version you would like released h
 Tag a Release In Github
 -----------------------
 1. Add your IngestLDD to the ``src/`` directory in your repo
-2. Create a branch with ``release`` in the name, e.g. ``release/1.1.0.0``
-3. Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit via the command-line (not sure how to do this via Github Desktop). For example::
+2. Create a branch with ``release`` in the name, e.g. ``release/1.18.0.0_1.1.0.0``
+3. If the intent is to release a sub-model with a past PDS4 Information Model version, see documentation for `Changing PDS4 Build Versions </development/ldd-how-to.html#how-to-change-pds4-build-versions>`_.
+4. Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit via the command-line (not sure how to do this via Github Desktop). For example::
 
     git commit --allow-empty -m "Prep for tagging release"
 
-4. Push your new branch to Github
-5. Create a Pull Request for your branch.
-6. Optional: monitor the generation of the dictionaries via the ``Actions`` tab in your Github repository.
-7. Once the build completes, you should see the new LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.
-8. Once you get approval from the appropriate stakeholders, merge your pull request.
-9. You should then see a new release tagged in your repo in a URL like https://github.com/pds-data-dictionaries/ldd-img/releases
-10. Then move on to :ref:`Submit Release Request` below to submit ticket to the EN Operations Github repo.
-
-
-Submit Manually
----------------
-
-If you are unable to submit to Github, see :ref:`Submit Release Request` to upload a zip of your generated artifacts.
+5. Push your new branch to Github
+6. Create a Pull Request for your branch.
+7. Optional: monitor the generation of the dictionaries via the ``Actions`` tab in your Github repository.
+8. Once the build completes, you should see the new LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.
+9. Once you get approval from the appropriate stakeholders, merge your pull request.
+10. You should then see a new release tagged in your repo in a URL like https://github.com/pds-data-dictionaries/ldd-img/releases
+11. Then move on to :ref:`Submit Release Request` below to submit ticket to the EN Operations Github repo.
 
 
 Submit Release Request
@@ -118,3 +116,4 @@ Reviewing a Staged Release
 ++++++++++++++++++++++++++
 
 See the :doc:`Review a Pull Request How-to </development/ldd-how-to>`
+
