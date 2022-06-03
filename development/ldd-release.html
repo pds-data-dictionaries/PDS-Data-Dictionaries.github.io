@@ -102,8 +102,15 @@
 <li class="toctree-l1"><a class="reference internal" href="ldd-how-to.html">LDD How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Release Process</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#release-timeframe">Release Timeframe</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#nominal-release-with-pds4-information-model">Nominal Release with PDS4 Information Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release">Release</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nominal-development-and-release">Nominal Development and Release</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#develop">1. Develop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wait">2. Wait</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#staging-nominal-release">3. Staging Nominal Release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#review-and-merge-pull-request">4. Review and Merge Pull Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deploy-nominal-release">5. Deploy Nominal Release</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#off-nominal-release">Off-Nominal Release</a></li>
 </ul>
 </li>
@@ -205,8 +212,8 @@
 <div class="toctree-wrapper compound">
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Release Process</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#release-timeframe">Release Timeframe</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#nominal-release-with-pds4-information-model">Nominal Release with PDS4 Information Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release">Release</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nominal-development-and-release">Nominal Development and Release</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#off-nominal-release">Off-Nominal Release</a></li>
 </ul>
 </li>
@@ -222,18 +229,48 @@
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="release-timeframe">
-<h2>Release Timeframe<a class="headerlink" href="#release-timeframe" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="nominal-release-with-pds4-information-model">
-<h3>Nominal Release with PDS4 Information Model<a class="headerlink" href="#nominal-release-with-pds4-information-model" title="Permalink to this headline">¶</a></h3>
-<p>By default, all Discipline LDDs will be built at the time of PDS4 IM Release. See the <a class="reference external" href="https://pds.jpl.nasa.gov/datastandards/about/">PDS4 Build Schedule</a> for more details on the timing of those builds.</p>
+<div class="section" id="release">
+<h2>Release<a class="headerlink" href="#release" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="nominal-development-and-release">
+<h3>Nominal Development and Release<a class="headerlink" href="#nominal-development-and-release" title="Permalink to this headline">¶</a></h3>
+<p>The ideal workflow for tagging a release happens every 6 months in line with the <a class="reference external" href="https://pds.jpl.nasa.gov/datastandards/about/">PDS4 Build Schedule</a>. Here is the process:</p>
+<div class="section" id="develop">
+<h4>1. Develop<a class="headerlink" href="#develop" title="Permalink to this headline">¶</a></h4>
+<p><strong>Responsible Party: Sub-Model Steward</strong></p>
+<p>In between build cycles, you are free to develop/enhance/upgrade your sub-model, making sure to update the sub-model version as appropriate and all your updates are merged into the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p>
+</div>
+<div class="section" id="wait">
+<h4>2. Wait<a class="headerlink" href="#wait" title="Permalink to this headline">¶</a></h4>
+<p><strong>Responsible Party: Sub-Model Steward</strong></p>
+<p>If you have completed development, you do not need to do anything else to prepare or tag your release. This will be done later by Engineering Node automation. See <a class="reference external" href="https://nasa-pds.github.io/releases/current/plan.html#key-dates">Key Dates</a> for more information on timeframe for release.</p>
+</div>
+<div class="section" id="staging-nominal-release">
+<h4>3. Staging Nominal Release<a class="headerlink" href="#staging-nominal-release" title="Permalink to this headline">¶</a></h4>
+<p><strong>Responsible Party: Engineering Node</strong></p>
+<p>EN will “stage the release” of the sub-model by automatically generating a Pull Request on your repository. The Pull Request will include an update to include the latest PDS4 Information Model version, all schemas/schematrons will be regenerated and tests executed via the Sub-Model Automation.</p>
+</div>
+<div class="section" id="review-and-merge-pull-request">
+<h4>4. Review and Merge Pull Request<a class="headerlink" href="#review-and-merge-pull-request" title="Permalink to this headline">¶</a></h4>
+<p><strong>Responsible Party: Sub-Model Steward</strong></p>
+<p>Once you receive notification of the staged release, it is the responsibility of the <strong>Sub-Model Steward</strong> to:</p>
+<ol class="loweralpha simple">
+<li><p><a class="reference external" href="/development/ldd-how-to.html#reviewing-a-pull-request">Review the pull request</a> - the Sub-Model Steward and associated Stewardship Team (as applicable) should review the regression tests passed as expected, and the schemas/schematrons generated are correct.</p></li>
+<li><p><a class="reference external" href="/development/ldd-how-to.html#merging-an-approved-pull-request">Merge the pull request</a> - merge the pull request to automatically tag a new version of the sub-model in GitHub.</p></li>
+</ol>
+<p><em>NOTE: If the Sub-Model Steward does not merge the pull request, the sub-model will not be released with the latest version of the Information Model. Text will be included on the web page notifying users they can submit a request that a new version be produced.</em></p>
+</div>
+<div class="section" id="deploy-nominal-release">
+<h4>5. Deploy Nominal Release<a class="headerlink" href="#deploy-nominal-release" title="Permalink to this headline">¶</a></h4>
+<p><strong>Responsible Party: Engineering Node</strong></p>
+<p>On the PDS System Release Date, EN will pull all the tagged releases from all the repos, generate the applicable web pages, and release all of the sub-models online.</p>
+</div>
 </div>
 <div class="section" id="off-nominal-release">
 <h3>Off-Nominal Release<a class="headerlink" href="#off-nominal-release" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please try to avoid this wherever possible. In order to minimize overhead of manual processing of LDDs, please coordinate with data providers to stick to the <a class="reference external" href="https://pds.nasa.gov/datastandards/about/">PDS4 Build Schedule</a> wherever posisble.</p>
-<p>At any time, you can direct providers to the <cite>build/development</cite> directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.</p>
+<p>Please try to avoid this wherever possible. In order to minimize overhead of manual processing of sub-models, please coordinate with data providers to stick to the <a class="reference external" href="https://pds.nasa.gov/datastandards/about/">PDS4 Build Schedule</a> wherever posisble.</p>
+<p>At any time, you can direct providers to the <code class="docutils literal notranslate"><span class="pre">build/development</span></code> directory of your LDD repository in order for them to have immediate access to the dictionaries for development and testing purposes.</p>
 </div>
 <p>If an immediate bug fix and release is needed off PDS4 Build cycle, see the <a class="reference internal" href="#preparing-a-release"><span class="std std-ref">Preparing a Release</span></a> for instructions for how to tag a release.</p>
 </div>
