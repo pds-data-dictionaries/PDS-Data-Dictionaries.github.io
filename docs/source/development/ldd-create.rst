@@ -135,7 +135,6 @@ e. Set GitHub Pages Deployment
     * Go to ``Settings`` -> ``Pages``
     * Under ``Build and Deployment`` -> ``Source``, select ``GitHub Actions``
 
-
 **Create new issue template in PDS4 LDD Issue Repo**
 
 a. `Create a new label <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/labels>`_ in the PDS4 LDD Issue Repo for the new repo (ldd-<namespace_id>)
