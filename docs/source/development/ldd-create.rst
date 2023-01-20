@@ -131,6 +131,10 @@ d. Set branches protections
        * Search and select the ``LDD Generation Check`` action.
     * Select ``Restrict who can push to matching branches``
 
+e. Set GitHub Pages Deployment
+    * Go to ``Settings`` -> ``Pages``
+    * Under ``Build and Deployment`` -> ``Source``, select ``GitHub Actions``
+
 
 **Create new issue template in PDS4 LDD Issue Repo**
 
