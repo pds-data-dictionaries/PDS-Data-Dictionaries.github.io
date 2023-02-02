@@ -92,11 +92,17 @@ Tag a Release In Github
 1. Add your IngestLDD to the ``src/`` directory in your repo
 2. Create a branch with ``release`` in the name, e.g. ``release/1.18.0.0_1.1.0.0``
 3. If the intent is to release a sub-model with a past PDS4 Information Model version, see documentation for `Changing PDS4 Build Versions </development/ldd-how-to.html#how-to-change-pds4-build-versions>`_.
-4. Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit via the command-line (not sure how to do this via Github Desktop). For example::
+4. Add your changes to the branch, commit, and push branch to Github. Be sure to push your branch even if you have no changes to commit.
+5. If you did not have any changes to commit, you can manually trigger the build of the LDDs by:
+    a. Select the ``Actions`` tab
+    b. Under the ``Actions`` left sidebar, select ``PDS4 Sub-Model Automation``
+    c. From the blue row in the table, select the ``Run Workflow`` dropdown.
+    d. Select your branch from the dropdown.
+    e. Select the ``Run Workflow`` button.
 
-    git commit --allow-empty -m "Prep for tagging release"
+..  image:: /_static/images/screenshot-workflow-dispatch.png
+    :target: ../_static/images/screenshot-workflow-dispatch.png
 
-5. Push your new branch to Github
 6. Create a Pull Request for your branch.
 7. Optional: monitor the generation of the dictionaries via the ``Actions`` tab in your Github repository.
 8. Once the build completes, you should see the new LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.

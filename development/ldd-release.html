@@ -296,16 +296,25 @@
 </div>
 <div class="section" id="tag-a-release-in-github">
 <h3>Tag a Release In Github<a class="headerlink" href="#tag-a-release-in-github" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p>Add your IngestLDD to the <code class="docutils literal notranslate"><span class="pre">src/</span></code> directory in your repo</p></li>
 <li><p>Create a branch with <code class="docutils literal notranslate"><span class="pre">release</span></code> in the name, e.g. <code class="docutils literal notranslate"><span class="pre">release/1.18.0.0_1.1.0.0</span></code></p></li>
 <li><p>If the intent is to release a sub-model with a past PDS4 Information Model version, see documentation for <a class="reference external" href="/development/ldd-how-to.html#how-to-change-pds4-build-versions">Changing PDS4 Build Versions</a>.</p></li>
-<li><p>Add your changes to the branch, commit, and push to Github. If you do not have any changes to commit, you can perform an empty commit via the command-line (not sure how to do this via Github Desktop). For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">empty</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Prep for tagging release&quot;</span>
-</pre></div>
-</div>
+<li><p>Add your changes to the branch, commit, and push branch to Github. Be sure to push your branch even if you have no changes to commit.</p></li>
+<li><dl class="simple">
+<dt>If you did not have any changes to commit, you can manually trigger the build of the LDDs by:</dt><dd><ol class="loweralpha simple">
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> tab</p></li>
+<li><p>Under the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> left sidebar, select <code class="docutils literal notranslate"><span class="pre">PDS4</span> <span class="pre">Sub-Model</span> <span class="pre">Automation</span></code></p></li>
+<li><p>From the blue row in the table, select the <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">Workflow</span></code> dropdown.</p></li>
+<li><p>Select your branch from the dropdown.</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">Workflow</span></code> button.</p></li>
+</ol>
+</dd>
+</dl>
 </li>
-<li><p>Push your new branch to Github</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/images/screenshot-workflow-dispatch.png"><img alt="../_images/screenshot-workflow-dispatch.png" src="../_images/screenshot-workflow-dispatch.png" /></a>
+<ol class="arabic simple" start="6">
 <li><p>Create a Pull Request for your branch.</p></li>
 <li><p>Optional: monitor the generation of the dictionaries via the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> tab in your Github repository.</p></li>
 <li><p>Once the build completes, you should see the new LDD auto-generated (after ~2-3 minutes) in both the <code class="docutils literal notranslate"><span class="pre">build/development</span></code> and <code class="docutils literal notranslate"><span class="pre">build/release</span></code> directories.</p></li>
