@@ -99,6 +99,10 @@ Tag a Release In Github
    c. From the blue row in the table, select the ``Run Workflow`` dropdown.
    d. Select your branch from the dropdown.
    e. Select the ``Run Workflow`` button.
+
+..  image:: /_static/images/screenshot-workflow-dispatch.png
+    :target: ../_static/images/screenshot-workflow-dispatch.png
+
 6. Create a Pull Request for your branch.
 7. Optional: monitor the generation of the dictionaries via the ``Actions`` tab in your Github repository.
 8. Once the build completes, you should see the new LDD auto-generated (after ~2-3 minutes) in both the ``build/development`` and ``build/release`` directories.
