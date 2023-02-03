@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>LDD Regression Testing &mdash; PDS Data Dictionaries  documentation</title>
+  <title>LDD Creation Process &mdash; PDS Data Dictionaries  documentation</title>
   
 
   
@@ -40,7 +40,9 @@
 
     
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LDD Change Control Board" href="../teams/ldd-ccb.html" />
+    <link rel="prev" title="LDD Release Process" href="ldd-release.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,13 +96,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/ldd-repo-overview.html">Getting to Know Your LDD Repo</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Development</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="ldd-create.html">LDD Creation Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-update.html">LDD Update Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-how-to.html">LDD How-To Guides</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-build.html">LDD Build Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ldd-release.html">LDD Release Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mission-ldds.html">LDD Creation Process</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Creation Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-mission-ldd">Proposing a New Mission LDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-a-mission-ldd">Release a Mission LDD</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Teams</span></p>
 <ul>
@@ -165,13 +171,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>LDD Regression Testing</li>
+      <li>LDD Creation Process</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/development/ldd-test.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/development/mission-ldds.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,54 +190,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ldd-regression-testing">
-<h1>LDD Regression Testing<a class="headerlink" href="#ldd-regression-testing" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="ldd-creation-process">
+<h1>LDD Creation Process<a class="headerlink" href="#ldd-creation-process" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Regression Testing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#regression-test-data">Regression Test Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#regression-test-data-rules">Regression Test Data Rules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-data-directory-layout">Test Data Directory Layout</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LDD Creation Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#proposing-a-new-mission-ldd">Proposing a New Mission LDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-a-mission-ldd">Release a Mission LDD</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>Local Data Dictionary (LDD) stewards are expected to provide example labels that can be used for regression testing LDDs delivered for release. The number and complexity of examples developed are dependent upon the dictionary steward and what is determined to be a high-priority or is thought to be something that are critical to the dictionary. The following page describes some examples of regression tests as well as where/how these files should be provided to PDS Engineering Node to complete that testing.</p>
+<div class="section" id="proposing-a-new-mission-ldd">
+<h2>Proposing a New Mission LDD<a class="headerlink" href="#proposing-a-new-mission-ldd" title="Permalink to this headline">¶</a></h2>
+<p>For PDS users, contact your Discipline Node to help you along this process. Many of the best practices and review rigor described below may not be necessary for Mission LDD development.</p>
+<p>For Discipline Node staff, once a mission LDD has been decided upon, follow the process to <a class="reference external" href="ldd-create.html#submit-request-for-new-ldd-creation">Submit Request For New LDD Creation</a></p>
 </div>
-<div class="section" id="regression-test-data">
-<h2>Regression Test Data<a class="headerlink" href="#regression-test-data" title="Permalink to this headline">¶</a></h2>
-<p>Regression tests should be made up of PDS4 example products that either successfully or unsuccessfully validate using the <a class="reference external" href="https://nasa-pds.github.io/validate/">PDS Validate Tool</a>.</p>
-<p>For simple examples of generating simple regression test cases, see the <a class="reference external" href="https://github.com/pds-data-dictionaries/ldd-template">LDD Template repository</a>.</p>
-</div>
-<div class="section" id="regression-test-data-rules">
-<h2>Regression Test Data Rules<a class="headerlink" href="#regression-test-data-rules" title="Permalink to this headline">¶</a></h2>
-<p>In order for your regression test data to be autonomously tested during the automated LDD Generation process, you must follow the following rules when posting your test data to Github:</p>
+<hr class="docutils" />
+<div class="section" id="release-a-mission-ldd">
+<h2>Release a Mission LDD<a class="headerlink" href="#release-a-mission-ldd" title="Permalink to this headline">¶</a></h2>
+<p>Unlike the <a class="reference external" href="ldd-release.html#nominal-development-and-release">Discipline LDD Nominal Release Process</a>, Mission LDDs require the LDD Steward to:</p>
 <ol class="arabic simple">
-<li><p><strong>No schematrons</strong> - do not include schematron references in the labels. the pipeline will automatically add the newly generated schematrons to the validation.</p></li>
-<li><p><strong>No schemaLocations</strong> - do not include schemaLocation references in the labels. the pipeline will automatically add the newly generated schematrons to the validation.</p></li>
-<li><p><strong>Include ``[IM_VERSION]`` for information_model_version</strong> - use <code class="docutils literal notranslate"><span class="pre">[IM_VERSION]</span></code> value for <code class="docutils literal notranslate"><span class="pre">information_model_version</span></code> attribute so it can be dynamically replaced by the pipeline</p></li>
+<li><p><a class="reference external" href="ldd-release.html#preparing-a-release">Manually Prepare a Release in GitHub</a></p></li>
+<li><p><a class="reference external" href="ldd-release.html#submit-release-request">Manually Submit a Release Request to the EN Operations Team through GitHub</a></p></li>
 </ol>
-</div>
-<div class="section" id="test-data-directory-layout">
-<h2>Test Data Directory Layout<a class="headerlink" href="#test-data-directory-layout" title="Permalink to this headline">¶</a></h2>
-<p>Regression test products should be maintained within the <code class="docutils literal notranslate"><span class="pre">test/</span></code> directory of your LDD Repo:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ldd-test/
-├── ...
-├── test
-│   ├── No.Data
-│   ├── test1_FAIL.xml
-│   └── test1_VALID.xml
-</pre></div>
-</div>
-<p>where:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">PDS4_SP_1100_1000_test</span></code> - this top level directory should be named using the format <code class="docutils literal notranslate"><span class="pre">PDS4_&lt;namespace_id&gt;_&lt;IM_version&gt;_&lt;LDD_version&gt;_test</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">*FAIL*</span></code> - all PDS4 XML labels that will fail validation against delivered dictionaries. Output from Validate Tool should go into <code class="docutils literal notranslate"><span class="pre">*FAIL*.log</span></code> files in order to compare output from EN Validate execution.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">*VALID*</span></code> - all PDS4 XML labels that will complete successful validation against delivered dictionaries.</p></li>
-</ul>
 </div>
 </div>
 
@@ -240,6 +222,10 @@
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../teams/ldd-ccb.html" class="btn btn-neutral float-right" title="LDD Change Control Board" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ldd-release.html" class="btn btn-neutral float-left" title="LDD Release Process" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
