@@ -93,7 +93,7 @@ Tag a Release In Github
 2. Create a branch with ``release`` in the name, e.g. ``release/1.18.0.0_1.1.0.0``
 3. If the intent is to release a sub-model with a past PDS4 Information Model version, see documentation for `Changing PDS4 Build Versions </development/ldd-how-to.html#how-to-change-pds4-build-versions>`_.
 4. Add your changes to the branch, commit, and push branch to Github. Be sure to push your branch even if you have no changes to commit.
-5. If you did not have any changes to commit, you can manually trigger the build of the LDDs by:
+5. If you have no changes, or you changes are not to your IngestLDD file, you will need to manually trigger the build of the LDDs:
     a. Select the ``Actions`` tab
     b. Under the ``Actions`` left sidebar, select ``PDS4 Sub-Model Automation``
     c. From the blue row in the table, select the ``Run Workflow`` dropdown.
