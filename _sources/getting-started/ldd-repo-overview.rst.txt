@@ -53,13 +53,20 @@ Below is an example of the default repo layout for the **cart** namespace. This 
 
     ├── README.md
     ├── pds4_versions.txt
-    ├── build
-    │   └── development
-    │   └── release
-    ├── src
+    ├── build/
+    │   └── development/
+    │   └── release/
+    ├── docs/
+    │   └── source/
+    │   └── Makefile
+    │   └── examplenamespace.pdf
+    │   └── make.bat
+    │   └── requirements.txt
+    ├── logs/
+    ├── src/
     │   ├── PDS4_EXAMPLE_IngestLDD.xml
-    │   └── dependencies
-    ├── test
+    │   └── dependencies/
+    ├── test/
     │   ├── No.Data
     │   ├── test1_FAIL.xml
     │   └── test1_VALID.xml
@@ -68,10 +75,7 @@ Below is an example of the default repo layout for the **cart** namespace. This 
 README.md
 ---------
 
-A template README is included in the repository with minimal information provided. At minimum, the following should be updated:
-
-* Replace `{LDD Name}` wherever it appears with the appropriate name for this LDD (e.g. Mars 2020 LDD, Geometry LDD)
-* Under `Documentation`, replace with a link to appropriate User Guide, if one exists.
+A template README is included in the repository with minimal information provided. Update anything contained within curly braces (``{````}``).
 
 pds4_versions.txt
 -----------------
@@ -90,9 +94,29 @@ build/
 
 This directory is where all the schemas, schematrons and other files generated from LDDTool are placed.
 
-* ``development`` - this directory will contain the current development version of the schema. You should always be able to direct someone here if they want to be able to test with the schemas that are currently in development for next build.
+* ``development/`` - this directory will contain the current development version of the schema. You should always be able to direct someone here if they want to be able to test with the schemas that are currently in development for next build.
 
-* ``release`` - this directory will contain all released versions of the LDD from PDS4 Stadard Version 1.15.0.0 and later. This directory is maintained for **configuration management only**. Users should be directed to download from the archival, released version at `pds.nasa.gov <https://pds.nasa.gov/datastandards/dictionaries/>`_.
+* ``release/`` - this directory will contain all released versions of the LDD from PDS4 Stadard Version 1.15.0.0 and later. This directory is maintained for **configuration management only**. Users should be directed to download from the archival, released version at `pds.nasa.gov <https://pds.nasa.gov/datastandards/dictionaries/>`_.
+
+docs/
+------
+
+Contains the template documentation (in Markdown) and the necessary build software and configuration for Sphinx to auto-generate the online documentation for this LDD. An overview of the content within this directory:
+
+* ``source/`` - contains the template documentation files, in Markdown, used to generate the online documentation for your repo, as well as the Sphinx configuration file, `conf.py <https://github.com/pds-data-dictionaries/ldd-template/blob/main/docs/source/conf.py>`_. The updates needed in that file should be self-documented in your repo, or see the `latest version <https://github.com/pds-data-dictionaries/ldd-template/blob/main/docs/source/conf.py>`_ in the ldd-template repo. You will want to update the remaining Markdown documentation files accordingly per your repository and the guidelines from the Stewards' Handbook.
+
+* ``Makefile`` - this is used to auto-generate the online documentation using Sphinx. You should not need to touch this.
+
+* ``examplenamespace.pdf`` - this is the auto-generated PDF from the Markdown documentation under the `source/` directory. Once you update the ``Project`` value in your Sphinx configuration file, this filename will change to your LDDs name. `Here is where that value comes from in the template repository <https://github.com/pds-data-dictionaries/ldd-template/blob/main/docs/source/conf.py#L20>`_.
+
+* ``make.bat`` - similar to the ``Makefile``, this is used to auto-generate the online documentation using Sphinx. You should not need to touch this.
+
+* ``requirements.txt`` - this is used to build the software used to auto-generate the online documentation using Sphinx. You should not need to touch this.
+
+logs/
+----
+
+Contains the logs from the last attempt to auto-generate the LDDs.
 
 src/
 ----
