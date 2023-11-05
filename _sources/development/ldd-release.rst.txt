@@ -114,7 +114,7 @@ Tag a Release In Github
 Submit Release Request
 ----------------------
 
-Submit a ``PDS LDD Release`` request request ticket `here <https://github.com/NASA-PDS/pdsen-operations/issues/new/choose>`_.
+Submit a ``PDS LDD Release`` request request ticket `here <https://github.com/NASA-PDS/pdsen-operations/issues/new?template=-ldd-request--pds-ldd-release.md>`_.
 
 ----
 
