@@ -103,7 +103,6 @@ b. Set the following parameters:
     * ``Repository Name``: should follow the naming scheme ``ldd-<namespace_id>``.
     * ``Description``: enter description sent by LDD Steward
     * Set visibility to ``Public``
-    * Check the box ``Include all branches``
 
 
 **Update Repo Settings**
@@ -117,7 +116,7 @@ b. Disable issues being created on this repo (they will be created in the PDS4 L
 c. Add appropriate teams with access to repo
     * Go to ``Manage Access``
     * Click on ``Invite teams or people``
-    * Add the ``LDD Stewardship Team`` with Admin access
+    * Add the ``<namespace_id> LDD Stewardship Team`` with Admin access
     * Add the ``@pdsen-operations-team`` with Admin access
     * If this is a Discipline LDD Repo, add the ``@dldd-data-modeling-team`` with Write access
 
@@ -128,7 +127,7 @@ d. Set branches protections
     * Select ``Require pull request reviews before merging``
     * Select ``Require review from Code Owners``
     * Select ``Require status checks to pass before merging``
-       * Search and select the ``LDD Generation Check`` action.
+       * Search and select the ``Tag and Release LDD (x.x.x.x)`` action.
     * Select ``Restrict who can push to matching branches``
 
 e. Set GitHub Pages Deployment
