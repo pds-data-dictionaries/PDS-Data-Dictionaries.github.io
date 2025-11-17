@@ -301,6 +301,16 @@ LDDTool is backwards compatible with PDS4 version 1.11.0.0 and later. When using
 
 ----
 
-TBD
+How to Document my LDD
+++++++++++++++++++++++
+
+See the ```docs/source/``` directory of our LDD for a template that is ready to be filled out with documentation.
+
+For automated generation of your LDD using examples, see GEO’s User Guide Tool (UGT) (Windows only). UGT can generate a detailed User Guide (user_guide.md) for a NASA PDS Discipline or Mission Data Dictionary.
+ 
+The primary inputs include the link to the dictionary’s *_IngestLDD.xml file on GitHub and example label files. UGT runs on Windows, but the system requirements are low, so it can easily run in a small virtual environment. The packaged Zip file below includes the executable application, PDF instructions and requirements, an example output user guide, and a checksum list for the include files.
+ 
+`https://pds-geosciences.wustl.edu/userguide/user_guide_tool_1.0.0.zip`_
+
 +++
 Feel free to add some of your own or create a ticket in the `PDS4 LDD Issue Repo <https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues>`_ so we can start to build up this documentation.
